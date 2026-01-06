@@ -1,0 +1,212 @@
+/* Modern Styles for Prime Gate International Ltd */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-blue: #041D7D;
+    --primary-crimson: #BD173C;
+    --crimson-dark: #961230;
+    --crimson-light: #D45672;
+    --text-dark: #333333;
+    --text-light: #777777;
+    --white: #ffffff;
+    --dropdown-bg: #041D7D;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    /* Compensation for Fixed Header */
+    padding-top: 80px !important; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Button Overrides */
+.logisco-button, .gdlr-core-button, .submit-button span {
+    background-color: var(--primary-crimson) !important;
+    border-radius: 4px !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* TOP BAR REDESIGN (Blue Background, White Text, Fixed) */
+/* -------------------------------------------------------------------------- */
+
+.logisco-top-bar {
+    background-color: var(--primary-blue) !important;
+    border-bottom: 2px solid var(--primary-crimson) !important;
+    color: var(--white) !important;
+    
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    
+    /* Height Control */
+    padding: 10px 0 !important;
+    min-height: 80px !important; 
+}
+
+.logisco-top-bar-background {
+    background-color: var(--primary-blue) !important;
+}
+
+.logisco-top-bar-container-inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* Contact Info Styling */
+.logisco-top-bar-left, 
+.logisco-top-bar-right {
+    flex: 1 !important;
+    width: auto !important;
+    float: none !important;
+}
+
+.logisco-top-bar-left { text-align: left !important; }
+.logisco-top-bar-right { text-align: right !important; }
+
+.contact-hours, .contact-numbers {
+    color: var(--white) !important;
+    font-size: 13px !important;
+}
+.contact-hours i, .contact-numbers i {
+    color: var(--white) !important;
+    margin-right: 5px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* STACKED & CENTERED NAVIGATION */
+/* -------------------------------------------------------------------------- */
+
+#menu-main-navigation-1 {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    list-style: none !important;
+    margin: 10px 0 0 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+    background: transparent !important;
+}
+
+#menu-main-navigation-1 > li {
+    margin: 0 15px !important;
+    position: relative !important;
+}
+
+#menu-main-navigation-1 > li > a {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--white) !important;
+    padding: 0 0 5px 0 !important;
+    text-transform: uppercase !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Dropdown Caret Symbol */
+#menu-main-navigation-1 > li.menu-item-has-children > a::after {
+    content: "\f107"; /* FontAwesome angle-down */
+    font-family: "FontAwesome" !important;
+    margin-left: 8px !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+}
+
+#menu-main-navigation-1 > li:hover > a,
+#menu-main-navigation-1 > li > a:hover {
+    color: var(--primary-crimson) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* DROPDOWN MENU REFINEMENT (BLUE BG + ANIMATION) */
+/* -------------------------------------------------------------------------- */
+
+/* Extremely aggressive targeting for Blue Background */
+#menu-main-navigation-1 .sub-menu,
+#menu-main-navigation-1 .sub-menu li,
+#menu-main-navigation-1 .sub-menu li a,
+.sf-menu li ul.sub-menu,
+.sf-menu li ul.sub-menu li,
+.sf-menu li ul.sub-menu li a {
+    background-color: var(--primary-blue) !important;
+    background: var(--primary-blue) !important;
+}
+
+#menu-main-navigation-1 .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+    
+    border-top: 3px solid var(--primary-crimson) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+    padding: 10px 0 !important;
+    min-width: 240px !important;
+    border-radius: 0 0 4px 4px !important;
+    margin-top: 5px !important;
+    
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Smooth Fade-in & Slide-up Animation */
+@keyframes dropdownReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+#menu-main-navigation-1 li:hover > .sub-menu {
+    display: block !important;
+    visibility: visible !important;
+    animation: dropdownReveal 0.3s ease forwards;
+}
+
+#menu-main-navigation-1 .sub-menu li a {
+    color: var(--white) !important;
+    display: block !important;
+    padding: 12px 25px !important;
+    font-size: 14px !important;
+    text-align: left !important;
+    transition: all 0.2s ease !important;
+    text-transform: none !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+#menu-main-navigation-1 .sub-menu li:last-child a {
+    border-bottom: none !important;
+}
+
+#menu-main-navigation-1 .sub-menu li a:hover,
+#menu-main-navigation-1 .sub-menu li.current-menu-item > a {
+    background-color: rgba(255,255,255,0.1) !important;
+    color: var(--primary-crimson) !important;
+    padding-left: 30px !important;
+}
+
+/* Hiding original header elements */
+.logisco-navigation { display: none !important; }
+.logisco-header-wrap { display: none !important; }
+.logisco-top-bar-right-button { display: none !important; }
+.logisco-top-bar-right-social { display: none !important; }
