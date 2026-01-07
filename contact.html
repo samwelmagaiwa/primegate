@@ -3,7 +3,55 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <title>contact</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Contact Us - Primegate International Trading LTD | Get in Touch</title>
+    <meta name="title" content="Contact Us - Primegate International Trading LTD | Get in Touch">
+    <meta name="description" content="Contact Primegate International Trading LTD for logistics and freight solutions. Reach us at +255 718707449 or info@primegateinternational.co.tz. Located in Dar es Salaam, Tanzania.">
+    <meta name="keywords" content="contact Primegate, Tanzania logistics contact, freight forwarding contact, Dar es Salaam logistics, shipping inquiry, logistics quote">
+    <meta name="author" content="Primegate International Trading LTD">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.primegateinternational.co.tz/contact.html">
+    <meta property="og:title" content="Contact Us - Primegate International Trading LTD">
+    <meta property="og:description" content="Get in touch with Primegate for all your logistics and freight needs. We're here to help with sea freight, air freight, and contract logistics.">
+    <meta property="og:image" content="https://www.primegateinternational.co.tz/upload/logo-removebg-preview.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.primegateinternational.co.tz/contact.html">
+    <meta property="twitter:title" content="Contact Us - Primegate International Trading LTD">
+    <meta property="twitter:description" content="Get in touch with Primegate for all your logistics and freight needs.">
+    <meta property="twitter:image" content="https://www.primegateinternational.co.tz/upload/logo-removebg-preview.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.primegateinternational.co.tz/contact.html">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Primegate International Trading LTD",
+      "description": "Contact information for Primegate International Trading LTD",
+      "url": "https://www.primegateinternational.co.tz/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Primegate International Trading LTD",
+        "telephone": "+255-718707449",
+        "email": "info@primegateinternational.co.tz",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mezzanine Floor, Victoria Plazza, Samora Road",
+          "addressLocality": "Dar es Salaam",
+          "postalCode": "225",
+          "addressCountry": "TZ"
+        }
+      }
+    }
+    </script>
 
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Assistant%3A200%2C300%2Cregular%2C600%2C700%2C800%7CKarla%3Aregular%2Citalic%2C700%2C700italic%7CPT+Sans%3Aregular%2Citalic%2C700%2C700italic&amp;subset=latin%2Chebrew%2Clatin-ext%2Ccyrillic-ext%2Ccyrillic&amp;ver=5.0.3' type=text/css media=all>
     <link rel=stylesheet href='plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
@@ -60,13 +108,73 @@
     z-index: 1;
 }
 
+@keyframes cardFadeUp {
+    0% { opacity: 0; transform: translateY(28px); }
+    60% { opacity: 1; }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 .contact-card {
-    background: #DE2818;
+    background: linear-gradient(145deg, #e52e25, #c2190f);
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
-    padding: 28px;
+    border-radius: 24px;
+    padding: 32px;
     color: #ffffff;
-    box-shadow: 0 20px 45px rgba(5, 11, 40, 0.35);
+    box-shadow: 0 25px 45px rgba(5, 11, 40, 0.35);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(28px);
+    animation: cardFadeUp 0.8s ease forwards;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.4s ease;
+}
+
+.contact-card:nth-child(2) { animation-delay: 0.12s; }
+.contact-card:nth-child(3) { animation-delay: 0.24s; }
+
+.contact-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 60px rgba(5, 10, 65, 0.55);
+    background: linear-gradient(135deg, #143369, rgba(20, 51, 105, 0.85));
+}
+
+.contact-card:hover::after {
+    opacity: 1;
+}
+
+.contact-card:hover h4,
+.contact-card:hover p,
+.contact-card:hover .contact-map-link {
+    color: #f6f8ff;
+}
+
+.contact-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
 .contact-card h4 {
@@ -83,6 +191,11 @@
     line-height: 1.6;
 }
 
+@keyframes pulseLink {
+    0% { box-shadow: 0 0 0 0 rgba(255, 224, 102, 0.4); }
+    100% { box-shadow: 0 0 0 16px rgba(255, 224, 102, 0); }
+}
+
 .contact-map-link {
     margin-top: 18px;
     display: inline-flex;
@@ -91,10 +204,16 @@
     color: #0a163a;
     background: #ffe066;
     font-weight: 600;
-    padding: 10px 18px;
+    padding: 10px 22px;
     border-radius: 999px;
     text-transform: uppercase;
     font-size: 14px;
+    transition: transform 0.25s ease;
+    animation: pulseLink 2.2s infinite;
+}
+
+.contact-map-link:hover {
+    transform: translateY(-3px);
 }
 
 .contact-form-modern {
@@ -214,7 +333,7 @@
                                 <ul class=sub-menu>
                                     <li class="menu-item"><a href="about-1.html">About us</a></li>
                                     <li class="menu-item"><a href="contact.html">Contact</a></li>
-                                    <li class="menu-item"><a href="#">Our Team</a></li>
+
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children"><a href=#>Our Services</a>
@@ -257,7 +376,7 @@
                                 <ul class=sub-menu>
                                     <li class="menu-item" data-size=60><a href=about-1.html>About Us</a></li>                                            
                                     <li class="menu-item" data-size=60><a href=contact.html>Contact</a></li>
-                                    <li class="menu-item" data-size=60><a href="#">Our Team</a></li>
+
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children logisco-normal-menu"><a href=# class=sf-with-ul-pre>Our Services</a>
@@ -334,14 +453,17 @@
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class="contact-info-grid">
                                 <div class="contact-card">
+                                    <span class="contact-icon"><i class="fa fa-phone"></i></span>
                                     <h4>Phone</h4>
                                     <p>+255 718707449<br/>+255 755666745</p>
                                 </div>
                                 <div class="contact-card">
+                                    <span class="contact-icon"><i class="fa fa-envelope"></i></span>
                                     <h4>Email</h4>
                                     <p>info@primegateinternational.co.tz</p>
                                 </div>
                                 <div class="contact-card">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
                                     <h4>Location</h4>
                                     <p>Box 225<br/>Mezzanine Floor, victoria plazza,<br/>samora Road<br/>Dar es Salaam, Tanzania</p>
                                     <a class="contact-map-link" href="https://goo.gl/maps/fsFuLa2wn47XKNYK8" target="_blank"><i class="fa fa-map-marker"></i> check us On Google Map</a>

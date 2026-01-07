@@ -312,7 +312,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 180px 0px 120px 0px;">
+                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 180px 0px 120px 0px;">
                     <div class=gdlr-core-pbf-background-wrap>
                         <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bg-404.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
                     </div>
@@ -338,11 +338,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 20px 0px;">
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="opacity: 0.8 ;background-image: url(upload/map.jpg) ;background-size: cover ;background-position: top left ;" data-parallax-speed=0></div>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="opacity: 0.8 ;background-image: url(upload/asia-culturecenter--kds3l8QqoQ-unsplash.jpg) ;background-size: cover ;background-position: top left ;" data-parallax-speed=0></div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -352,49 +352,157 @@
                                         <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Our Mission<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " data-sync-height="height logis1">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 20px ;font-weight: 400 ;text-transform: none ;color: #090909 ;">
-                                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in�</p>
+                            <!-- Triangle Feature Cards -->
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <style>
+                                            .triangle-features-container {
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                gap: 20px;
+                                                padding: 20px 10px;
+                                            }
+
+                                            .triangle-row {
+                                                display: flex;
+                                                justify-content: center;
+                                                gap: 25px;
+                                                width: 100%;
+                                            }
+
+                                            .triangle-row.top {
+                                                max-width: 320px;
+                                            }
+
+                                            .triangle-row.bottom {
+                                                max-width: 700px;
+                                            }
+
+                                            .feature-card-triangle {
+                                                background: linear-gradient(135deg, #ffffff, #f8f9ff);
+                                                border-radius: 18px;
+                                                padding: 28px 24px;
+                                                box-shadow: 0 15px 40px rgba(20, 51, 105, 0.12);
+                                                flex: 1;
+                                                min-width: 220px;
+                                                max-width: 320px;
+                                                position: relative;
+                                                overflow: hidden;
+                                                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                                                border: 1px solid rgba(20, 51, 105, 0.08);
+                                            }
+
+                                            .feature-card-triangle::before {
+                                                content: "";
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                right: 0;
+                                                height: 3px;
+                                                background: linear-gradient(90deg, #e52021, #ff6b35);
+                                                transform: scaleX(0);
+                                                transition: transform 0.4s ease;
+                                            }
+
+                                            .feature-card-triangle:hover::before {
+                                                transform: scaleX(1);
+                                            }
+
+                                            .feature-card-triangle:hover {
+                                                transform: translateY(-10px) scale(1.02);
+                                                box-shadow: 0 25px 50px rgba(20, 51, 105, 0.22);
+                                                border-color: rgba(229, 32, 33, 0.2);
+                                            }
+
+                                            .feature-icon-triangle {
+                                                width: 55px;
+                                                height: 55px;
+                                                background: linear-gradient(135deg, #e52021, #143369);
+                                                border-radius: 50%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                margin: 0 auto 18px;
+                                                box-shadow: 0 12px 28px rgba(229, 32, 33, 0.28);
+                                                transition: all 0.3s ease;
+                                            }
+
+                                            .feature-card-triangle:hover .feature-icon-triangle {
+                                                transform: scale(1.1) rotate(5deg);
+                                                box-shadow: 0 16px 38px rgba(229, 32, 33, 0.4);
+                                            }
+
+                                            .feature-icon-triangle img {
+                                                width: 28px;
+                                                height: auto;
+                                                filter: brightness(0) invert(1);
+                                            }
+
+                                            .feature-title-triangle {
+                                                font-size: 19px;
+                                                font-weight: 700;
+                                                color: #143369;
+                                                text-align: center;
+                                                margin-bottom: 12px;
+                                                letter-spacing: 0.3px;
+                                            }
+
+                                            .feature-description-triangle {
+                                                font-size: 14px;
+                                                line-height: 1.6;
+                                                color: #4f5d77;
+                                                text-align: center;
+                                                margin: 0;
+                                            }
+
+                                            @media (max-width: 768px) {
+                                                .triangle-row {
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                }
+
+                                                .triangle-row.top,
+                                                .triangle-row.bottom {
+                                                    max-width: 100%;
+                                                }
+
+                                                .feature-card-triangle {
+                                                    max-width: 100%;
+                                                }
+                                            }
+                                        </style>
+
+                                        <div class="triangle-features-container">
+                                            <!-- Top Row: Single Card -->
+                                            <div class="triangle-row top">
+                                                <div class="feature-card-triangle">
+                                                    <div class="feature-icon-triangle">
+                                                        <img src="upload/clock-icon.png" alt="Quality of service">
+                                                    </div>
+                                                    <h4 class="feature-title-triangle">Quality of service</h4>
+                                                    <p class="feature-description-triangle">We deliver efficient and seamless service that ensures a smooth and stress-free experience from start to finish.</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #656565 ;">
-                                                    <p>language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+                                            <!-- Bottom Row: Two Cards -->
+                                            <div class="triangle-row bottom">
+                                                <div class="feature-card-triangle">
+                                                    <div class="feature-icon-triangle">
+                                                        <img src="upload/paper-icon.png" alt="Reliability">
+                                                    </div>
+                                                    <h4 class="feature-title-triangle">Reliability</h4>
+                                                    <p class="feature-description-triangle">We ensure precise, error-free processes that deliver reliable and consistent results every time.</p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 0px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #656565 ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.�</p>
+
+                                                <div class="feature-card-triangle">
+                                                    <div class="feature-icon-triangle">
+                                                        <img src="upload/paper2-icon.png" alt="Safety zone">
+                                                    </div>
+                                                    <h4 class="feature-title-triangle">Safety zone</h4>
+                                                    <p class="feature-description-triangle">Your safety and satisfaction are our priority, backed by reliable and guaranteed services</p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " data-sync-height="height logis1">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
-                                                <ul>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 50px ;"><span class=gdlr-core-icon-list-image style="margin-right: 38px ;"><img src=upload/clock-icon.png alt width=50 height=59 title=clock-icon></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #252525 ;font-size: 20px ;font-weight: 700 ;">Fast Service</span><span class=gdlr-core-icon-list-caption style="color: #4f5d77 ;font-size: 16px ;font-weight: 400 ;">A wonderful serenity has taken pos.session of my entire soul, like these sweet mornings of spring which I enjoy.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 50px ;"><span class=gdlr-core-icon-list-image style="margin-right: 38px ;"><img src=upload/paper-icon.png alt width=49 height=57 title=paper-icon></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #252525 ;font-size: 20px ;font-weight: 700 ;">100% Accuracy</span><span class=gdlr-core-icon-list-caption style="color: #4f5d77 ;font-size: 16px ;font-weight: 400 ;">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 50px ;"><span class=gdlr-core-icon-list-image style="margin-right: 38px ;"><img src=upload/paper2-icon.png alt width=50 height=49 title=paper2-icon></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #252525 ;font-size: 20px ;font-weight: 700 ;">Safety & Guarantee</span><span class=gdlr-core-icon-list-caption style="color: #4f5d77 ;font-size: 16px ;font-weight: 400 ;">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.</span></div>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -415,8 +523,7 @@
                             <div class="textwidget">
                                 <p><img class="alignnone size-full wp-image-5803" src="upload/logo-removebg-preview.png" alt="" width="138">
                                     <br/> <span class="gdlr-core-space-shortcode" style="margin-top: -27px ;"></span>
-                                    <br/> Logistco is one of the world�s leading logistics companies. Its strong market position lies in the seafreight, airfreight, contract logistics and overland businesses.</p>
-                                <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;"><a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="font-size: 16px ;color: #fff ;"><i class="fa fa-facebook" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin" style="font-size: 16px ;color: #fff ;"><i class="fa fa-linkedin" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="skype" style="font-size: 16px ;color: #fff ;"><i class="fa fa-skype" ></i></a><a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="twitter" style="font-size: 16px ;color: #fff ;"><i class="fa fa-twitter" ></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="vimeo" style="font-size: 16px ;color: #fff ;"><i class="fa fa-vimeo" ></i></a></div>
+                                    <br/> Primegate is a global logistics leader with strong capabilities in sea freight, air freight, contract logistics, and overland transportation.</p>
                             </div>
                         </div>
                     </div>
