@@ -34,6 +34,53 @@
 .my-float{
 	margin-top:16px;
 }
+
+.about-intro-text {
+    text-align: justify;
+    line-height: 1.85;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 22px 28px;
+    border-radius: 14px;
+    box-shadow: 0 18px 45px rgba(20, 51, 105, 0.12);
+    border-left: 6px solid #e52021;
+    backdrop-filter: blur(4px);
+    animation: aboutFadeIn 1.2s ease forwards;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+@keyframes aboutFadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about-hero-panel {
+    background-image: url('upload/aerial-view-cargo-ship-cargo-container-harbor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-hero-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10, 16, 58, 0.82), rgba(10, 16, 58, 0.45));
+    z-index: 0;
+}
+
+.about-hero-panel > .gdlr-core-pbf-background-wrap,
+.about-hero-panel > .gdlr-core-pbf-background-wrap > .gdlr-core-pbf-background {
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero-panel .gdlr-core-pbf-wrapper-container {
+    position: relative;
+    z-index: 2;
+}
 </style>
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
@@ -172,9 +219,9 @@
 
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
             <div class=gdlr-core-page-builder-body>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 30px 0px 75px 0px;">
+                <div class="gdlr-core-pbf-wrapper about-hero-panel" style="padding: 30px 0px 75px 0px;">
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/about-team-map-bg.jpg) ;background-size: cover ;background-position: bottom center ;" data-parallax-speed=0.05></div>
+                        <div class="gdlr-core-pbf-background"></div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -201,24 +248,11 @@
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 23px ;">
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space about-intro-text" style="padding-bottom: 23px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ; text-transform: none ;color: #000 ;">
                                                     <p>
-                                                        Prime Gate TRADING COMPANY LIMITED is a full clearing and forwarding service
-                                                        provider and authorized Customs Agent to offer professional services by Tanzania Revenue
-                                                        Authority (TRA) and Tanzania port authority (TPA) respectively. <br> FIFA is licensed by the
-                                                        Commissioner for Customs & Excise Department since its establishment to undertake various
-                                                        kinds of import and export, Customs Clearances at Dar es Salaam, Mtwara, Tanga, Bagamoyo,
-                                                        Mwambani on Indian Ocean and other major ports, Airports and borders in an efficient way
-                                                        and trouble-free manner.
-                                                        Since it’s commencement in 2006, Prime Gate Trading Co. Ltd has been providing reliable
-                                                        services to it’s clients. <br>The company started as Customs Clearing Agent and Freight
-                                                        Forwarding services and slowly expanded to other incorporated services in this industry
-                                                        including , Transportation, Transit, Exportation and Importation, Freight consultation, Fairs
-                                                        and Exhibitions, Cargo Consolidation, Break Bulk services and Project Cargo serving to
-                                                        different clients ranging from manufacturers to individual, local and homemade producers,
-                                                        government to NGO’s, over-dimensional cargo (ODC) mainly in special equipment such as
-                                                        gas and oilfield equipment’s, power plants, cement industries and many other industries, 
+                                                        PRIME GATE INTERNATIONAL TRADING LTD was established in 2025 under the Companies Act CAP 2002 of the United Republic of Tanzania with the objective of providing best-in-class clearing and forwarding services while operating import/export business internationally. We are authorized customs agents delivering professional services for the Tanzania Revenue Authority (TRA) and the Tanzania Ports Authority (TPA). PRIME GATE INTERNATIONAL TRADING LTD is licensed by the Commissioner for Customs and Excise Department to undertake various kinds of import and export customs clearances at Dar es Salaam, Mtwara, Tanga, Bagamoyo, Mwambani on the Indian Ocean, and other major ports, airports, and borders efficiently and without hassle.
+The company started as a customs clearing agent and freight forwarder supporting importation, exportation, and transit operations. PRIME GATE INTERNATIONAL TRADING LTD now delivers integrated logistics and transportation services domestically and internationally worldwide 🌐.
                                                     </p>
                                                 </div>
                                             </div>
