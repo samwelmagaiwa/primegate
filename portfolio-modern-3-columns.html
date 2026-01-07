@@ -1,17 +1,440 @@
 <!DOCTYPE html>
-<html style="height:100%">
+<html lang=en-US class=no-js>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title> 404 Not Found
-</title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head>
-<body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
-<div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
-        <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">404</h1>
-<h2 style="margin-top:20px;font-size: 30px;">Not Found
-</h2>
-<p>The resource requested could not be found on this server!</p>
-</div></div><div style="color:#f0f0f0; font-size:12px;margin:auto;padding:0px 30px 0px 30px;position:relative;clear:both;height:100px;margin-top:-101px;background-color:#474747;border-top: 1px solid rgba(0,0,0,0.15);box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;">
-<br>Proudly powered by LiteSpeed Web Server<p>Please be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.</p></div><footer>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Primegate | Portfolio – Modern 3 Columns</title>
+
+    <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Assistant%3A200%2C300%2Cregular%2C600%2C700%2C800%7CKarla%3Aregular%2Citalic%2C700%2C700italic%7CPT+Sans%3Aregular%2Citalic%2C700%2C700italic&amp;subset=latin%2Chebrew%2Clatin-ext%2Ccyrillic-ext%2Ccyrillic&amp;ver=5.0.3' type=text/css media=all>
+    <link rel=stylesheet href='plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
+    <link rel=stylesheet href='plugins/goodlayers-core/include/css/page-builder.css' type=text/css media=all>
+    <link rel=stylesheet href='plugins/revslider/public/assets/css/settings.css' type=text/css media=all>
+    <link rel=stylesheet href='plugins/quform/css/base.css' type=text/css media=all>
+    <link rel=stylesheet href='css/style-core.css' type=text/css media=all>
+    <link rel=stylesheet href='css/logisco-style-custom.css' type=text/css media=all>
+    <link rel=stylesheet href='css/modern-primegate.css' type=text/css media=all>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.my-float{margin-top:16px;}
+
+.top-bar-brand{display:inline-flex;align-items:center;gap:16px;}
+.top-bar-logo{height:52px;width:auto;object-fit:contain;}
+@media (max-width:768px){.top-bar-brand{gap:10px;}.top-bar-logo{height:42px;}}
+
+.hero-portfolio-wrap{position:relative;}
+.hero-portfolio-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(10,19,55,.85),rgba(229,32,33,.4));}
+.hero-portfolio-content{position:relative;color:#fff;text-align:left;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.15);font-weight:600;letter-spacing:.1em;font-size:13px;text-transform:uppercase;margin-bottom:18px;}
+.hero-badge i{color:#ffe066;}
+.hero-title{font-size:54px;font-weight:800;margin:0 0 18px;line-height:1.1;}
+.hero-caption{font-size:20px;color:#d7e6ff;margin:0;max-width:620px;}
+
+.portfolio-intro{margin-bottom:30px;text-align:center;color:#6c738a;}
+.portfolio-intro h2{font-size:36px;color:#0f213f;font-weight:800;margin-bottom:12px;}
+.portfolio-intro p{max-width:780px;margin:0 auto 22px;}
+.portfolio-scorecard{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;}
+.portfolio-scorecard .score-pill{background:#fff;border-radius:999px;padding:10px 22px;box-shadow:0 8px 20px rgba(9,16,51,.08);color:#143369;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:13px;}
+
+.sector-filter{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-bottom:35px;}
+.sector-filter-card{background:#0f213f;color:#fff;border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;box-shadow:0 18px 35px rgba(5,15,45,.18);transition:transform .3s ease,box-shadow .3s ease;cursor:pointer;}
+.sector-filter-card.active{background:#e52021;}
+.sector-filter-card:hover{transform:translateY(-6px);box-shadow:0 24px 45px rgba(5,15,45,.25);}
+.sector-filter-card span{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.sector-filter-card strong{font-size:18px;}
+
+.gdlr-core-filter-item-holder{display:none;}
+
+.anchor-image-wrap{position:relative;margin:50px 0;}
+.anchor-image-wrap img{width:100%;border-radius:28px;box-shadow:0 35px 65px rgba(7,13,32,.25);object-fit:cover;max-height:520px;}
+.cta-over-image-card{position:absolute;top:40px;left:50%;transform:translateX(-50%);background:rgba(7,13,32,.86);color:#fff;padding:28px 40px;border-radius:24px;box-shadow:0 25px 45px rgba(7,13,32,.4);display:flex;flex-direction:column;gap:14px;width:min(90%,640px);}
+.cta-over-image-card .cta-kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#ffe066;}
+.cta-over-image-card h3{margin:0;font-size:28px;font-weight:700;line-height:1.2;}
+.cta-over-image-card p{margin:0;color:#dbe6ff;}
+.cta-over-image-btn{align-self:flex-start;background:#ffe066;color:#0b1636;font-weight:700;padding:13px 28px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em;}
+@media(max-width:768px){
+    .anchor-image-wrap{margin:30px 0;}
+    .cta-over-image-card{position:static;transform:none;margin-top:20px;width:100%;}
+}
+
+.portfolio-card{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 25px 45px rgba(9,16,51,.15);}
+.portfolio-card img{display:block;width:100%;height:auto;}
+.card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,32,0),rgba(7,13,32,.85));color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;gap:10px;}
+.portfolio-badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;}
+.case-title{font-size:22px;font-weight:700;margin:0;}
+.case-meta{display:flex;gap:14px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#b5c7ff;}
+.case-meta span{display:flex;align-items:center;gap:6px;}
+
+.advantage-section{padding:70px 0 20px;}
+.advantage-card{background:#fff;border-radius:18px;padding:30px;box-shadow:0 18px 35px rgba(5,15,45,.12);border-top:3px solid #e52021;height:100%;}
+.advantage-card h4{margin-top:0;color:#143369;font-size:18px;text-transform:uppercase;letter-spacing:.1em;}
+.advantage-card p{margin-bottom:0;color:#4b4f63;}
+
+.logisco-body-wrapper{padding-bottom:0 !important;}
+#logisco-page-wrapper{padding-bottom:0 !important;}
+
+.logiscoopyright-wrapper{background:#DE2818;color:#ffeede;padding:18px 0;display:flex;justify-content:center;}
+.logiscoopyright-container{width:100%;display:flex;justify-content:space-between;align-items:center;}
+.logiscoopyright-wrapper a{color:#ffeede;}
+
+</style>
+</head>
+<body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
+<a href="https://api.whatsapp.com/send?phone=255743519104&text=Hello Primegate International" class="float" target="_blank"><i class="fa fa-whatsapp my-float"></i></a>
+
+<!-- Mobile Header -->
+<div class=logisco-mobile-header-wrap>
+    <div class="logisco-mobile-header logisco-header-background logisco-style-slide logisco-sticky-mobile-navigation " id=logisco-mobile-header>
+        <div class="logisco-mobile-header-container logisco-container clearfix">
+            <div class="logisco-logo  logisco-item-pdlr">
+                <div class=logisco-logo-inner>
+                    <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                </div>
+            </div>
+            <div class=logisco-mobile-menu-right>
+                <div class=logisco-main-menu-search id=logisco-mobile-top-search><i class="fa fa-search"></i></div>
+                <div class=logisco-top-search-wrap>
+                    <div class=logisco-top-search-close></div>
+                    <div class=logisco-top-search-row>
+                        <div class=logisco-top-search-cell>
+                            <form role=search method=get class=search-form action=#>
+                                <input type=text class="search-field logisco-title-font" placeholder=Search... value name=s>
+                                <div class=logisco-top-search-submit><i class="fa fa-search"></i></div>
+                                <input type=submit class=search-submit value=Search>
+                                <div class=logisco-top-search-close><i class=icon_close></i></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class=logisco-mobile-menu><a class="logisco-mm-menu-button logisco-mobile-menu-button logisco-mobile-button-hamburger" href=#logisco-mobile-menu><span></span></a>
+                    <div class="logisco-mm-menu-wrap logisco-navigation-font" id=logisco-mobile-menu data-slide=right>
+                        <ul id=menu-main-navigation class=m-menu>
+                            <li class="menu-item menu-item-home current-menu-item"><a href=index-2.html>Home</a></li>
+                            <li class="menu-item menu-item-has-children"><a href=#>Company</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item"><a href="about-1.html">About us</a></li>
+                                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                    <li class="menu-item"><a href="#">Our Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href=#>Our Services</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item"><a href="breakbulk.html">Break Bulk Services</a></li>
+                                    <li class="menu-item"><a href="project-cargo.html">Project Cargo</a></li>
+                                    <li class="menu-item"><a href="transportation.html">Transportation</a></li>
+                                    <li class="menu-item"><a href="local-distribution.html">Local Distribution Service Products</a></li>
+                                    <li class="menu-item"><a href="Clearance.html">Custom & Clearance</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-home current-menu-item"><a href=index-2.html>Customer Portal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="logisco-body-outer-wrapper ">
+    <div class="logisco-body-wrapper clearfix  logisco-with-transparent-header logisco-with-frame">
+        <div class=logisco-header-background-transparent>
+            <div class=logisco-top-bar>
+                <div class=logisco-top-bar-background></div>
+                <div class="logisco-top-bar-container logisco-top-bar-full ">
+                    <div class="logisco-top-bar-container-inner clearfix">
+                        <div class="logisco-top-bar-left logisco-item-pdlr">
+                            <div class="top-bar-brand">
+                                <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+                                <div class="contact-hours">
+                                    <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logisco-top-bar-right logisco-item-pdlr">
+                            <div class="contact-numbers">
+                                <i class="fa fa-phone"></i>+255 718707449 | +255 755666745
+                            </div>
+                        </div>
+                        <ul id=menu-main-navigation-1 class=sf-menu>
+                            <li class="menu-item menu-item-home current-menu-item logisco-normal-menu"><a href=index-2.html>Home</a></li>
+                            <li class="menu-item menu-item-has-children logisco-normal-menu"><a href=# class=sf-with-ul-pre>Company</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item" data-size=60><a href=about-1.html>About Us</a></li>
+                                    <li class="menu-item" data-size=60><a href=contact.html>Contact</a></li>
+                                    <li class="menu-item" data-size=60><a href="#">Our Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children logisco-normal-menu"><a href=# class=sf-with-ul-pre>Our Services</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item" data-size=60><a href="breakbulk.html">Break Bulk Services</a></li>
+                                    <li class="menu-item" data-size=60><a href="project-cargo.html">Project Cargo</a></li>
+                                    <li class="menu-item" data-size=60><a href="transportation.html">Transportation</a></li>
+                                    <li class="menu-item" data-size=60><a href="local-distribution.html">Local Distribution Service</a></li>
+                                    <li class="menu-item" data-size=60><a href="Clearance.html">Customs Clearance</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href=#>Customer Portal</a></li>
+                        </ul>
+                    </div>
+                    <a class=logisco-top-bar-right-button href=get-a-quote.html target=_self>Get A Quote</a>
+                    <div class="logisco-top-bar-right logisco-item-pdlr">
+                        <div class=logisco-top-bar-right-social><a href="#" target=_blank class=logisco-top-bar-social-icon title=facebook><i class="fa fa-facebook" ></i></a><a href="#" target=_blank class=logisco-top-bar-social-icon title=linkedin><i class="fa fa-linkedin" ></i></a><a href="#" target=_blank class=logisco-top-bar-social-icon title=twitter><i class="fa fa-twitter" ></i></a><a href="#" target=_blank class=logisco-top-bar-social-icon title=instagram><i class="fa fa-instagram" ></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <header class="logisco-header-wrap logisco-header-style-plain  logisco-style-menu-right  logisco-style-slide" data-navigation-offset=75>
+                <div class=logisco-header-background></div>
+                <div class="logisco-header-container  logisco-header-full">
+                    <div class="logisco-header-container-inner clearfix">
+                        <div class="logisco-logo  logisco-item-pdlr">
+                            <div class=logisco-logo-inner>
+                                <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                            </div>
+                        </div>
+                        <div class="logisco-navigation logisco-item-pdlr clearfix ">
+                            <div class=logisco-main-menu id=logisco-main-menu>
+                                <div class=logisco-navigation-slide-bar id=logisco-navigation-slide-bar></div>
+                            </div>
+                            <div class="logisco-main-menu-right-wrap clearfix ">
+                                <div class=logisco-main-menu-search id=logisco-top-search><i class="fa fa-search"></i></div>
+                                <div class=logisco-top-search-wrap>
+                                    <div class=logisco-top-search-close></div>
+                                    <div class=logisco-top-search-row>
+                                        <div class=logisco-top-search-cell>
+                                            <form role=search method=get class=search-form action=#>
+                                                <input type=text class="search-field logisco-title-font" placeholder=Search... value name=s>
+                                                <div class=logisco-top-search-submit><i class="fa fa-search"></i></div>
+                                                <input type=submit class=search-submit value=Search>
+                                                <div class=logisco-top-search-close><i class=icon_close></i></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class=logisco-page-wrapper id=logisco-page-wrapper>
+            <div class=gdlr-core-page-builder-body>
+                <!-- <div class="gdlr-core-pbf-wrapper hero-portfolio-wrap" style="padding: 320px 0 140px 0;" id=gdlr-core-wrapper-1>
+                    <div class=gdlr-core-pbf-background-wrap>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/shutterstock_321314553.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.3></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js hero-portfolio-content" data-gdlr-animation=fadeInUp data-gdlr-animation-duration=600ms data-gdlr-animation-offset=0.8>
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class=gdlr-core-pbf-element>
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
+                                    <div class="gdlr-core-title-item-title-wrap ">
+                                        <div class="hero-badge"><i class="fa fa-plane"></i>Clearing & Forwarding Case Studies</div>
+                                        <h1 class="hero-title">Delivering cargo certainty for Africa’s most demanding supply chains.</h1>
+                                        <p class="hero-caption">A snapshot of multidisciplinary projects executed by Primegate International Ltd—covering customs brokerage, over-dimensional freight, bonded warehousing, and just-in-time distribution across East & Central Africa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="gdlr-core-pbf-wrapper " style="padding: 70px 0 0 0;">
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="portfolio-intro">
+                                <div class="portfolio-scorecard">
+                                    <div class="score-pill">24/7 full Support and communications</div>
+                                    <div class="score-pill">Be our Preferred Partner</div>
+                                    <div class="score-pill">we serve all corridors</div>
+                                </div>
+                            </div>
+                            <div class="sector-filter">
+                                <div class="sector-filter-card active" data-filter="*">
+                                    <span>Complete Showcase</span>
+                                    <strong>All Case Studies</strong>
+                                    <p>Discover Primegate International&rsquo;s signature missions, showcasing seamless multi-sector logistics and global forwarding expertise.</p>
+                                </div>
+                                <div class="sector-filter-card" data-filter=".customs">
+                                    <span>🌐 Borderless Clearances &ndash; Customs & Brokerage</span>
+                                    <strong>Customs & Brokerage</strong>
+                                    <p>Effortless import and export solutions. From smart tariff planning to bonded storage, we ensure high-compliance cargo moves smoothly across borders.</p>
+                                </div>
+                                <div class="sector-filter-card" data-filter=".energy">
+                                    <span>⛏️ Extractive Excellence &ndash; Energy & Mining</span>
+                                    <strong>Energy & Mining</strong>
+                                    <p>End-to-end handling of modular rigs, hazardous materials, and remote-site operations. Primegate delivers safety, precision, and reliability in every shipment.</p>
+                                </div>
+                                <div class="sector-filter-card" data-filter=".project">
+                                    <span>🚚 Mega Moves &ndash; Project Logistics</span>
+                                    <strong>Project Logistics</strong>
+                                    <p>Oversize, complex, or time-critical freight? We coordinate port charters, lifting studies, and escorts to move your large-scale projects efficiently.</p>
+                                </div>
+                                <div class="sector-filter-card" data-filter=".retail">
+                                    <span>⚡ Launch Velocity &ndash; Retail & FMCG</span>
+                                    <strong>Retail & FMCG</strong>
+                                    <p>Nationwide product rollouts made easy. From synchronized last-mile deployment to rapid merchandising bursts, we accelerate your business growth.</p>
+                                </div>
+                            </div>
+                            <div class="anchor-image-wrap">
+                                <img src="upload/renaldo-matamoro-DEMrRuvJvqo-unsplash.jpg" alt="Primegate operations control" loading="lazy">
+                                <div class="cta-over-image-card">
+                                    <span class="cta-kicker">Primegate Control Tower</span>
+                                    <h3>Need a clearing partner that thinks in milestones, not hand-offs?</h3>
+                                    <p>Share your cargo plan and we&rsquo;ll map transit corridors, regulatory approvals, and duty optimization before the shipment leaves origin.</p>
+                                    <a class="cta-over-image-btn" href="get-a-quote.html">Book A Discovery Call</a>
+                                </div>
+                            </div>
+                            <div class=gdlr-core-pbf-element>
+                                <div class="gdlr-core-portfolio-item gdlr-core-item-pdb  gdlr-core-style-3 gdlr-core-column-20 gdlr-core-with-thumbnail-rollover" style="padding-bottom: 5px ;">
+                                    <div class=gdlr-core-portfolio-item-holder data-layout=headlight style="margin-top: -30px ;">
+                                        <div class="gdlr-core-portfolio-grid gdlr-core-animate-end customs" data-sync-height=portfolio>
+                                            <div class="portfolio-card">
+                                                <img src=upload/portfolio1.jpg alt title="Port handling">
+                                                <div class="card-overlay">
+                                                    <span class="portfolio-badge"><i class="fa fa-ship"></i>Customs & Brokerage</span>
+                                                    <h4 class="case-title">Dar es Salaam Port Fast-Track</h4>
+                                                    <div class="case-meta">
+                                                        <span><i class="fa fa-clock-o"></i>48hr release</span>
+                                                        <span><i class="fa fa-globe"></i>7 countries</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="gdlr-core-portfolio-grid gdlr-core-animate-end project" data-sync-height=portfolio>
+                                            <div class="portfolio-card">
+                                                <img src=upload/portfolio2.jpg alt title="Oversized cargo">
+                                                <div class="card-overlay">
+                                                    <span class="portfolio-badge"><i class="fa fa-industry"></i>Project Logistics</span>
+                                                    <h4 class="case-title">Heavy Haul – Mining Conveyor</h4>
+                                                    <div class="case-meta">
+                                                        <span><i class="fa fa-truck"></i>210 MT</span>
+                                                        <span><i class="fa fa-road"></i>1,200 km escorted</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="gdlr-core-portfolio-grid gdlr-core-animate-end energy" data-sync-height=portfolio>
+                                            <div class="portfolio-card">
+                                                <img src=upload/portfolio3.jpg alt title="Energy logistics">
+                                                <div class="card-overlay">
+                                                    <span class="portfolio-badge"><i class="fa fa-bolt"></i>Energy & Mining</span>
+                                                    <h4 class="case-title">Modular LNG Plant Mobilization</h4>
+                                                    <div class="case-meta">
+                                                        <span><i class="fa fa-ship"></i>4 breakbulk vessels</span>
+                                                        <span><i class="fa fa-check"></i>Zero incidents</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="gdlr-core-portfolio-grid gdlr-core-animate-end retail" data-sync-height=portfolio>
+                                            <div class="portfolio-card">
+                                                <img src=upload/portfolio4.jpg alt title="Retail rollout">
+                                                <div class="card-overlay">
+                                                    <span class="portfolio-badge"><i class="fa fa-shopping-bag"></i>Retail & FMCG</span>
+                                                    <h4 class="case-title">Pan-African Merchandising Sprint</h4>
+                                                    <div class="case-meta">
+                                                        <span><i class="fa fa-map-marker"></i>96 stores</span>
+                                                        <span><i class="fa fa-calendar"></i>3 weeks</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="gdlr-core-portfolio-grid gdlr-core-animate-end customs" data-sync-height=portfolio>
+                                            <div class="portfolio-card">
+                                                <img src=upload/portfolio5.jpg alt title="Bonded warehouse">
+                                                <div class="card-overlay">
+                                                    <span class="portfolio-badge"><i class="fa fa-archive"></i>Bonded Warehousing</span>
+                                                    <h4 class="case-title">Pharma Cold Chain Control Tower</h4>
+                                                    <div class="case-meta">
+                                                        <span><i class="fa fa-thermometer-half"></i>2-8°C</span>
+                                                        <span><i class="fa fa-medkit"></i>1.5M vials safeguarded</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="gdlr-core-portfolio-grid gdlr-core-animate-end project" data-sync-height=portfolio>
+                                            <div class="portfolio-card">
+                                                <img src=upload/portfolio6.jpg alt title="Air charter">
+                                                <div class="card-overlay">
+                                                    <span class="portfolio-badge"><i class="fa fa-plane"></i>Critical Airlift</span>
+                                                    <h4 class="case-title">AOG Recovery – Aerospace Fleet</h4>
+                                                    <div class="case-meta">
+                                                        <span><i class="fa fa-clock-o"></i>14 hrs door-to-door</span>
+                                                        <span><i class="fa fa-shield"></i>Trusted by OEM</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantage-section" style="background:#f7f8fb; padding:60px 0 20px;">
+                                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                    <div class=gdlr-core-pbf-element>
+                                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 35px ;">
+                                            <div class="gdlr-core-title-item-title-wrap ">
+                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 700 ;color: #143369 ;">The Primegate advantage</h3></div>
+                                        </div>
+                                    </div>
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                <div class="advantage-card">
+                                                    <h4>🛃 Customs Mastery</h4>
+                                                    <p>Fast, compliant, and penalty-free. Real-time HS classification, strategic tax planning, and strong relationships with TRA &amp; KRA officials minimize dwell time and keep your cargo moving.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-20">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                <div class="advantage-card">
+                                                    <h4>📦 Asset Visibility</h4>
+                                                    <p>End-to-end control at your fingertips. IoT-enabled sealed trailers, bonded warehouse telemetry, and exception dashboards give shippers 24/7 oversight of every shipment.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-20">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                <div class="advantage-card">
+                                                    <h4>✅ Integrated Compliance</h4>
+                                                    <p>Shipping with confidence. Our ISO 9001, TBS, and WHO GDP certified processes ensure every step of your regulated cargo meets global standards.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
             <div class="logisco-footer-wrapper ">
                 <div class="logisco-footer-container logisco-container clearfix">
                     <div class="logisco-footer-column logisco-item-pdlr logisco-column-15">
@@ -30,8 +453,8 @@
                                 <p>Box 705
                                     <br/> Mezzanine Floor, Victoria Plazza, Samora Road
                                     <br/> Dar es Salaam, Tanzania</p>
-                                <p><span style="""color: #fff;""">+255 718 707 449 | +255 755 666 745</span>
-                                    <br/> <span style="""color: #e52021;""">info@primegateinternational.co.tz</span></p>
+                                <p><span style="color: #fff;">+255 718 707 449 | +255 755 666 745</span>
+                                    <br/> <span style="color: #e52021;">info@primegateinternational.co.tz</span></p>
                             </div>
                         </div>
                     </div>
@@ -56,16 +479,56 @@
                     </div>
                 </div>
             </div>
-            <div class="logisco-copyright-wrapper">
-                <div class="logisco-copyright-container logisco-container clearfix">
-                    <div class="logisco-copyright-left logisco-item-pdlr">Copyright 2025 Primegate, All Right Reserved</div>
-                    <div class="logisco-copyright-right logisco-item-pdlr"><a href="#" style="margin-left:21px;">Home</a><a href="#" style="margin-left:21px;">About       </a><a href="#" style="margin-left:21px;">Updates</a><a href="#" style="margin-left:21px;">Services</a><a href="#" style="margin-left:21px;">Contact</a></div>
+            <div class="logiscoopyright-wrapper">
+                <div class="logiscoopyright-container logisco-container clearfix">
+                    <div class="logiscoopyright-left logisco-item-pdlr">Copyright 2025 Primegate, All Right Reserved</div>
+                    <div class="logiscoopyright-right logisco-item-pdlr"><a href="#" style="margin-left:21px;">Home</a><a href="#" style="margin-left:21px;">About       </a><a href="#" style="margin-left:21px;">Updates</a><a href="#" style="margin-left:21px;">Services</a><a href="#" style="margin-left:21px;">Contact</a></div>
                 </div>
             </div>
         </footer>
-</body></html>
+    </div>
+</div>
 
-
-
-
-
+	<script src='js/jquery/jquery.js'></script>
+	<script src='js/jquery/jquery-migrate.min.js'></script>
+	<script src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+	<script>
+	    var gdlr_core_pbf = {
+	        "admin": "",
+	        "video": {
+	            "width": "640",
+	            "height": "360"
+	        },
+	        "ajax_url": ""
+	    };
+	</script>
+	<script src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+	<script src='js/jquery/jquery.blockUI.min.js'></script>
+	<script src='js/jquery/ui/effect.min.js'></script>
+	<script src='js/jquery.mmenu.js'></script>
+	<script src='js/jquery.superfish.js'></script>
+	<script src='js/plugins.js'></script>
+    <script type="text/javascript" src="plugins/quform/js/plugins.js"></script>
+    <script type="text/javascript" src="plugins/quform/js/scripts.js"></script>
+    <script>
+        (function($){
+            const cards = document.querySelectorAll('.sector-filter-card');
+            const grids = document.querySelectorAll('.gdlr-core-portfolio-grid');
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    cards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    const filter = card.getAttribute('data-filter');
+                    grids.forEach(grid => {
+                        if(filter === '*' || grid.classList.contains(filter.replace('.', ''))){
+                            grid.style.display = '';
+                        } else {
+                            grid.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

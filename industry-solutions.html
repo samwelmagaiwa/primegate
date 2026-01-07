@@ -34,6 +34,28 @@
 .my-float{
 	margin-top:16px;
 }
+
+.top-bar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.top-bar-logo {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .top-bar-brand {
+        gap: 10px;
+    }
+
+    .top-bar-logo {
+        height: 42px;
+    }
+}
 </style>
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
@@ -99,13 +121,16 @@
                 <div class="logisco-top-bar-container logisco-top-bar-full ">
                     <div class="logisco-top-bar-container-inner clearfix">
                         <div class="logisco-top-bar-left logisco-item-pdlr">
-                            <div class="contact-hours">
+                            <div class="top-bar-brand">
+        <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+        <div class="contact-hours">
                                 <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
                             </div>
+    </div>
                         </div>
                         <div class="logisco-top-bar-right logisco-item-pdlr">
                             <div class="contact-numbers">
-                                <i class="fa fa-phone"></i> +255 617 919 104 | +255 743 519 104
+                                <i class="fa fa-phone"></i> +255 718 707 449 | +255 755 666 745
                             </div>
                         </div>
                         <ul id=menu-main-navigation-1 class=sf-menu>
@@ -178,140 +203,190 @@
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" style="max-width: 1280px ;">
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align">
-                                    <div class=gdlr-core-text-box-item-content style="text-transform: none ;color: #929bab ;">
-                                        <p>Our global logistics network, cutting-edge IT systems, in-house expertise and excellent customer service. <a style="color: #143369;" href=#>Learn More</a></p>
+                                    <div class=gdlr-core-text-box-item-content>
+                                        <h2 class="industry-intro-heading">Global Logistics Expertise <span>Powered by Technology & Service Excellence</span></h2>
+                                        <p class="industry-intro-subtext">Precision supply chains, intelligent platforms, and white-glove support for every shipment.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Homepage Column Service 2" id=gdlr-core-column-1>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 26px 40px 0px;padding: 55px 30px 50px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/airbus-icon.png alt width=78 height=39 title=airbus-icon></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 20px ;font-weight: 700 ;text-transform: capitalize ;">Aerospace & Defense</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;">
-                                                        <p>The Aerospace &#038; Defense industry requires innovative supply chain solutions for their unique demands.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <style>
+                                .industry-intro-heading {
+                                    font-size: 34px;
+                                    font-weight: 800;
+                                    letter-spacing: 0.4px;
+                                    color: #143369;
+                                    text-transform: none;
+                                    margin-bottom: 12px;
+                                }
+
+                                .industry-intro-heading span {
+                                    color: #e52021;
+                                }
+
+                                .industry-intro-subtext {
+                                    font-size: 17px;
+                                    color: #727c93;
+                                    margin: 0;
+                                }
+
+                                @media (max-width: 768px) {
+                                    .industry-intro-heading {
+                                        font-size: 26px;
+                                        line-height: 1.3;
+                                    }
+                                }
+                            </style>
+                            <style>
+                                .industry-card {
+                                    background: #ffffff;
+                                    border-radius: 22px;
+                                    padding: 32px 26px;
+                                    box-shadow: 0 20px 45px rgba(10, 22, 55, 0.12);
+                                    border: 2px solid rgba(20, 51, 105, 0.25);
+                                    min-height: 260px;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 14px;
+                                    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+
+                                .industry-card::before {
+                                    content: "";
+                                    position: absolute;
+                                    inset: 8px;
+                                    border-radius: 18px;
+                                    border: 1px solid rgba(229, 32, 33, 0.4);
+                                    pointer-events: none;
+                                }
+
+                                .industry-card::after {
+                                    content: "";
+                                    position: absolute;
+                                    inset: 16px;
+                                    border-radius: 12px;
+                                    border: 1px dashed rgba(20, 51, 105, 0.35);
+                                    pointer-events: none;
+                                }
+
+                                .industry-card:hover {
+                                    transform: translateY(-10px);
+                                    box-shadow: 0 30px 65px rgba(12, 18, 46, 0.2);
+                                    border-color: rgba(229, 32, 33, 0.45);
+                                }
+
+                                .industry-icon {
+                                    width: 60px;
+                                    height: 60px;
+                                    border-radius: 16px;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 26px;
+                                    color: #ffffff;
+                                    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+                                }
+
+                                .industry-icon.icon-aviation { background: linear-gradient(135deg, #143369, #0a8bff); }
+                                .industry-icon.icon-automotive { background: linear-gradient(135deg, #ff7b36, #e52021); }
+                                .industry-icon.icon-energy { background: linear-gradient(135deg, #f7b733, #fc4a1a); }
+                                .industry-icon.icon-fashion { background: linear-gradient(135deg, #ff5f6d, #ffc371); }
+                                .industry-icon.icon-medical { background: linear-gradient(135deg, #33ccad, #1f8ac0); }
+                                .industry-icon.icon-consumer { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+
+                                .industry-title {
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    color: #143369;
+                                    margin: 0;
+                                }
+
+                                .industry-text {
+                                    font-size: 15px;
+                                    line-height: 1.65;
+                                    color: #4f5d77;
+                                    margin: 0;
+                                    text-align: justify;
+                                }
+
+                                @media (max-width: 768px) {
+                                    .industry-card {
+                                        min-height: auto;
+                                        padding: 28px 22px;
+                                    }
+                                }
+                            </style>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Homepage Column Service 2">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: 0px 15px 30px 0px;padding: 10px 0;">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="industry-card">
+                                            <span class="industry-icon icon-aviation"><i class="fa fa-plane" aria-hidden="true"></i></span>
+                                            <h3 class="industry-title">Aviation & Defense Logistics</h3>
+                                            <p class="industry-text">We deliver specialized logistics services engineered for the precision, safety, and reliability standards of modern defense and aerospace missions.</p>
                                         </div>
                                     </div>
-                                    <a class=gdlr-core-pbf-column-link href=aerospace-defense/index.html target=_self></a>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-2>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 13px 40px 13px;padding: 55px 30px 55px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/car-icon.png alt width=44 height=44 title=car-icon></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 20px ;font-weight: 700 ;text-transform: capitalize ;">Automotive</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="text-transform: none ;">
-                                                        <p>Our worldwide network for procurement, distribution and aftermarket logistics ensures your components and vehicles.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: 0px 15px 30px 15px;padding: 10px 0;">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="industry-card">
+                                            <span class="industry-icon icon-automotive"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                                            <h3 class="industry-title">Automotive Supply Chain Services</h3>
+                                            <p class="industry-text">Prime Gate International orchestrates procurement, distribution, and aftermarket logistics programs that keep automotive operations synchronized worldwide.</p>
                                         </div>
                                     </div>
-                                    <a class=gdlr-core-pbf-column-link href=automotive/index.html target=_self></a>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-3>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 0px 40px 26px;padding: 55px 30px 50px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/power-icon.png alt width=51 height=46 title=power-icon></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 20px ;font-weight: 700 ;text-transform: capitalize ;">Oil & Gas</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;">
-                                                        <p>When it comes to managing the logistics of oil and gas, safety and efficiency are the greatest concerns.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: 0px 0px 30px 15px;padding: 10px 0;">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                    <div class="industry-card">
+                                            <span class="industry-icon icon-energy"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+                                            <h3 class="industry-title">Energy & Dangerous Goods Handling</h3>
+                                            <p class="industry-text">Prime Gate International Trading Ltd. is certified to manage Dangerous Goods safely and compliantly, ensuring every shipment is handled with expert care.</p>
                                         </div>
                                     </div>
-                                    <a class=gdlr-core-pbf-column-link href=oil-gas/index.html target=_self></a>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Homepage Column Service 2" id=gdlr-core-column-4>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 26px 40px 0px;padding: 55px 30px 50px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/hp-icon-service-4.png alt width=47 height=44 title=hp-icon-service-4></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 20px ;font-weight: 700 ;text-transform: capitalize ;">Retail & Fashion</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;">
-                                                        <p>Speed, flexibility, and efficiency are the key in the retail industry. That�s why numerous retailers across the globe.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Homepage Column Service 2">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: 0px 15px 30px 0px;padding: 10px 0;">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="industry-card">
+                                            <span class="industry-icon icon-fashion"><i class="fa fa-tags" aria-hidden="true"></i></span>
+                                            <h3 class="industry-title">Fashion Logistics Solutions</h3>
+                                            <p class="industry-text">Fast, flexible, and seasonal-ready fulfillment keeps retail and fashion brands ahead of launch calendars and consumer expectations.</p>
                                         </div>
                                     </div>
-                                    <a class=gdlr-core-pbf-column-link href=retail-fashion/index.html target=_self></a>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-5>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 13px 40px 13px;padding: 55px 30px 55px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-top: 10px;margin-bottom: 25px;"><img src=upload/hp-icon-service-5.png alt width=38 height=40 title=hp-icon-service-5></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 20px ;font-weight: 700 ;text-transform: capitalize ;">Healthcare</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="text-transform: none ;">
-                                                        <p>The reliable delivery of healthcare products can be lifesaving. Which is why we develop supply chain solutions.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: 0px 15px 30px 15px;padding: 10px 0;">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="industry-card">
+                                            <span class="industry-icon icon-medical"><i class="fa fa-medkit" aria-hidden="true"></i></span>
+                                            <h3 class="industry-title">Medical & Pharmaceutical Supply Chain</h3>
+                                            <p class="industry-text">Reliable healthcare logistics with temperature-controlled options support lifesaving therapies, devices, and emergency response deliveries.</p>
                                         </div>
                                     </div>
-                                    <a class=gdlr-core-pbf-column-link href=healthcare/index.html target=_self></a>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-6>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 0px 60px 26px;padding: 55px 30px 50px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-top: 10px;margin-bottom: 23px;"><img src=upload/hp-icon-service-6.png alt width=23 height=41 title=hp-icon-service-6></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 20px ;font-weight: 700 ;text-transform: capitalize ;">Consumer</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;">
-                                                        <p>Logisco has an in-depth understanding of the consumer industry and offers innovative.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: 0px 0px 30px 15px;padding: 10px 0;">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="industry-card">
+                                            <span class="industry-icon icon-consumer"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+                                            <h3 class="industry-title">Consumer Goods Logistics Solutions</h3>
+                                            <p class="industry-text">Prime Gate International delivers innovative, insight-driven logistics programs tailored to the fast-moving consumer goods landscape.</p>
                                         </div>
                                     </div>
-                                    <a class=gdlr-core-pbf-column-link href=consumer/index.html target=_self></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 180px 0px 120px 0px;">
                     <div class=gdlr-core-pbf-background-wrap>
                         <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bg-404.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
@@ -349,7 +424,7 @@
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 55px ;" id=gdlr-core-title-item-1>
                                     <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Our Mission<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Customer-Centric mission<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                 </div>
                             </div>
                             <!-- Triangle Feature Cards -->

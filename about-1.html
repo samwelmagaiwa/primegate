@@ -263,6 +263,28 @@
     position: relative;
     z-index: 2;
 }
+
+.top-bar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.top-bar-logo {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .top-bar-brand {
+        gap: 10px;
+    }
+
+    .top-bar-logo {
+        height: 42px;
+    }
+}
 </style>
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
@@ -328,9 +350,12 @@
                 <div class="logisco-top-bar-container logisco-top-bar-full ">
                     <div class="logisco-top-bar-container-inner clearfix">
                         <div class="logisco-top-bar-left logisco-item-pdlr">
-                            <div class="contact-hours">
+                            <div class="top-bar-brand">
+        <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+        <div class="contact-hours">
                                 <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
                             </div>
+    </div>
                         </div>
                         <div class="logisco-top-bar-right logisco-item-pdlr">
                             <div class="contact-numbers">
