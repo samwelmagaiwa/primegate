@@ -34,6 +34,72 @@
 .my-float{
 	margin-top:16px;
 }
+
+.typing-caret {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    margin-left: 6px;
+    background-color: #ffffff;
+    animation: typingCaretBlink 0.9s steps(2, start) infinite;
+}
+
+@keyframes typingCaretBlink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.typing-active ~ .typing-caret {
+    opacity: 1;
+}
+
+.typing-complete ~ .typing-caret {
+    opacity: 0;
+}
+
+.hero-highlight-container {
+    background: rgba(7, 47, 132, 0.92);
+    padding: 24px 28px;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    max-width: 440px;
+}
+
+.hero-highlight-container .gdlr-core-title-item-title {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #ffffff;
+}
+
+.hero-highlight-container .gdlr-core-title-item-caption {
+    color: #d8e4ff !important;
+}
+
+.top-bar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.top-bar-logo {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
+}
+
+@media (max-width: 768px) {
+    .top-bar-brand {
+        gap: 10px;
+    }
+
+    .top-bar-logo {
+        height: 40px;
+    }
+}
 </style>
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
@@ -45,7 +111,7 @@
         <div class="logisco-mobile-header-container logisco-container clearfix">
             <div class="logisco-logo  logisco-item-pdlr">
                 <div class=logisco-logo-inner>
-                    <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                    <a class href=index-2.html><img src=upload/logo-removebg-preview.png alt width=320 height=84 title=logo-big></a>
                 </div>
             </div>
             <div class=logisco-mobile-menu-right>
@@ -99,8 +165,11 @@
                 <div class="logisco-top-bar-container logisco-top-bar-full ">
                     <div class="logisco-top-bar-container-inner clearfix">
                         <div class="logisco-top-bar-left logisco-item-pdlr">
-                            <div class="contact-hours">
-                                <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
+                            <div class="top-bar-brand">
+                                <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+                                <div class="contact-hours">
+                                    <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
+                                </div>
                             </div>
                         </div>
                         <div class="logisco-top-bar-right logisco-item-pdlr">
@@ -141,7 +210,7 @@
                     <div class="logisco-header-container-inner clearfix">
                         <div class="logisco-logo  logisco-item-pdlr">
                             <div class=logisco-logo-inner>
-                                <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                                <a class href=index-2.html><img src="upload/logo-removebg-preview.png" alt="Primegate Logo" width="360" height="110" title="Primegate"></a>
                             </div>
                         </div>
                         <div class="logisco-navigation logisco-item-pdlr clearfix ">
@@ -172,19 +241,28 @@
 
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
             <div class=gdlr-core-page-builder-body>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 260px 0px 110px 0px;" id=gdlr-core-wrapper-1>
+                <div class="gdlr-core-pbf-wrapper " style="padding: 60px 0px 40px 0px;" id=gdlr-core-wrapper-1>
                     <div class=gdlr-core-pbf-background-wrap>
                         <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/1800x140.png) ;background-size: cover ;background-position: center ;" data-parallax-speed=0></div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first" id=gdlr-core-column-1>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 190px 0px 30px 80px;">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 30px 0px 30px 40px;">
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 35px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 40px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;"><span class="gdlr-core-js gdlr-core-type-animation-item-animated" data-animation-text='["We Provide One Stop Logistic & Custom Clearance Services ."]'></span><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 20px ;font-style: normal ;color: #c5c5c5 ;margin-top: 20px ;">Guaranteed by professionals with more than 17+ years of experience</span></div>
+                                        <div class="hero-highlight-container">
+                                            <div class=gdlr-core-pbf-element>
+                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 35px ;">
+                                                    <div class="gdlr-core-title-item-title-wrap ">
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title ">
+                                                            <span id="hero-typed-text" data-text="We Provide One Stop Logistic &amp; Custom Clearance Services .">We Provide One Stop Logistic &amp; Custom Clearance Services .</span>
+                                                            <span class="typing-caret" aria-hidden="true"></span>
+                                                            <span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                        </h3>
+                                                    </div>
+                                                    <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 20px ;font-style: normal ;color: #c5c5c5 ;margin-top: 20px ;display: block;">Guaranteed by professionals with more than 17+ years of experience</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border" href="about-1.html" style="font-weight: 800 ;letter-spacing: 1px ;padding: 15px 34px 18px 34px;border-radius: 27px;-moz-border-radius: 27px;-webkit-border-radius: 27px;background: #e52021 ;"><span class=gdlr-core-content >Learn More</span></a></div>
@@ -193,7 +271,7 @@
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-column gdlr-core-column-30" data-skin="Homepage Enquiry Form" id=gdlr-core-column-2>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 20px 35px 125px;padding: 45px 25px 5px 25px;">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 20px 35px 60px;padding: 45px 25px 5px 25px;">
                                     <div class=gdlr-core-pbf-background-wrap style="background-color: #212121 ;opacity: 0.77 ;border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webkit-border-radius: 3px 3px 3px 3px;"></div>
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
@@ -1730,6 +1808,7 @@
 	    };
 	</script>
 	<script src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+	<script src='js/heroTypewriter.js'></script>
 	<script src='js/jquery/jquery.blockUI.min.js'></script>
 	<script src='js/jquery/ui/effect.min.js'></script>
 	<script src='js/jquery.mmenu.js'></script>
