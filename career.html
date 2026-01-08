@@ -47,6 +47,301 @@
     object-fit: contain;
 }
 
+.career-section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.career-section-heading span {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #1A6A9F;
+    margin-bottom: 10px;
+}
+
+.career-section-heading h2 {
+    font-size: 34px;
+    color: #143369;
+    margin-bottom: 14px;
+}
+
+.career-section-heading p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #5c6679;
+    font-size: 17px;
+}
+
+.career-success-grid,
+.career-benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.career-success-card,
+.career-benefit-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(20, 51, 105, 0.08);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.career-success-media {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.career-success-body {
+    padding: 26px;
+}
+
+.career-success-role {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1A6A9F;
+    margin-bottom: 8px;
+}
+
+.career-success-quote {
+    font-size: 18px;
+    color: #1b2234;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.career-success-meta {
+    font-size: 15px;
+    color: #7c889e;
+}
+
+.career-journey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.career-journey-step {
+    background: #0f1f3b;
+    color: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.career-journey-step:before {
+    content: attr(data-step);
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 54px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.07);
+}
+
+.career-journey-step h4 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.career-benefit-card {
+    padding: 26px;
+}
+
+.career-benefit-card h4 {
+    font-size: 20px;
+    color: #143369;
+    margin-bottom: 10px;
+}
+
+.career-benefit-card p {
+    color: #586074;
+    font-size: 16px;
+}
+
+.career-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-bottom: 12px;
+}
+
+.career-card-tags span {
+    background: rgba(26, 106, 159, 0.1);
+    color: #1A6A9F;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.career-card-summary {
+    font-size: 15px;
+    color: #4a4f5f;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.career-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.career-cta-banner {
+    background: linear-gradient(120deg, #0a234d, #1A6A9F);
+    color: #fff;
+    border-radius: 28px;
+    padding: 48px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.career-cta-banner h3 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.career-cta-banner p {
+    max-width: 620px;
+    font-size: 17px;
+}
+
+.career-cta-banner .career-btn {
+    background: #fff;
+    color: #0a234d;
+    padding: 14px 28px;
+    border-radius: 999px;
+    text-transform: none;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-cta-banner .career-btn:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(26px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 20px 45px rgba(20, 51, 105, 0.16);
+    }
+    50% {
+        box-shadow: 0 25px 60px rgba(26, 106, 159, 0.28);
+    }
+    100% {
+        box-shadow: 0 20px 45px rgba(20, 51, 105, 0.16);
+    }
+}
+
+.career-success-card,
+.career-benefit-card,
+.career-journey-step,
+.career-job-card,
+.career-cta-banner {
+    opacity: 0;
+    transform: translateY(26px);
+    animation: fadeSlideUp .9s ease forwards;
+}
+
+.career-success-card,
+.career-benefit-card,
+.career-journey-step,
+.career-job-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.career-success-card:hover,
+.career-benefit-card:hover,
+.career-job-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(10, 22, 66, 0.18);
+}
+
+.career-journey-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(9, 17, 38, 0.55);
+}
+
+.career-journey-step:hover:before {
+    color: rgba(255, 255, 255, 0.18);
+}
+
+.career-success-card:nth-child(1) { animation-delay: .1s; }
+.career-success-card:nth-child(2) { animation-delay: .2s; }
+.career-success-card:nth-child(3) { animation-delay: .3s; }
+.career-success-card:nth-child(4) { animation-delay: .4s; }
+
+.career-benefit-card:nth-child(1) { animation-delay: .1s; }
+.career-benefit-card:nth-child(2) { animation-delay: .2s; }
+.career-benefit-card:nth-child(3) { animation-delay: .3s; }
+.career-benefit-card:nth-child(4) { animation-delay: .4s; }
+
+.career-journey-step:nth-child(1) { animation-delay: .1s; }
+.career-journey-step:nth-child(2) { animation-delay: .2s; }
+.career-journey-step:nth-child(3) { animation-delay: .3s; }
+.career-journey-step:nth-child(4) { animation-delay: .4s; }
+
+.career-job-card { animation-delay: .15s; }
+.career-job-card:nth-of-type(2) { animation-delay: .25s; }
+.career-job-card:nth-of-type(3) { animation-delay: .35s; }
+.career-job-card:nth-of-type(4) { animation-delay: .45s; }
+.career-job-card:nth-of-type(5) { animation-delay: .55s; }
+.career-job-card:nth-of-type(6) { animation-delay: .65s; }
+
+.career-cta-banner {
+    animation-delay: .2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.career-cta-banner:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.12), transparent);
+    mix-blend-mode: screen;
+    animation: glowPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.career-cta-banner > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .career-cta-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .top-bar-brand {
         gap: 10px;
@@ -54,6 +349,22 @@
 
     .top-bar-logo {
         height: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .career-success-card,
+    .career-benefit-card,
+    .career-journey-step,
+    .career-job-card,
+    .career-cta-banner {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .career-cta-banner:before {
+        animation: none;
     }
 }
 </style>
@@ -122,24 +433,24 @@
                     <div class="logisco-top-bar-container-inner clearfix">
                         <div class="logisco-top-bar-left logisco-item-pdlr">
                             <div class="top-bar-brand">
-        <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
-        <div class="contact-hours">
-                                <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
+                                <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+                                <div class="contact-hours">
+                                    <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
+                                </div>
                             </div>
-    </div>
                         </div>
                         <div class="logisco-top-bar-right logisco-item-pdlr">
                             <div class="contact-numbers">
-                                <i class="fa fa-phone"></i> +255 617 919 104 | +255 743 519 104
+                                <i class="fa fa-phone"></i> +255 718 707 449 | +255 755 666 745
                             </div>
                         </div>
                         <ul id=menu-main-navigation-1 class=sf-menu>
                             <li class="menu-item menu-item-home current-menu-item logisco-normal-menu"><a href=index-2.html>Home</a></li>
                             <li class="menu-item menu-item-has-children logisco-normal-menu"><a href=# class=sf-with-ul-pre>Company</a>
                                 <ul class=sub-menu>
-                                    <li class="menu-item" data-size=60><a href=about-1.html>About Us</a></li>                                            
+                                    <li class="menu-item" data-size=60><a href=about-1.html>About Us</a></li>
                                     <li class="menu-item" data-size=60><a href=contact.html>Contact</a></li>
-                                    <li class="menu-item" data-size=60><a href="#">Our Team</a></li>
+                                    <li class="menu-item" data-size=60><a href="our-team.html">Our Team</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children logisco-normal-menu"><a href=# class=sf-with-ul-pre>Our Services</a>
@@ -197,60 +508,85 @@
 
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
             <div class=gdlr-core-page-builder-body>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 30px 0px;">
+                <div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 60px 0px;">
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bg-career.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.></div>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/cargo-ship-sailing-through-ocean.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.15></div>
+                        <div class="gdlr-core-pbf-background-mask" style="background: rgba(4,13,30,0.63);"></div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 20px 0 0 0;">
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 28px ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Career Opportunities<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <span class=gdlr-core-title-item-caption style="color:#fff;font-size:14px;letter-spacing:3px;text-transform:uppercase;">Careers at Primegate</span>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 42px ;letter-spacing: -1px ;text-transform: none ;color: #ffffff ;">Where African Trade<br/>Meets Bold Talent<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 15px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #393939 ;">
-                                                    <p>At Logisco, we recruit, train, and retain the very best logistics and technical experts the world over. We love to promote from within more than 30 percent of our staff of 26,000 employees has been at Logisco 20 years or more. Our high retention rate is influenced by a unique compensation program for positions that are more than just jobs they�re chances to grow, thrive,</p>
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 25px ;">
+                                                <div class=gdlr-core-text-box-item-content style="font-size: 19px ;font-weight: 400 ;text-transform: none ;color: #d8dee8 ;line-height:1.7;">
+                                                    <p>At Primegate International Ltd, we grow careers around the rhythm of African trade. From customs brokerage desks in Dar es Salaam to advisory squads across the region, we empower specialists to solve complex cargo challenges with confidence.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border" href=# style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;color: #ffffff ;padding: 11px 29px 16px 29px;text-transform: none ;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;background: #1A6A9F ;"><span class=gdlr-core-content >Success Stories</span></a></div>
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;">
+                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 500 ;text-transform: none ;color: #9fc2dc ;">
+                                                    <p>Continuous training • Transparent growth paths • Freedom to design smarter supply chains</p>
+                                                </div>
+                                            </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-column gdlr-core-column-30">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 15px 0px 0px 0px;">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="background: rgba(12,23,49,0.72);padding: 32px 32px 32px 32px;border-radius: 20px;backdrop-filter: blur(6px);">
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 19px ;font-weight: 400 ;text-transform: none ;color: #969696 ;">
-                                                    <p>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas.</p>
+                                                <div class=gdlr-core-text-box-item-content style="font-size: 18px ;font-weight: 500 ;text-transform: none ;color: #a7bddc ;">
+                                                    <p>Success Stories</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
-                                                <ul>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 18px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;font-weight: 400 ;text-transform: none ;">Nearshoring is fast becoming a Retail trend, with many stakeholders.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 18px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;font-weight: 400 ;text-transform: none ;">Transporting goods from a Distribution Center (DC) to the final point.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 18px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;font-weight: 400 ;text-transform: none ;">Logisco orchestrates the flow of products, partly or completely.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 18px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;font-weight: 400 ;text-transform: none ;">Solutions that provide short response times to urgent requests.</span></div>
-                                                    </li>
-                                                </ul>
+                                            <div class="career-success-grid">
+                                                <div class="career-success-card">
+                                                    <div class="career-success-media" style="background-image:url('upload/shipping-container-being-loaded-onto-truck-port.jpg');"></div>
+                                                    <div class="career-success-body">
+                                                        <div class="career-success-role">Customs Expertise</div>
+                                                        <div class="career-success-quote">“Mastering tariff codes and exemptions keeps customers compliant and agile.”</div>
+                                                        <div class="career-success-meta">Up-to-the-minute knowledge of TRA regulations.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="career-success-card">
+                                                    <div class="career-success-media" style="background-image:url('upload/container_2.jpg');"></div>
+                                                    <div class="career-success-body">
+                                                        <div class="career-success-role">Operations Leadership</div>
+                                                        <div class="career-success-quote">“Transit bonds, warehousing slots, last-mile fleets—coordinated in one view.”</div>
+                                                        <div class="career-success-meta">Hands-on control tower experience.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="career-success-card">
+                                                    <div class="career-success-media" style="background-image:url('upload/mita-64-VJX7YO8nXtg-unsplash.jpg');"></div>
+                                                    <div class="career-success-body">
+                                                        <div class="career-success-role">Client Success</div>
+                                                        <div class="career-success-quote">“We translate complex supply chain patterns into proactive updates clients trust.”</div>
+                                                        <div class="career-success-meta">Data storytelling &amp; empathy across East and Central Africa.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="career-success-card">
+                                                    <div class="career-success-media" style="background-image:url('upload/cs.jpg');background-color:#0f1f3b;"></div>
+                                                    <div class="career-success-body">
+                                                        <div class="career-success-role">Innovation Squad</div>
+                                                        <div class="career-success-quote">“We prototype digital cargo release, dashboards, and bonded warehousing tech.”</div>
+                                                        <div class="career-success-meta">Experimentation that keeps cargo flowing.</div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -259,7 +595,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 140px 0px 90px 0px;" data-skin="career svc" id=gdlr-core-wrapper-1>
+                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 140px 0px 90px 0px;" data-skin="career svc" id=gdlr-core-wrapper-1>
                     <div class=gdlr-core-pbf-background-wrap>
                         <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bg-career-2.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.1></div>
                     </div>
@@ -358,214 +694,68 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 90px 0px 35px 0px;" id=gdlr-core-wrapper-2>
-                    <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
+                </div> -->
+                <div class="gdlr-core-pbf-wrapper " style="padding: 90px 0px 60px 0px;">
+                    <div class=gdlr-core-pbf-background-wrap style="background-color: #f9fbff ;"></div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" style="max-width: 780px ;">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 14px ;">
-                                    <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Open Jobs<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align" style="margin-bottom: 25px ;">
-                                    <div class=gdlr-core-divider-container style="max-width: 45px ;">
-                                        <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #1A6A9F ;border-bottom-width: 3px ;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align gdlr-core-no-p-space" style="padding-bottom: 0px ;">
-                                    <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #828282 ;">
-                                        <p>Logisco sparks innovation that moves our customers and industry forward � by actively engaging in innovative networks such as the International Data Space Association, IDG</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 30px 0px 60px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" style="max-width: 1280px ;">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Homepage Column Service 2" id=gdlr-core-column-1>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 26px 40px 0px;padding: 52px 30px 40px 29px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); background-color: #f7f7f7 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 20px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Project Manager Continuous  Improvement<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-40 gdlr-core-column-first">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                        <div class="gdlr-core-pbf-element career-section-heading">
+                                            <span>Success Stories</span>
+                                            <h2>Every Journey Builds Supply Chain Confidence</h2>
+                                            <p>From port-side operations to control towers and client advisory desks, our teams connect people, timelines, and commitments.</p>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 3px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Location</strong> : London</p>
+                                            <div class="career-journey-grid">
+                                                <div class="career-journey-step" data-step="01">
+                                                    <h4>Customs Mastery</h4>
+                                                    <p>Professionals who decode tariff codes, exemptions, and TRA regulations.</p>
+                                                </div>
+                                                <div class="career-journey-step" data-step="02">
+                                                    <h4>Operations Pulse</h4>
+                                                    <p>Leads orchestrating transit bonds, warehousing slots, and last-mile moves.</p>
+                                                </div>
+                                                <div class="career-journey-step" data-step="03">
+                                                    <h4>Client Empathy</h4>
+                                                    <p>Teams that convert complex data into proactive customer updates.</p>
+                                                </div>
+                                                <div class="career-journey-step" data-step="04">
+                                                    <h4>Innovation Squads</h4>
+                                                    <p>Thinkers piloting digital cargo release, dashboards, and bonded tech.</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 20px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Department</strong> : Customer Service</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# id=gdlr-core-button-id-17491><span class=gdlr-core-content >Job Detail</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"  ></i></a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-2>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 13px 40px 13px;padding: 52px 30px 40px 29px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); background-color: #f7f7f7 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 20px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Senior Ocean Customer Service  Representative<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                        <div class="gdlr-core-pbf-element career-section-heading" style="text-align:left;">
+                                            <span>People Experience</span>
+                                            <h2>Why Talent Chooses Prime gate international</h2>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 3px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Location</strong> : London</p>
+                                            <div class="career-benefit-grid">
+                                                <div class="career-benefit-card">
+                                                    <h4>Learning Culture</h4>
+                                                    <p>Continuous upskilling on customs policy, digital tools, and leadership.</p>
+                                                </div>
+                                                <div class="career-benefit-card">
+                                                    <h4>Transparent Growth</h4>
+                                                    <p>Clear pathways from field expertise to regional leadership.</p>
+                                                </div>
+                                                <div class="career-benefit-card">
+                                                    <h4>Design Freedom</h4>
+                                                    <p>Autonomy to build smarter supply chains for complex cargo.</p>
+                                                </div>
+                                                <div class="career-benefit-card">
+                                                    <h4>Human-Centered Tech</h4>
+                                                    <p>Experiment with dashboards, cargo visibility, and bonded warehousing tech.</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 20px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Department</strong> : Customer Service</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# id=gdlr-core-button-id-59527><span class=gdlr-core-content >Job Detail</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"  ></i></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-3>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 0px 40px 26px;padding: 52px 30px 40px 29px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); background-color: #f7f7f7 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 20px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Professional driver (m / w / d)  Local transport<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 3px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Location</strong> : London</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 20px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Department</strong> : Customer Service</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# id=gdlr-core-button-id-81413><span class=gdlr-core-content >Job Detail</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"  ></i></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Homepage Column Service 2" id=gdlr-core-column-4>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 26px 40px 0px;padding: 52px 30px 40px 29px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); background-color: #f7f7f7 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 20px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Project Manager Continuous  Improvement<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 3px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Location</strong> : London</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 20px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Department</strong> : Customer Service</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# id=gdlr-core-button-id-26797><span class=gdlr-core-content >Job Detail</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"  ></i></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-5>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 13px 40px 13px;padding: 52px 30px 40px 29px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); background-color: #f7f7f7 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 20px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Senior Ocean Customer Service  Representative<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 3px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Location</strong> : London</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 20px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Department</strong> : Customer Service</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# id=gdlr-core-button-id-97687><span class=gdlr-core-content >Job Detail</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"  ></i></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-6>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 0px 40px 26px;padding: 52px 30px 40px 29px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0,0.08); background-color: #f7f7f7 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 20px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Professional driver (m / w / d)  Local transport<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 3px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Location</strong> : London</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 20px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #585858 ;">
-                                                    <p><strong>Department</strong> : Customer Service</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# id=gdlr-core-button-id-70746><span class=gdlr-core-content >Job Detail</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"  ></i></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -573,38 +763,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 180px 0px 150px 0px;" id=gdlr-core-wrapper-3>
-                    <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/about-1-video-bg.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" style="max-width: 850px ;">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align">
-                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                                        <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=wtPB-VNNK2Q"><img src=upload/play1-icon.png alt width=82 height=82 title=play1-icon></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                    <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 34px ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">See Video Introduction <span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 21px ;font-style: normal ;color: #e52021 ;margin-top: 23px ;">Take a tour and see how the greatest logistic company in USA works</span></div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;">
-                                    <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #becae5 ;">
-                                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-                <footer>
+                
+                    
+                
+        <footer>
             <div class="logisco-footer-wrapper ">
                 <div class="logisco-footer-container logisco-container clearfix">
                     <div class="logisco-footer-column logisco-item-pdlr logisco-column-15">
@@ -623,8 +785,8 @@
                                 <p>Box 705
                                     <br/> Mezzanine Floor, Victoria Plazza, Samora Road
                                     <br/> Dar es Salaam, Tanzania</p>
-                                <p><span style="""color: #fff;""">+255 718 707 449 | +255 755 666 745</span>
-                                    <br/> <span style="""color: #e52021;""">info@primegateinternational.co.tz</span></p>
+                                <p><span style="color: #fff;">+255 718 707 449 | +255 755 666 745</span>
+                                    <br/> <span style="color: #e52021;">info@primegateinternational.co.tz</span></p>
                             </div>
                         </div>
                     </div>
@@ -640,7 +802,7 @@
                                     <li class="menu-item"><a href="#">Investor Relation</a></li>
                                     <li class="menu-item"><a href="#">Our Clients</a></li>
                                     <li class="menu-item"><a href="get-a-quote.html">Get A Quote</a></li>
-                                    <li class="menu-item"><a href="#">FAQ</a></li>
+                                    
                                     <li class="menu-item"><a href="contact.html">Contact</a></li>
                                     <li class="menu-item"><a href="#">Media Relation</a></li>
                                 </ul>
@@ -651,11 +813,10 @@
             </div>
             <div class="logisco-copyright-wrapper">
                 <div class="logisco-copyright-container logisco-container clearfix">
-                    <div class="logisco-copyright-left logisco-item-pdlr">Copyright 2025 Primegate, All Right Reserved</div>
-                    <div class="logisco-copyright-right logisco-item-pdlr"><a href="#" style="margin-left:21px;">Home</a><a href="#" style="margin-left:21px;">About       </a><a href="#" style="margin-left:21px;">Updates</a><a href="#" style="margin-left:21px;">Services</a><a href="#" style="margin-left:21px;">Contact</a></div>
-                </div>
+                    <div class="logisco-copyright-left logisco-item-pdlr">Copyright 2025 Primegate, All Right Reserved</div></div>
             </div>
         </footer>
+
     </div>
 </div>
 
@@ -682,5 +843,6 @@
     <script type="text/javascript" src="plugins/quform/js/scripts.js"></script> 
 </body>
 </html>
+
 
 

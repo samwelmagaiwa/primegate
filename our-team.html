@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang=en-US class=no-js>
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Our Team - Primegate International</title>
+
+    <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Assistant%3A200%2C300%2Cregular%2C600%2C700%2C800%7CKarla%3Aregular%2Citalic%2C700%2C700italic%7CPT+Sans%3Aregular%2Citalic%2C700%2C700italic&amp;subset=latin%2Chebrew%2Clatin-ext%2Ccyrillic-ext%2Ccyrillic&amp;ver=5.0.3' type=text/css media=all>
+    <link rel=stylesheet href='plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
+    <link rel=stylesheet href='plugins/goodlayers-core/include/css/page-builder.css' type=text/css media=all>
+    <link rel=stylesheet href='plugins/revslider/public/assets/css/settings.css' type=text/css media=all>
+    <link rel=stylesheet href='plugins/quform/css/base.css' type=text/css media=all>
+    <link rel=stylesheet href='css/style-core.css' type=text/css media=all>
+    <link rel=stylesheet href='css/logisco-style-custom.css' type=text/css media=all>
+    <link rel=stylesheet href='css/modern-primegate.css' type=text/css media=all>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <style>
+        :root {
+            --dark-blue: #0a1c3f;
+            --brand-blue: #1A6A9F;
+            --soft-gray: #f7f9fc;
+            --card-shadow: 0 25px 55px rgba(10, 22, 66, 0.12);
+            --radius-xl: 24px;
+        }
+
+        body {
+            font-family: 'Karla', 'Assistant', sans-serif;
+            color: #1b1f2b;
+        }
+
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+
+        .top-bar-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .top-bar-logo {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .team-hero {
+            position: relative;
+            padding: 160px 0 140px;
+            background: linear-gradient(135deg, rgba(10, 28, 63, 0.92), rgba(26, 106, 159, 0.9)),
+                        url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1800&q=80') center/cover;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .team-hero .gdlr-core-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-hero__headline {
+            font-size: clamp(2.6rem, 4vw, 3.8rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .team-hero__subtext {
+            font-size: 1.2rem;
+            max-width: 680px;
+            color: #d5deef;
+            line-height: 1.7;
+        }
+
+        .team-hero__cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .btn-primary,
+        .btn-outline {
+            border-radius: 999px;
+            padding: 14px 32px;
+            font-weight: 700;
+            text-transform: none;
+            letter-spacing: .5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform .3s ease, box-shadow .3s ease, color .3s ease, background .3s ease;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #0a1c3f;
+            box-shadow: 0 18px 40px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .team-hero__stats {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 18px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 20px 24px;
+            backdrop-filter: blur(8px);
+        }
+
+        .stat-card__number {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-heading span {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--brand-blue);
+            font-size: 0.85rem;
+        }
+
+        .section-heading h3 {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            color: var(--dark-blue);
+            margin: 16px 0 12px;
+        }
+
+        .section-heading p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: #5c647a;
+            line-height: 1.7;
+        }
+
+        .team-section {
+            padding: 100px 0;
+        }
+
+        .leadership-grid,
+        .core-grid,
+        .values-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .leadership-slider {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 18px;
+        }
+
+        .leadership-track {
+            display: flex;
+            gap: 16px;
+            transition: transform .45s ease;
+        }
+
+        .leadership-grid {
+            display: contents;
+        }
+
+        .values-grid {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .core-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .value-card {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid rgba(10, 28, 63, 0.08);
+            box-shadow: 0 12px 32px rgba(6, 12, 30, 0.08);
+            padding: 24px;
+            color: #10131f;
+            position: relative;
+        }
+
+        .value-card i {
+            font-size: 1.6rem;
+            color: var(--brand-blue);
+            margin-bottom: 10px;
+        }
+
+        .value-wave {
+            animation: waveFloat 4s ease-in-out infinite;
+        }
+
+        .wave-grid .value-wave:nth-child(2) { animation-delay: .3s; }
+        .wave-grid .value-wave:nth-child(3) { animation-delay: .6s; }
+        .wave-grid .value-wave:nth-child(4) { animation-delay: .9s; }
+
+        @keyframes waveFloat {
+            0% { transform: translateY(0); box-shadow: 0 12px 32px rgba(6,12,30,0.08); }
+            50% { transform: translateY(-8px); box-shadow: 0 20px 35px rgba(6,12,30,0.12); }
+            100% { transform: translateY(0); box-shadow: 0 12px 32px rgba(6,12,30,0.08); }
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .35s ease, box-shadow .35s ease;
+        }
+
+        .leader-card {
+            width: min(320px, 90vw);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 22px;
+            border-radius: 18px;
+            background: #ffffff;
+            color: #0a0d1d;
+            box-shadow: 0 12px 30px rgba(6, 12, 30, 0.15);
+            border: 1px solid rgba(10, 28, 63, 0.12);
+        }
+
+        .leader-card__portrait {
+            flex: 0 0 70px;
+            height: 70px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0;
+            position: relative;
+            background: rgba(26, 106, 159, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .leader-card__icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a1c3f;
+            font-size: 1.5rem;
+            box-shadow: inset 0 0 0 1px rgba(20, 51, 105, 0.15);
+        }
+
+        .leader-african-pattern {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12) 6px, transparent 6px, transparent 12px);
+            mix-blend-mode: soft-light;
+        }
+
+        .leader-card__content {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .leader-card__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(26, 106, 159, 0.18);
+            color: #0a0d1d;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .leader-card__title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .leader-card__role {
+            font-size: 0.95rem;
+            color: #4a4f63;
+            margin-bottom: 12px;
+        }
+
+        .leader-card__bio {
+            color: #2e3242;
+            line-height: 1.55;
+            margin-bottom: 14px;
+        }
+
+        .leader-card__extra {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: #374155;
+        }
+
+        .leader-card__extra i {
+            color: #ffd166;
+        }
+
+        .leader-slider-controls {
+            margin-top: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .leader-slider-button {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(10, 28, 63, 0.1);
+            color: var(--dark-blue);
+            cursor: pointer;
+            transition: background .25s ease, color .25s ease;
+        }
+
+        .leader-slider-button:focus-visible {
+            outline: 2px solid var(--brand-blue);
+            outline-offset: 3px;
+        }
+
+        .leader-slider-button:hover {
+            background: rgba(26, 106, 159, 0.2);
+        }
+
+        .leader-slider-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .leader-slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(10, 28, 63, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .leader-slider-dot.is-active {
+            background: var(--brand-blue);
+        }
+
+        @media (max-width: 640px) {
+            .leader-card {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .leader-card__portrait {
+                width: 100%;
+                height: 220px;
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 75px rgba(10, 22, 66, 0.18);
+        }
+
+        .card__avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            object-fit: cover;
+            margin-bottom: 18px;
+        }
+
+        .card__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+        }
+
+        .card__meta {
+            font-size: 0.95rem;
+            color: #7a8094;
+        }
+
+        .card__bio {
+            margin-top: 12px;
+            color: #50566b;
+            line-height: 1.6;
+        }
+
+        .card__actions a {
+            color: var(--brand-blue);
+            font-size: 1.2rem;
+        }
+
+        .dept-tag {
+            display: inline-flex;
+            padding: 6px 12px;
+            font-size: 0.78rem;
+            background: rgba(26, 106, 159, 0.08);
+            color: var(--brand-blue);
+            border-radius: 999px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .values-grid .card {
+            background: var(--soft-gray);
+        }
+
+        .values-grid i {
+            font-size: 1.8rem;
+            color: var(--brand-blue);
+            margin-bottom: 12px;
+        }
+
+        .culture-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--card-shadow);
+            background: #000;
+        }
+
+        .culture-track {
+            display: flex;
+            transition: transform .6s ease;
+        }
+
+        .culture-card {
+            min-width: 320px;
+            flex: 0 0 320px;
+            height: 280px;
+            position: relative;
+            color: #fff;
+        }
+
+        .culture-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+        }
+
+        .culture-card__caption {
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(180deg, rgba(4, 8, 24, 0) 30%, rgba(4, 8, 24, 0.85));
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 16px;
+        }
+
+        .slider-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--dark-blue);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform .25s ease;
+        }
+
+        .slider-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .cta-banner {
+            background: linear-gradient(135deg, #0a1c3f, #1A6A9F);
+            border-radius: 32px;
+            padding: 60px 70px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .cta-banner h4 {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+
+        .cta-banner p {
+            margin: 0;
+            color: #d9e4ff;
+        }
+
+        .cta-banner .btn-primary {
+            background: #fff;
+            color: var(--dark-blue);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        .fade-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 992px) {
+            .team-section {
+                padding: 70px 0;
+            }
+
+            .cta-banner {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-hero {
+                padding: 120px 0 100px;
+            }
+
+            .team-hero__cta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .top-bar-logo {
+                height: 42px;
+            }
+
+            .culture-card {
+                min-width: 260px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .value-wave {
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
+<a href="https://api.whatsapp.com/send?phone=255743519104&text=Hello Primegate International" class="float" target="_blank"><i class="fa fa-whatsapp my-float"></i></a>
+<div class=logisco-mobile-header-wrap>
+    <div class="logisco-mobile-header logisco-header-background logisco-style-slide logisco-sticky-mobile-navigation " id=logisco-mobile-header>
+        <div class="logisco-mobile-header-container logisco-container clearfix">
+            <div class="logisco-logo  logisco-item-pdlr">
+                <div class=logisco-logo-inner>
+                    <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                </div>
+            </div>
+            <div class=logisco-mobile-menu-right>
+                <div class=logisco-main-menu-search id=logisco-mobile-top-search><i class="fa fa-search"></i></div>
+                <div class=logisco-top-search-wrap>
+                    <div class=logisco-top-search-close></div>
+                    <div class=logisco-top-search-row>
+                        <div class=logisco-top-search-cell>
+                            <form role=search method=get class=search-form action=#>
+                                <input type=text class="search-field logisco-title-font" placeholder=Search... value name=s>
+                                <div class=logisco-top-search-submit><i class="fa fa-search"></i></div>
+                                <input type=submit class=search-submit value=Search>
+                                <div class=logisco-top-search-close><i class=icon_close></i></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class=logisco-mobile-menu><a class="logisco-mm-menu-button logisco-mobile-menu-button logisco-mobile-button-hamburger" href=#logisco-mobile-menu><span></span></a>
+                    <div class="logisco-mm-menu-wrap logisco-navigation-font" id=logisco-mobile-menu data-slide=right>
+                        <ul id=menu-main-navigation class=m-menu>
+                            <li class="menu-item menu-item-home current-menu-item"><a href=index-2.html>Home</a></li>
+                            <li class="menu-item menu-item-has-children"><a href=#>Company</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item"><a href="about-1.html">About us</a></li>
+                                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                    <li class="menu-item"><a href="our-team.html">Our Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href=#>Our Services</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item"><a href="breakbulk.html">Break Bulk Services</a></li>
+                                    <li class="menu-item"><a href="project-cargo.html">Project Cargo</a></li>
+                                    <li class="menu-item"><a href="transportation.html">Transportation</a></li>
+                                    <li class="menu-item"><a href="local-distribution.html">Local Distribution Service Products</a></li>
+                                    <li class="menu-item"><a href="Clearance.html">Custom & Clearance</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-home current-menu-item"><a href=index-2.html>Customer Portal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="logisco-body-outer-wrapper ">
+    <div class="logisco-body-wrapper clearfix  logisco-with-transparent-header logisco-with-frame">
+        <div class=logisco-header-background-transparent>
+            <div class=logisco-top-bar>
+                <div class=logisco-top-bar-background></div>
+                <div class="logisco-top-bar-container logisco-top-bar-full ">
+                    <div class="logisco-top-bar-container-inner clearfix">
+                        <div class="logisco-top-bar-left logisco-item-pdlr">
+                            <div class="top-bar-brand">
+                                <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+                                <div class="contact-hours"><i class="icon_clock"></i> Mon - sun / 08:00 - 17:30</div>
+                            </div>
+                        </div>
+                        <div class="logisco-top-bar-right logisco-item-pdlr">
+                            <div class="contact-numbers"><i class="fa fa-phone"></i>+255 718 707 449 | +255 755 666 745</div>
+                        </div>
+                        <ul id=menu-main-navigation-1 class=sf-menu>
+                            <li class="menu-item menu-item-home current-menu-item logisco-normal-menu"><a href=index-2.html>Home</a></li>
+                            <li class="menu-item menu-item-has-children logisco-normal-menu"><a href=# class=sf-with-ul-pre>Company</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item" data-size=60><a href=about-1.html>About Us</a></li>
+                                    <li class="menu-item" data-size=60><a href=contact.html>Contact</a></li>
+                                    <li class="menu-item" data-size=60><a href=our-team.html>Our Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children logisco-normal-menu"><a href=# class=sf-with-ul-pre>Our Services</a>
+                                <ul class=sub-menu>
+                                    <li class="menu-item" data-size=60><a href="breakbulk.html">Break Bulk Services</a></li>
+                                    <li class="menu-item" data-size=60><a href="project-cargo.html">Project Cargo</a></li>
+                                    <li class="menu-item" data-size=60><a href="transportation.html">Transportation</a></li>
+                                    <li class="menu-item" data-size=60><a href="local-distribution.html">Local Distribution Service</a></li>
+                                    <li class="menu-item" data-size=60><a href="Clearance.html">Customs Clearance</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href=#>Customer Portal</a></li>
+                        </ul>
+                    </div>
+                    <a class=logisco-top-bar-right-button href=get-a-quote.html target=_self>Get A Quote</a>
+                    <div class="logisco-top-bar-right logisco-item-pdlr">
+                        <div class=logisco-top-bar-right-social><a href=# target=_blank class=logisco-top-bar-social-icon title=facebook><i class="fa fa-facebook" ></i></a><a href=# target=_blank class=logisco-top-bar-social-icon title=linkedin><i class="fa fa-linkedin" ></i></a><a href=# target=_blank class=logisco-top-bar-social-icon title=twitter><i class="fa fa-twitter" ></i></a><a href=# target=_blank class=logisco-top-bar-social-icon title=instagram><i class="fa fa-instagram" ></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <header class="logisco-header-wrap logisco-header-style-plain  logisco-style-menu-right  logisco-style-slide" data-navigation-offset=75>
+                <div class=logisco-header-background></div>
+                <div class="logisco-header-container  logisco-header-full">
+                    <div class="logisco-header-container-inner clearfix">
+                        <div class="logisco-logo  logisco-item-pdlr">
+                            <div class=logisco-logo-inner>
+                                <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                            </div>
+                        </div>
+                        <div class="logisco-navigation logisco-item-pdlr clearfix ">
+                            <div class=logisco-main-menu id=logisco-main-menu>
+                                <div class=logisco-navigation-slide-bar id=logisco-navigation-slide-bar></div>
+                            </div>
+                            <div class="logisco-main-menu-right-wrap clearfix ">
+                                <div class=logisco-main-menu-search id=logisco-top-search><i class="fa fa-search"></i></div>
+                                <div class=logisco-top-search-wrap>
+                                    <div class=logisco-top-search-close></div>
+                                    <div class=logisco-top-search-row>
+                                        <div class=logisco-top-search-cell>
+                                            <form role=search method=get class=search-form action=#>
+                                                <input type=text class="search-field logisco-title-font" placeholder=Search... value name=s>
+                                                <div class=logisco-top-search-submit><i class="fa fa-search"></i></div>
+                                                <input type=submit class=search-submit value=Search>
+                                                <div class=logisco-top-search-close><i class=icon_close></i></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class=logisco-page-wrapper id=logisco-page-wrapper>
+            <section class="team-hero">
+                <div class="gdlr-core-container">
+                    <div class="team-hero__headline">People who keep global trade moving—together.</div>
+                    <p class="team-hero__subtext">Primegate International blends customs mastery, operations precision, and client empathy so every shipment moves with confidence across East & Central Africa.</p>
+                    <div class="team-hero__cta">
+                        <a href="#leadership" class="btn-primary">Meet the Leadership <i class="fa fa-long-arrow-right"></i></a>
+                        <a href="career.html" class="btn-outline">Join the Team</a>
+                    </div>
+                    <div class="team-hero__stats">
+                        <div class="stat-card fade-up"><div class="stat-card__number"></div><div>Years average leadership tenure</div></div>
+                        <div class="stat-card fade-up"><div class="stat-card__number">6</div><div>Customer Support</div></div>
+                        <div class="stat-card fade-up"><div class="stat-card__number">24/7</div><div>Multilingual client desks</div></div>
+                        <div class="stat-card fade-up"><div class="stat-card__number"></div><div>Customs professionals</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-section" id="leadership">
+                <div class="gdlr-core-container">
+                    <div class="section-heading fade-up">
+                        <span>Leadership Team</span>
+                        <h3>Guided by logisticians, technologists, and client champions</h3>
+                        <p>Our leadership team combines decades of port operations, bonded warehousing, and digital freight innovation experience.</p>
+                    </div>
+                    <div class="leadership-slider" aria-live="polite">
+                        <div class="leadership-track" id="leaderTrack" data-index="0">
+                            <article class="leader-card fade-up" aria-label="Amina Kileo">
+                                <figure class="leader-card__portrait" aria-hidden="true">
+                                    <div class="leader-card__icon"><i class="fa fa-briefcase"></i></div>
+                                    <div class="leader-african-pattern"></div>
+                                </figure>
+                                <div class="leader-card__content">
+                                    <div class="leader-card__badge"><i class="fa fa-globe"></i> Dar es Salaam • Dubai • Rotterdam</div>
+                                    <div class="leader-card__title">Amina Kileo</div>
+                                    <div class="leader-card__role">Chief Executive Officer</div>
+                                    <p class="leader-card__bio">Two decades leading freight innovation between East Africa, the Gulf, and Europe—with a vision anchored in inclusive trade and equitable partnerships.</p>
+                                    <div class="leader-card__extra">
+                                
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="leader-card fade-up" aria-label="James Kalonji">
+                                <figure class="leader-card__portrait" aria-hidden="true">
+                                    <div class="leader-card__icon"><i class="fa fa-industry"></i></div>
+                                    <div class="leader-african-pattern"></div>
+                                </figure>
+                                <div class="leader-card__content">
+                                    <div class="leader-card__badge"><i class="fa fa-map-signs"></i> Ports • Bonded Warehouses • Last Mile</div>
+                                    <div class="leader-card__title">James Kalonji</div>
+                                    <div class="leader-card__role">Chief Operations Officer</div>
+                                    <p class="leader-card__bio">Architects multimodal playbooks covering ports, bonded warehousing, and last mile, ensuring every corridor respects time, cost, and community.</p>
+                                    <div class="leader-card__extra">
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="leader-card fade-up" aria-label="Rashida Noor">
+                                <figure class="leader-card__portrait" aria-hidden="true">
+                                    <div class="leader-card__icon"><i class="fa fa-laptop"></i></div>
+                                    <div class="leader-african-pattern"></div>
+                                </figure>
+                                <div class="leader-card__content">
+                                    <div class="leader-card__badge"><i class="fa fa-line-chart"></i> Client & Digital Excellence</div>
+                                    <div class="leader-card__title">Rashida Noor</div>
+                                    <div class="leader-card__role">Chief Client & Digital Officer</div>
+                                    <p class="leader-card__bio">Transforms supply chain data into proactive client stories and digital cargo visibility dashboards tuned for African businesses.</p>
+                                    <div class="leader-card__extra">
+                                       
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="leader-slider-controls">
+                            <button class="leader-slider-button" type="button" id="leaderPrev" aria-label="Previous leader"><i class="fa fa-chevron-left"></i></button>
+                            <div class="leader-slider-dots" role="tablist">
+                                <button class="leader-slider-dot is-active" type="button" data-index="0" aria-label="View Amina"></button>
+                                <button class="leader-slider-dot" type="button" data-index="1" aria-label="View James"></button>
+                                <button class="leader-slider-dot" type="button" data-index="2" aria-label="View Rashida"></button>
+                            </div>
+                            <button class="leader-slider-button" type="button" id="leaderNext" aria-label="Next leader"><i class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-section">
+                <div class="gdlr-core-container">
+                    <div class="section-heading fade-up">
+                        <span>Values & Culture</span>
+                        <h3>Principles that shape every clearance, call, and corridor</h3>
+                        <p>We combine human-first service with tech-forward logistics, ensuring teams are empowered and clients always informed.</p>
+                    </div>
+                    <div class="values-grid wave-grid">
+                        <article class="value-card value-wave fade-up">
+                            <i class="fa fa-shield"></i>
+                            <div class="card__title">Relentless Reliability</div>
+                            <p class="card__bio">Cargo visibility and updates you can set your watch to.</p>
+                        </article>
+                        <article class="value-card value-wave fade-up">
+                            <i class="fa fa-balance-scale"></i>
+                            <div class="card__title">Customs Mastery</div>
+                            <p class="card__bio">Licensed brokers fluent in tariff codes, exemptions, and TRA shifts.</p>
+                        </article>
+                        <article class="value-card value-wave fade-up">
+                            <i class="fa fa-users"></i>
+                            <div class="card__title">Human Collaboration</div>
+                            <p class="card__bio">Operations, tech, and client success co-design every milestone.</p>
+                        </article>
+                        <article class="value-card value-wave fade-up">
+                            <i class="fa fa-lightbulb-o"></i>
+                            <div class="card__title">Innovation in Motion</div>
+                            <p class="card__bio">Dashboards, digital release, and bonded warehousing tech built with clients.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-section" style="padding-top: 3px;">
+                <div class="gdlr-core-container">
+                    <div class="section-heading fade-up">
+                        <span>Behind the Scenes</span>
+                        <h3>Human moments across corridors, ports, and control towers</h3>
+                        <p>Snapshots of candid teamwork that keeps cargo flowing.</p>
+                    </div>
+                    <div class="culture-slider fade-up" aria-live="polite">
+                        <div class="culture-track" id="cultureTrack">
+                            <figure class="culture-card"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80" alt="Dar es Salaam customs huddle"><figcaption class="culture-card__caption">Dar es Salaam customs huddle planning next-day clearances.</figcaption></figure>
+                            <figure class="culture-card"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80&sat=-50" alt="Control tower sync"><figcaption class="culture-card__caption">Control tower sync bridging Nairobi, Kampala, and Kigali.</figcaption></figure>
+                            <figure class="culture-card"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80&sat=50" alt="Innovation sprint"><figcaption class="culture-card__caption">Innovation sprint prototyping bonded warehouse tech.</figcaption></figure>
+                            <figure class="culture-card"><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="People and culture workshop"><figcaption class="culture-card__caption">People & culture workshop on mentoring new brokers.</figcaption></figure>
+                        </div>
+                        <div class="slider-controls" aria-hidden="false">
+                            <button class="slider-btn" id="prevBtn" aria-label="Previous slide"><i class="fa fa-chevron-left"></i></button>
+                            <button class="slider-btn" id="nextBtn" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        
+        <footer>
+            <div class="logisco-footer-wrapper ">
+                <div class="logisco-footer-container logisco-container clearfix">
+                    <div class="logisco-footer-column logisco-item-pdlr logisco-column-15">
+                        <div id="text-1" class="widget widget_text logisco-widget">
+                            <div class="textwidget">
+                                <p><img class="alignnone size-full wp-image-5803" src="upload/logo-removebg-preview.png" alt="" width="138">
+                                    <br/> <span class="gdlr-core-space-shortcode" style="margin-top: -27px ;"></span>
+                                    <br/> Primegate is a global logistics leader with strong capabilities in sea freight, air freight, contract logistics, and overland transportation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logisco-footer-column logisco-item-pdlr logisco-column-15">
+                        <div id="text-5" class="widget widget_text logisco-widget">
+                            <h3 class="logisco-widget-title">Contact Info</h3><span class="clear"></span>
+                            <div class="textwidget">
+                                <p>Box 705
+                                    <br/> Mezzanine Floor, Victoria Plazza, Samora Road
+                                    <br/> Dar es Salaam, Tanzania</p>
+                                <p><span style="color: #fff;">+255 718 707 449 | +255 755 666 745</span>
+                                    <br/> <span style="color: #e52021;">info@primegateinternational.co.tz</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logisco-footer-column logisco-item-pdlr logisco-column-30">
+                        <div id="gdlr-core-custom-menu-widget-2" class="widget widget_gdlr-core-custom-menu-widget logisco-widget">
+                            <h3 class="logisco-widget-title">Useful Links</h3><span class="clear"></span>
+                            <div class="menu-useful-links-container">
+                                <ul id="menu-useful-links" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-half">
+                                    <li class="menu-item"><a href="#">Our Services</a></li>
+                                    <li class="menu-item"><a href="portfolio-modern-3-columns.html">Case Study</a></li>
+                                    <li class="menu-item"><a href="industry-solutions.html">Industry Solutions</a></li>
+                                    <li class="menu-item"><a href="career.html">Seeking For Career</a></li>
+                                    <li class="menu-item"><a href="#">Investor Relation</a></li>
+                                    <li class="menu-item"><a href="#">Our Clients</a></li>
+                                    <li class="menu-item"><a href="get-a-quote.html">Get A Quote</a></li>
+                                    
+                                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                    <li class="menu-item"><a href="#">Media Relation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logisco-copyright-wrapper">
+                <div class="logisco-copyright-container logisco-container clearfix">
+                    <div class="logisco-copyright-left logisco-item-pdlr">Copyright 2025 Primegate, All Right Reserved</div></div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+<script src='js/jquery/jquery.js'></script>
+<script src='js/jquery/jquery-migrate.min.js'></script>
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        cards.forEach(card => observer.observe(card));
+    })();
+
+    (function(){
+        const track = document.getElementById('cultureTrack');
+        if(!track) return;
+        const slides = track.children;
+        let index = 0;
+        const updateSlider = () => {
+            track.style.transform = `translateX(-${index * (slides[0].offsetWidth + 20)}px)`;
+        };
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            updateSlider();
+        });
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+        window.addEventListener('resize', updateSlider);
+    })();
+
+    (function(){
+        const track = document.getElementById('leaderTrack');
+        if(!track) return;
+        const slides = track.children;
+        const prev = document.getElementById('leaderPrev');
+        const next = document.getElementById('leaderNext');
+        const dots = Array.from(document.querySelectorAll('.leader-slider-dot'));
+        const slideWidth = () => slides[0].offsetWidth + 16;
+        const AUTOPLAY_MS = 4000;
+        let index = 0;
+        let autoplayId = null;
+        let touchStartX = 0;
+        let touchCurrentX = 0;
+        let isDragging = false;
+
+        const goTo = (target) => {
+            index = (target + slides.length) % slides.length;
+            track.style.transform = `translateX(-${index * slideWidth()}px)`;
+            dots.forEach((dot, idx) => dot.classList.toggle('is-active', idx === index));
+        };
+
+        const nextSlide = () => goTo(index + 1);
+        const prevSlide = () => goTo(index - 1);
+
+        const stopAutoplay = () => {
+            if (autoplayId) {
+                clearInterval(autoplayId);
+                autoplayId = null;
+            }
+        };
+
+        const startAutoplay = () => {
+            stopAutoplay();
+            autoplayId = setInterval(nextSlide, AUTOPLAY_MS);
+        };
+
+        const handleUserAction = (callback) => {
+            stopAutoplay();
+            callback();
+            startAutoplay();
+        };
+
+        prev && prev.addEventListener('click', () => handleUserAction(prevSlide));
+        next && next.addEventListener('click', () => handleUserAction(nextSlide));
+        dots.forEach(dot => dot.addEventListener('click', () => handleUserAction(() => goTo(Number(dot.dataset.index)))));
+        window.addEventListener('resize', () => goTo(index));
+
+        track.addEventListener('touchstart', (e) => {
+            stopAutoplay();
+            isDragging = true;
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        track.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            touchCurrentX = e.touches[0].clientX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            const deltaX = touchCurrentX - touchStartX;
+            if (Math.abs(deltaX) > 50) {
+                deltaX > 0 ? prevSlide() : nextSlide();
+            }
+            isDragging = false;
+            touchStartX = touchCurrentX = 0;
+            startAutoplay();
+        });
+
+        goTo(0);
+        startAutoplay();
+    })();
+
+</script>
+<script src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+<script src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+<script src='js/jquery/jquery.blockUI.min.js'></script>
+<script src='js/jquery/ui/effect.min.js'></script>
+<script src='js/jquery.mmenu.js'></script>
+<script src='js/jquery.superfish.js'></script>
+<script src='js/plugins.js'></script>
+<script type="text/javascript" src="plugins/quform/js/plugins.js"></script>
+<script type="text/javascript" src="plugins/quform/js/scripts.js"></script>
+</body>
+</html>
