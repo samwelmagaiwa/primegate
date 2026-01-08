@@ -3,7 +3,7 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <title>Clearance</title>
+    <title>Customs Clearance | Primegate International Ltd</title>
 
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Assistant%3A200%2C300%2Cregular%2C600%2C700%2C800%7CKarla%3Aregular%2Citalic%2C700%2C700italic%7CPT+Sans%3Aregular%2Citalic%2C700%2C700italic&amp;subset=latin%2Chebrew%2Clatin-ext%2Ccyrillic-ext%2Ccyrillic&amp;ver=5.0.3' type=text/css media=all>
     <link rel=stylesheet href='plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
@@ -16,46 +16,56 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <style>
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-}
+.float{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100;}
+.my-float{margin-top:16px;}
+.top-bar-brand{display:inline-flex;align-items:center;gap:16px;}
+.top-bar-logo{height:52px;width:auto;object-fit:contain;}
+@media(max-width:768px){.top-bar-brand{gap:10px;}.top-bar-logo{height:42px;}}
 
-.my-float{
-	margin-top:16px;
-}
+.clearance-hero{position:relative;padding:clamp(110px,18vw,180px) 0;background:linear-gradient(135deg,#020a24 0%,#051640 55%,#0b2859 100%);color:#fff;overflow:hidden;}
+.clearance-hero::after{content:"";position:absolute;inset:0;background:url('upload/700x5001.png') center/cover;opacity:0.22;mix-blend-mode:multiply;}
+.clearance-hero .hero-content{position:relative;z-index:1;max-width:min(1800px,98vw);margin:0 auto;padding:0 clamp(20px,6vw,80px);}
+.clearance-hero h2{font-size:clamp(2.6rem,6vw,4.2rem);margin-bottom:18px;}
+.clearance-hero h2.ts-headline{display:inline-flex;align-items:center;gap:18px;padding:18px 26px;border-radius:20px;background:rgba(5,10,35,0.65);border:1px solid rgba(255,255,255,0.15);box-shadow:0 25px 55px rgba(0,0,0,0.35);backdrop-filter:blur(8px);}
+.ts-text{font-weight:600;letter-spacing:.01em;line-height:1.3;display:inline-flex;align-items:center;}
+.typing-caret{width:2px;height:1.8rem;background:#fff;margin-left:8px;animation:caretBlink .8s steps(2,start) infinite;}
+@keyframes caretBlink{to{opacity:0;}}
+.hero-pill-group{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 34px;}
+.hero-pill{padding:10px 20px;border-radius:999px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);font-weight:600;font-size:.95rem;backdrop-filter:blur(8px);}
+.clearance-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:40px;background:linear-gradient(120deg,#e52021,#ff7a18);color:#fff;font-weight:600;text-decoration:none;transition:transform .25s,box-shadow .25s;}
+.clearance-btn:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(229,32,33,0.35);}
+.hero-stats{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;}
+.stat-card{background:rgba(255,255,255,.08);border-radius:16px;padding:22px 24px;border:1px solid rgba(255,255,255,.15);box-shadow:0 20px 40px rgba(4,10,30,.3);}
+.stat-card span{display:block;font-size:2rem;font-weight:700;}
 
-.top-bar-brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.top-bar-logo {
-    height: 52px;
-    width: auto;
-    object-fit: contain;
-}
-
-@media (max-width: 768px) {
-    .top-bar-brand {
-        gap: 10px;
-    }
-
-    .top-bar-logo {
-        height: 42px;
-    }
-}
+.section-shell{margin-left:auto;margin-right:auto;max-width:min(1800px,98vw);padding-left:clamp(20px,6vw,80px);padding-right:clamp(20px,6vw,80px);} 
+.promise-grid,.capability-grid,.process-grid,.timeline-section,.metric-wrap,.compliance-showcase,.cta-panel,.assurance-grid,.coverage-grid{margin-left:auto;margin-right:auto;max-width:min(1800px,98vw);padding-left:clamp(20px,6vw,80px);padding-right:clamp(20px,6vw,80px);} 
+.promise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:80px;}
+.promise-card{background:#fff;border-radius:20px;padding:26px 30px;border:1px solid rgba(6,20,43,0.08);box-shadow:0 18px 45px rgba(6,20,43,0.08);border-left:6px solid #0f62fe;}
+.capability-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:70px;}
+.capability-card{background:#fff;border-radius:18px;padding:28px 28px 28px 36px;border-left:6px solid #e52021;box-shadow:0 18px 45px rgba(6,12,30,0.12);} 
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:70px;}
+.process-card{background:#fff;border-radius:18px;padding:20px 24px;border-top:4px solid #0f62fe;box-shadow:0 15px 35px rgba(6,12,30,0.1);} 
+.timeline-section{margin-top:90px;} 
+.timeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;} 
+.timeline-step{background:#fff;border-radius:18px;padding:24px;border-top:4px solid #e52021;box-shadow:0 15px 35px rgba(6,12,30,0.1);} 
+.metric-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;} 
+.metrics-panel{background:linear-gradient(120deg,#041647,#0b2966);color:#fff;padding:80px 0;margin:90px 0;} 
+.metric-card{background:rgba(255,255,255,0.1);border-radius:18px;padding:26px 24px 26px 34px;border-left:5px solid #ff7a18;box-shadow:0 20px 40px rgba(1,6,23,0.35);} 
+.metric-number{font-size:2.4rem;font-weight:700;} 
+.compliance-showcase{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;align-items:center;margin-top:70px;} 
+.compliance-showcase img{width:100%;border-radius:24px;box-shadow:0 25px 55px rgba(6,12,30,0.2);} 
+.assurance-grid{margin-top:60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;} 
+.assurance-card{background:#fff;border-radius:18px;padding:24px 26px;border-left:5px solid #0f62fe;box-shadow:0 18px 40px rgba(6,20,43,0.08);} 
+.coverage-grid{margin-top:70px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;} 
+.coverage-card{background:#fff;border-radius:18px;padding:24px;border-left:5px solid #0f62fe;box-shadow:0 18px 45px rgba(6,20,43,0.08);} 
+.cta-panel{border-radius:26px;background:linear-gradient(120deg,#e52021,#ff7a18);color:#fff;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;box-shadow:0 30px 60px rgba(229,32,33,0.35);margin:110px auto 140px;padding:50px clamp(24px,6vw,80px);} 
+[data-animate]{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;} 
+[data-animate].is-visible{opacity:1;transform:translateY(0);} 
+@keyframes cardIdle{0%{transform:translateY(0);}50%{transform:translateY(-4px);}100%{transform:translateY(0);}} 
+.promise-card,.capability-card,.timeline-step,.metric-card,.compliance-showcase>div,.compliance-showcase img,.cta-panel,.assurance-card,.coverage-card,.stat-card,.process-card{animation:cardIdle 9s ease-in-out infinite;transition:transform .35s,box-shadow .35s;will-change:transform;} 
+@media(hover:hover){.promise-card:hover,.capability-card:hover,.timeline-step:hover,.metric-card:hover,.compliance-showcase>div:hover,.compliance-showcase img:hover,.cta-panel:hover,.assurance-card:hover,.coverage-card:hover,.stat-card:hover,.process-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 30px 60px rgba(4,10,30,0.18);}} 
+.floating-badge{animation:cardIdle 6s ease-in-out infinite;font-weight:600;} 
 </style>
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
@@ -122,15 +132,15 @@
                     <div class="logisco-top-bar-container-inner clearfix">
                         <div class="logisco-top-bar-left logisco-item-pdlr">
                             <div class="top-bar-brand">
-        <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
-        <div class="contact-hours">
-                                <i class="icon_clock"></i> Mon - Fri / 08:00 - 17:30
+                                <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+                                <div class="contact-hours">
+                                    <i class="icon_clock"></i> Mon - sun / 08:00 - 17:30
+                                </div>
                             </div>
-    </div>
                         </div>
                         <div class="logisco-top-bar-right logisco-item-pdlr">
                             <div class="contact-numbers">
-                                <i class="fa fa-phone"></i> +255 617 919 104 | +255 743 519 104
+                                <i class="fa fa-phone"></i> +255 718 707 449 | +255 755 666 745
                             </div>
                         </div>
                         <ul id=menu-main-navigation-1 class=sf-menu>
@@ -198,741 +208,89 @@
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
             <div class=gdlr-core-page-builder-body>
 
-
-                <!-- CONTENT  STARTS HERE -->
-
-                <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;border-width: 0px 0px 1px 0px;border-color: #ededed ;border-style: solid ;">
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-breadcrumbs-item gdlr-core-item-pdlr gdlr-core-item-pdb "> <span property=itemListElement typeof=ListItem><a property=item typeof=WebPage title="Go to Logisco." href=https://demo.goodlayers.com/logisco class=home><span property=name>Our Services</span></a>
-                                    <meta property=position content=1>
-                                    <!-- </span>&#183;<span property=itemListElement typeof=ListItem><a property=item typeof=WebPage title="Go to the Case Study Portfolio Category archives." href=../../portfolio_category/case-study/index.html class="taxonomy portfolio_category"><span property=name>Transportation</span></a> -->
-                                    <meta property=position content=2>
-                                    </span>&#183;<span class="post post-portfolio current-item">Custom Clearance</span></div>
-                            </div>
+                <section class="clearance-hero" data-animate>
+                    <div class="hero-content">
+                        <div class="hero-pill floating-badge">Primegate International Ltd · Customs & Regulatory Command</div>
+                        <h2 class="ts-headline"><span class="ts-text">Customs dexterity for every bill of entry, every corridor.</span></h2>
+                        <p>Primegate International Ltd translates complex tariff codes, free-zone regulations, and inspection regimes into predictable lead times. We unlock compliant passage for bulk imports, humanitarian cargo, oil & gas assets, and eCommerce parcels through every Tanzanian and regional gateway.</p>
+                        <div class="hero-pill-group">
+                            <span class="hero-pill">TRA bonded desks</span>
+                            <span class="hero-pill">24/7 document control</span>
+                            <span class="hero-pill">Risk management & valuation</span>
+                            <span class="hero-pill">Regulatory relationship cell</span>
+                        </div>
+                        <a class="clearance-btn" href="get-a-quote.html">Secure a Clearance Slot <i class="fa fa-arrow-right"></i></a>
+                        <div class="hero-stats">
+                            <article class="stat-card"><span>6 hrs</span><p>Average time to secure release once cargo berth is confirmed.</p></article>
+                            <article class="stat-card"><span>0</span><p>Penalties in the past 24 months thanks to proactive compliance.</p></article>
+                            <article class="stat-card"><span>12</span><p>Border posts & ports where Primegate operates accredited desks.</p></article>
                         </div>
                     </div>
-                </div>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 50px 0px 30px 0px;" id=gdlr-core-wrapper-1>
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" style="padding-bottom: 50px ;">
-                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-round" style="border-width: 0px;">
-                                                    <a class="gdlr-core-lightgallery gdlr-core-js " href=upload/700x5001.png><img src=upload/700x5001.png alt width=700 height=500 title=spacex-530583-unsplash><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"  ></i></span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30" id=gdlr-core-column-1>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 30px 0px 0px 20px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 30px ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Custom Clearance <span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="text-transform: none ;">
-                                                    <p>
-                                                        Prime Gate are proudly represent local and international brands, from all sectors of the economy during customs clearance of their cargo across international borders.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 50px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;">
-                                                    <p>
-                                                        Our Custom Clearance division comprises of experienced cargo professionals with years of industry experience thereby easing the communication flow and accelerating the decision making among all clients
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-port-info-item gdlr-core-item-pdb  gdlr-core-item-pdlr" style="padding-bottom: 55px ;">
-                                                <div class="gdlr-core-port-info-wrap gdlr-core-skin-divider ">
-                                                    <div class=gdlr-core-port-info><span class="gdlr-core-port-info-key gdlr-core-skin-title">Client</span><span class=gdlr-core-port-info-value>SpaceX</span></div>
-                                                    <div class=gdlr-core-port-info><span class="gdlr-core-port-info-key gdlr-core-skin-title">Date</span><span class=gdlr-core-port-info-value>August 16, 2018</span></div>
-                                                    <div class=gdlr-core-port-info><span class="gdlr-core-port-info-key gdlr-core-skin-title">Scope</span><span class=gdlr-core-port-info-value>Transportation, Warehouse</span></div>
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
+                </section>
 
-                            <!-- <div class="gdlr-core-pbf-column gdlr-core-column-40 gdlr-core-column-first" id=gdlr-core-column-2>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 30px 0px 0px 0px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 24px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Land Transportation<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 20px ;text-transform: none ;color: #1c1c1c ;">
-                                                    <p>
-                                                        Prime Gate TRADING COMPANY LIMITED handles your parcel delivery with the professionalism and thoroughness that you can expect from the leading logistics supplier in the Sub Sahara Africa.
-                                                        No matter the size of your shipment, Prime Gate is committed to getting it where it needs to go. With Prime Gate, we handle your parcel delivery like any other major freight shipment � thoroughly and professionally.   
-                                                        Our Services
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 50px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;">
-                                                    <p>
-                                                        No matter the size of your shipment, Prime Gate is committed to getting it where it needs to go. With Prime Gate, we handle your parcel delivery like any other major freight shipment � thoroughly and professionally. 
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-
-
-                            <!-- <div class="gdlr-core-pbf-column gdlr-core-column-20">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 20px 0px 0px 0px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" style="padding-bottom: 50px ;">
-                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-round" style="border-width: 0px;">
-                                                    <a class="gdlr-core-lightgallery gdlr-core-js " href=upload/700x5002.png><img src=upload/700x5002.png alt width=700 height=770 title=spacex-101795-unsplash><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"  ></i></span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                        </div>
+                <section class="compliance-showcase" data-animate>
+                    <div>
+                        <h3>Your single point of truth for customs</h3>
+                        <p>From advance declarations to post-clearance audits, we maintain a live dossier of your tariff strategy, certificate validity, and HSSE documentation. Stakeholders follow along via digital dashboards that show exception alerts, valuation status, and release milestones.</p>
+                        <ul>
+                            <li>Automated pre-alerts for duty payments, exemptions, and temporary admissions.</li>
+                            <li>On-site representation at TRA, TPA, TBS, TFDA, and Port Health counters.</li>
+                            <li>Bonded warehousing and inland ICD transfers controlled end-to-end.</li>
+                        </ul>
                     </div>
-                </div>
-                
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 480px 0px 30px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/spacex-1130894-unsplash.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.3></div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container"></div>
-                    </div>
-                </div> -->
+                    <img src="upload/shipping-container-being-loaded-onto-truck-port.jpg" alt="Primegate customs specialists" loading="lazy">
+                </section>
 
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 0px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 24px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Challenge<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-45">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 25px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 19px ;text-transform: none ;color: #202020 ;">
-                                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 45px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;color: #143369 ;">
-                                                    <p>More than 25 years of experience working in the industry has enabled us to build our services and solutions in strategy, consulting, digital, technology and operations that help our clients with their trading projects around the world. Capabilities we leverage for our clients include</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                
-                <div class="gdlr-core-pbf-wrapper " style="padding: 10px 0px 0px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 24px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Solution<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-45">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 19px ;text-transform: none ;color: #969696 ;">
-                                               <p>
-                                                We clear all types of shipments/cargo in Tanzania using all the Ports. As experienced clearing agents, we have special clearance system of clearing the cargo on the arrival of the ship at the port. We are fast and economical as our rates are very affordable.
-                                               </p>     
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <!-- <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
-                                                <ul>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 17px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;font-size: 17px ;width: 17px ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;">Nearshoring is fast becoming a Retail trend, with many.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 17px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;font-size: 17px ;width: 17px ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;">Transporting goods from a Distribution Center (DC) to the final.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 17px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;font-size: 17px ;width: 17px ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;">Logisco orchestrates the flow of products, partly or completely.</span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 17px ;"><span class=gdlr-core-icon-list-icon-wrap style="margin-top: 5px ;"><i class="gdlr-core-icon-list-icon fa fa-dot-circle-o" style="color: #1A6A9F ;font-size: 17px ;width: 17px ;" ></i></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #181818 ;font-size: 17px ;">Solutions that provide short response times to urgent requests.</span></div>
-                                                    </li>
-                                                </ul>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 10px 0px 60px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 24px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Result<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-45">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 25px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;">
-                                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Comm</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-
-
-
-
-
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 30px 0px 75px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/about-team-map-bg.jpg) ;background-size: cover ;background-position: bottom center ;" data-parallax-speed=0.05></div>
-                    </div>
-
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first gdlr-core-hide-in-mobile">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 60px 0px 0px 0px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align">
-                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;margin: 0px 0px 0px 0px;">
-                                                    <a class="gdlr-core-lightgallery gdlr-core-js " href=upload/about-1-top-image.png><img src=upload/about-1-top-image.png alt width=340 height=340 title=about-1-top-image></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gdlr-core-pbf-column gdlr-core-column-40">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 80px 0px 0px 0px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 27px ;" id=gdlr-core-title-item-1>
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 36px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">WHO IS Prime Gate TRADING COMPANY LTD?<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 23px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ; text-transform: none ;color: #000 ;">
-                                                    <p>
-                                                        Prime Gate TRADING COMPANY LIMITED is a full clearing and forwarding service
-                                                        provider and authorized Customs Agent to offer professional services by Tanzania Revenue
-                                                        Authority (TRA) and Tanzania port authority (TPA) respectively. <br> FIFA is licensed by the
-                                                        Commissioner for Customs & Excise Department since its establishment to undertake various
-                                                        kinds of import and export, Customs Clearances at Dar es Salaam, Mtwara, Tanga, Bagamoyo,
-                                                        Mwambani on Indian Ocean and other major ports, Airports and borders in an efficient way
-                                                        and trouble-free manner.
-                                                        Since it�s commencement in 2006, Prime Gate Trading Co. Ltd has been providing reliable
-                                                        services to it�s clients. <br>The company started as Customs Clearing Agent and Freight
-                                                        Forwarding services and slowly expanded to other incorporated services in this industry
-                                                        including , Transportation, Transit, Exportation and Importation, Freight consultation, Fairs
-                                                        and Exhibitions, Cargo Consolidation, Break Bulk services and Project Cargo serving to
-                                                        different clients ranging from manufacturers to individual, local and homemade producers,
-                                                        government to NGO�s, over-dimensional cargo (ODC) mainly in special equipment such as
-                                                        gas and oilfield equipment�s, power plants, cement industries and many other industries, 
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 23px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #656565 ;">
-                                                    <p>Question Marks and devious Semikoli, but the Little Blind Text didn�t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 30px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap style="background-color: #f7f7f7 ;"></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" data-skin="logisco Number color">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 0px 0px 0px 0px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align gdlr-core-no-p-space" style="padding-bottom: 10px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #ababab ;">
-                                                    <p>More Than</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 50px ;">
-                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 53px ;font-weight: 700 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start data-counter-end=3000></span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">Locations of Service</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-15" data-skin="logisco Number color">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align gdlr-core-no-p-space" style="padding-bottom: 10px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #ababab ;">
-                                                    <p>More Than</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 50px ;">
-                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 53px ;font-weight: 700 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start data-counter-end=850></span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">Emplees World Wide</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-15" data-skin="logisco Number color">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align gdlr-core-no-p-space" style="padding-bottom: 10px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #ababab ;">
-                                                    <p>More Than</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 50px ;">
-                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 53px ;font-weight: 700 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start data-counter-end=2000></span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">Trucks in The Fleet</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-15" data-skin="logisco Number color">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align gdlr-core-no-p-space" style="padding-bottom: 10px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #ababab ;">
-                                                    <p>More Than</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 50px ;">
-                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 53px ;font-weight: 700 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start data-counter-end=375526></span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">shipped items and counting</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 110px 0px 20px 0px;" id=gdlr-core-wrapper-1>
-                    <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/about-1-globe-bg-1.jpg) ;background-size: cover ;background-position: top center ;" data-parallax-speed=0.15></div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 55px ;" id=gdlr-core-title-item-2>
-                                    <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Vision and Mission Statements<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 0px 20px 0px 0px;" data-sync-height="height logis1">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-icon-list-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
-                                                <ul>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 50px ;"><span class=gdlr-core-icon-list-image style="margin-right: 38px ;"><img src=upload/clock-icon.png alt width=50 height=59 title=clock-icon></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #252525 ;font-size: 20px ;font-weight: 700 ;">Vision</span><span class=gdlr-core-icon-list-caption style="color: #4f5d77 ;font-size: 16px ;font-weight: 400 ;">
-                                                            Prime Gate International Ltd Limited vision is to become the preferably center of
-                                                            customs clearing and forwarding to all land locked sub Saharan Africa countries.
-                                                        </span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 50px ;"><span class=gdlr-core-icon-list-image style="margin-right: 38px ;"><img src=upload/paper-icon.png alt width=49 height=57 title=paper-icon></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #252525 ;font-size: 20px ;font-weight: 700 ;">Mission</span><span class=gdlr-core-icon-list-caption style="color: #4f5d77 ;font-size: 16px ;font-weight: 400 ;">
-                                                            Building long lasting relationship with our clients based on quality growth, Efficiency and
-                                                            Innovation. We are a dedicated team striving to bring changes and infrastructural revolution to
-                                                            customs clearing and forwarding through working with existing companies and assist our
-                                                            clients in making their dreams become the reality.
-
-
-                                                        </span></div>
-                                                    </li>
-                                                    <li class=" gdlr-core-skin-divider" style="margin-bottom: 50px ;"><span class=gdlr-core-icon-list-image style="margin-right: 38px ;"><img src=upload/paper2-icon.png alt width=50 height=49 title=paper2-icon></span>
-                                                        <div class=gdlr-core-icon-list-content-wrap><span class=gdlr-core-icon-list-content style="color: #252525 ;font-size: 20px ;font-weight: 700 ;">Objectives</span><span class=gdlr-core-icon-list-caption style="color: #4f5d77 ;font-size: 16px ;font-weight: 400 ;">
-                                                         <li>
-                                                            To build a long lasting relation through quality services. 
-                                                         </li>   
-                                                         <li>
-                                                            To offer superior quality services to our clients in affordable rates.
-
-                                                         </li>
-
-                                                         <li>
-                                                            To engage direct to expanding custom clearing and forwarding business globally
-
-                                                         </li>   
-
-                                                         <li>
-                                                            To jointly boost national and regional economy
-                                                         </li>
-
-                                                        </span></div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " data-sync-height="height logis1">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 22px ;font-weight: 400 ;text-transform: none ;color: #090909 ;">
-                                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in�</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #656565 ;">
-                                                    <p>language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 0px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #656565 ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.�</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-
-
-                <div class="gdlr-core-pbf-wrapper " style="padding: 57px 0px 21px 0px;" data-skin="logisco call to action1">
-                    <div class=gdlr-core-pbf-background-wrap style="background-color: #e52021 ;"></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-48 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 11px 0px 0px 0px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 27px ;font-weight: 400 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">We can be your great business partner and help you grow strongly..<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-12">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border" href="get-a-quote.html" id=gdlr-core-button-id-96460><i class="gdlr-core-pos-left fa fa-comments" style="font-size: 16px ;color: #ffffff ;"  ></i><span class=gdlr-core-content >Get A Quote Now</span></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="promise-grid" data-animate>
+                    <article class="promise-card"><h4>Predictive compliance</h4><p>Customs matrices flag tariff changes, HS code updates, and license expiries before they threaten a shipment.</p></article>
+                    <article class="promise-card"><h4>Govt relationship desks</h4><p>Full-time liaison officers stationed at TRA, TBS, and port command posts accelerate queries.</p></article>
+                    <article class="promise-card"><h4>Financial transparency</h4><p>Duty simulations, reconciliation statements, and variance logs shared for every entry.</p></article>
+                    <article class="promise-card"><h4>HSSE governance</h4><p>Dangerous goods, pharma, and foodstuffs handled with tailored permits and inspection protocols.</p></article>
                 </div>
 
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 190px 0px 200px 0px;" id=gdlr-core-wrapper-2>
-                    <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/about-1-video-bg.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
+                <section class="capability-grid" data-animate>
+                    <div class="capability-card"><h4>Imports & exports</h4><p>Full service from manifest filing, customs position, to bonded removal and last-mile delivery.</p></div>
+                    <div class="capability-card"><h4>Transit & temporary admission</h4><p>Door-to-door handling for project cargo, drilling rigs, and exhibition goods requiring re-export.</p></div>
+                    <div class="capability-card"><h4>Special regimes</h4><p>EPZA, SEZ, diplomatic, NGO, and humanitarian clearances with bespoke tax treatments.</p></div>
+                    <div class="capability-card"><h4>Regulatory advisory</h4><p>Tariff engineering, valuation disputes, and audit support with digital documentation vaults.</p></div>
+                </section>
+
+                <section class="process-grid" data-animate>
+                    <article class="process-card"><strong>Advance compliance</strong><p>Document vetting, HS code reviews, and exemption applications completed before vessel arrival.</p></article>
+                    <article class="process-card"><strong>Cargo intelligence</strong><p>Integration with shipping lines, airlines, and ICDs to pull manifest data for proactive filing.</p></article>
+                    <article class="process-card"><strong>Inspection orchestration</strong><p>On-site teams manage TBS, Port Health, and scanning appointments with photographic evidence.</p></article>
+                    <article class="process-card"><strong>Post-entry governance</strong><p>Audit-ready archives, variance explanations, and duty recovery programs.</p></article>
+                </section>
+
+                <section class="timeline-section" data-animate>
+                    <h3>Primegate customs playbook</h3>
+                    <div class="timeline-grid">
+                        <div class="timeline-step"><strong>01 · Pre-arrival intelligence</strong><p>Commercial documents reviewed, HS codes validated, and entry lodged before ETA.</p></div>
+                        <div class="timeline-step"><strong>02 · Physical coordination</strong><p>Truckers, inspectors, and terminals aligned through a single command chat.</p></div>
+                        <div class="timeline-step"><strong>03 · Clearance & release</strong><p>Taxes settled, release orders issued, and bonded transfers launched without dwell.</p></div>
+                        <div class="timeline-step"><strong>04 · Audit & insights</strong><p>Performance dashboards highlight duty savings, penalty avoidance, and process improvements.</p></div>
                     </div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" style="max-width: 850px ;">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align">
-                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                                        <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=wtPB-VNNK2Q"><img src=upload/play1-icon.png alt width=82 height=82 title=play1-icon></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                    <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 34px ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">See Video Introduction <span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 21px ;font-style: normal ;color: #e52021 ;margin-top: 23px ;">Take a tour and see how the greatest logistic company in USA works</span></div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;">
-                                    <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #9db1df ;">
-                                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </section>
+
+                <section class="metrics-panel" data-animate>
+                    <div class="metric-wrap">
+                        <div class="metric-card"><div class="metric-number">92%</div><p>Entries released within SLA thanks to advance document control.</p></div>
+                        <div class="metric-card"><div class="metric-number">100+</div><p>HS codes actively monitored per client to forecast duty exposure.</p></div>
+                        <div class="metric-card"><div class="metric-number">40%</div><p>Average reduction in port demurrage for Primegate-managed cargo.</p></div>
+                        <div class="metric-card"><div class="metric-number">24/7</div><p>On-call customs specialists covering Dar, Tanga, Mtwara, Kilimanjaro, and Julius Nyerere airports.</p></div>
                     </div>
-                </div> -->
+                </section>
 
-                <!-- <div class="gdlr-core-pbf-wrapper " style="margin: -85px 0px 0px 0px;padding: 0px 0px 0px 0px;" id=gdlr-core-wrapper-3>
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" style="max-width: 1320px ;">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first" data-skin="Homepage Column Service 2" id=gdlr-core-column-1>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 26px 40px 0px;padding: 55px 30px 50px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 30px rgba(25, 25, 25,0.08); -moz-box-shadow: 0px 0px 30px rgba(25, 25, 25,0.08); -webkit-box-shadow: 0px 0px 30px rgba(25, 25, 25,0.08); background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/airbus-icon.png alt width=78 height=39 title=airbus-icon></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 22px ;font-weight: 700 ;text-transform: capitalize ;">Aerospace & Defense</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;">
-                                                        <p>The Aerospace &#038; Defense industry requires innovative supply chain solutions for their unique demands.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class=gdlr-core-pbf-column-link href=# target=_self></a>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-2>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 13px 40px 13px;padding: 55px 30px 55px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0px 0px 30px rgba(10, 10, 10,0.08); -moz-box-shadow: 0px 0px 30px rgba(10, 10, 10,0.08); -webkit-box-shadow: 0px 0px 30px rgba(10, 10, 10,0.08); background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/car-icon.png alt width=44 height=44 title=car-icon></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 22px ;font-weight: 700 ;text-transform: capitalize ;">Automotive</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="text-transform: none ;">
-                                                        <p>Our worldwide network for procurement, distribution and aftermarket logistics ensures your components and vehicles.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class=gdlr-core-pbf-column-link href=# target=_self></a>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20" data-skin="Homepage Column Service 2" id=gdlr-core-column-3>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 0px 40px 26px;padding: 55px 30px 50px 30px;" data-sync-height="column svc logisco" data-sync-height-center>
-                                    <div class=gdlr-core-pbf-background-wrap style="box-shadow: 0 0 30px rgba(17, 17, 17,0.08); -moz-box-shadow: 0 0 30px rgba(17, 17, 17,0.08); -webkit-box-shadow: 0 0 30px rgba(17, 17, 17,0.08); background-color: #ffffff ;"></div>
-                                    <div class=gdlr-core-pbf-background-frame style="margin: 0px 0px 0px 0px;border-width: 0px 0px 3px 0px;border-style: solid ;border-color: #e52021 ;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-no-caption gdlr-core-item-pdlr" style="padding-bottom: 0px;">
-                                                <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/power-icon.png alt width=51 height=46 title=power-icon></div>
-                                                <div class=gdlr-core-column-service-content-wrapper>
-                                                    <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 22px ;font-weight: 700 ;text-transform: capitalize ;">Oil & Gas</h3></div>
-                                                    <div class=gdlr-core-column-service-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;">
-                                                        <p>When it comes to managing the logistics of oil and gas, safety and efficiency are the greatest concerns.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class=gdlr-core-pbf-column-link href=# target=_self></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 20px 0px 40px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" style="max-width: 800px ;">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 20px ;">
-                                    <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #9b9b9b ;">
-                                        <p>Logisco sparks innovation that moves our customers and industry forward � by actively engaging in innovative networks such as the International Data Space Association, IDG</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border" href=# style="font-size: 13px ;font-weight: 800 ;color: #ffffff ;padding: 15px 33px 17px 33px;text-transform: uppercase ;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;background: #e52021 ;"><span class=gdlr-core-content >View All Industries</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 50px 0px 100px 0px;" id=gdlr-core-wrapper-4>
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " data-sync-height=bg1>
-                                    <div class=gdlr-core-pbf-background-wrap>
-                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/man-smile-1.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0></div>
-                                    </div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content"></div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 60px 0px 30px 50px;" data-sync-height=bg1>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-left-align" style="padding-bottom: 25px ;">
-                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src=upload/paper-icon2.png alt width=59 height=68 title=paper-icon2></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px ;font-style: normal ;text-transform: uppercase ;color: #919191 ;margin-bottom: 6px ;">Why customers love us</span>
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #000000 ;">We are passionate about customers<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;font-weight: 400 ;text-transform: none ;color: #727272 ;">
-                                                    <p>Logistics, a leading global asset-light supply chain management company, designs and implements industry leading solutions for large and medium-size national and multinational companies. Approximately 73,000 employees in more than 120 countries are dedicated to delivering effective and robust supply-chain solutions across a variety of.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space" style="padding-bottom: 25px ;">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 21px ;font-weight: 400 ;text-transform: none ;color: #2b2b2b ;">
-                                                    <p>Airfreight is fast-moving, challenging and constantly changing � it�s the nature of the business. Around the globe capacity and demand can change in the blink.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-with-border" href=# style="font-size: 18px ;font-weight: 400 ;letter-spacing: 0px ;color: #e52021 ;padding: 0px 0px 2px 0px;text-transform: none ;border-radius: 0px;-moz-border-radius: 0px;-webkit-border-radius: 0px;border-width: 0px 0px 1px 0px;border-color: #e52021 ;"><span class=gdlr-core-content >See Case Studies</span></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- CONTENT ENDS HERE -->
-
-
-
-
-
-
-
-
-
+                <section class="coverage-grid" data-animate>
+                    <article class="coverage-card"><strong>Dar es Salaam Port & JNIA</strong><p>Marine and air cargo desks embedded alongside TRA officers.</p></article>
+                    <article class="coverage-card"><strong>Tanga & Mtwara Ports</strong><p>Energy and project cargo specialists with bonded warehousing nearby.</p></article>
+                    <article class="coverage-card"><strong>Isaka ICD & Rusumo</strong><p>Transit and inland clearance for Rwanda, Burundi, and Eastern DRC.</p></article>
+                    <article class="coverage-card"><strong>Namanga & Tunduma Borders</strong><p>Road freight release teams supporting automotive, retail, and humanitarian convoys.</p></article>
+                </section>
 
             </div>
         </div>
 
-
-                
         <footer>
             <div class="logisco-footer-wrapper ">
                 <div class="logisco-footer-container logisco-container clearfix">
@@ -969,7 +327,6 @@
                                     <li class="menu-item"><a href="#">Investor Relation</a></li>
                                     <li class="menu-item"><a href="#">Our Clients</a></li>
                                     <li class="menu-item"><a href="get-a-quote.html">Get A Quote</a></li>
-                                    
                                     <li class="menu-item"><a href="contact.html">Contact</a></li>
                                     <li class="menu-item"><a href="#">Media Relation</a></li>
                                 </ul>
@@ -978,37 +335,74 @@
                     </div>
                 </div>
             </div>
-            <div class="logisco-copyright-wrapper">
-                <div class="logisco-copyright-container logisco-container clearfix">
-                    <div class="logisco-copyright-left logisco-item-pdlr">Copyright 2025 Primegate, All Right Reserved</div></div>
+            <div class="logiscoopyright-wrapper">
+                <div class="logiscoopyright-container logisco-container clearfix">
+                    <div class="logiscoopyright-left logisco-item-pdlr">Copyright 2025 Primegate, All Right Reserved</div></div>
             </div>
         </footer>
 
     </div>
 </div>
 
-	<script src='js/jquery/jquery.js'></script>
-	<script src='js/jquery/jquery-migrate.min.js'></script>
-	<script src='plugins/goodlayers-core/plugins/combine/script.js'></script>
-	<script>
-	    var gdlr_core_pbf = {
-	        "admin": "",
-	        "video": {
-	            "width": "640",
-	            "height": "360"
-	        },
-	        "ajax_url": ""
-	    };
-	</script>
-	<script src='plugins/goodlayers-core/include/js/page-builder.js'></script>
-	<script src='js/jquery/jquery.blockUI.min.js'></script>
-	<script src='js/jquery/ui/effect.min.js'></script>
-	<script src='js/jquery.mmenu.js'></script>
-	<script src='js/jquery.superfish.js'></script>
-	<script src='js/plugins.js'></script>
+    <script src='js/jquery/jquery.js'></script>
+    <script src='js/jquery/jquery-migrate.min.js'></script>
+    <script src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+    <script>
+        var gdlr_core_pbf = {
+            "admin": "",
+            "video": {
+                "width": "640",
+                "height": "360"
+            },
+            "ajax_url": ""
+        };
+    </script>
+    <script src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+    <script src='js/jquery/jquery.blockUI.min.js'></script>
+    <script src='js/jquery/ui/effect.min.js'></script>
+    <script src='js/jquery.mmenu.js'></script>
+    <script src='js/jquery.superfish.js'></script>
+    <script src='js/plugins.js'></script>
+    <script>
+        (function(){
+            const animated = document.querySelectorAll('[data-animate]');
+            if(!animated.length) return;
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('is-visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            animated.forEach(el => io.observe(el));
+        })();
+
+        (function(){
+            const tsNode = document.querySelector('.ts-text');
+            if(!tsNode) return;
+            const fullText = tsNode.textContent.trim();
+            const caret = document.createElement('span');
+            caret.className = 'typing-caret';
+            function typeLoop(){
+                tsNode.textContent = '';
+                tsNode.appendChild(caret);
+                let index = 0;
+                function typeNext(){
+                    if(index <= fullText.length){
+                        tsNode.insertBefore(document.createTextNode(fullText.charAt(index) || ''), caret);
+                        index++;
+                        setTimeout(typeNext, 40);
+                    } else {
+                        setTimeout(typeLoop, 1800);
+                    }
+                }
+                typeNext();
+            }
+            typeLoop();
+        })();
+    </script>
     <script type="text/javascript" src="plugins/quform/js/plugins.js"></script>
-    <script type="text/javascript" src="plugins/quform/js/scripts.js"></script> 
+    <script type="text/javascript" src="plugins/quform/js/scripts.js"></script>
 </body>
 </html>
-
-
