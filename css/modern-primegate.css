@@ -1,8 +1,10 @@
 .logisco-copyright-wrapper {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   z-index: 9999;
-  padding: 10px 0 !important;
+  padding: 8px 0 !important;
   background-color: #DE2818 !important;
   border-top: 2px solid rgba(255,255,255,0.15) !important;
   box-shadow: 0 -3px 12px rgba(0,0,0,0.15);
@@ -13,7 +15,7 @@
   line-height: 1.5 !important;
 }
 footer {
-  padding-bottom: 0px !important;
+  padding-bottom: 60px !important;
 }
 /* Modern Styles for Prime Gate International Ltd */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
@@ -29,6 +31,40 @@ footer {
   --dropdown-bg: #041d7d;
 }
 
+.logisco-container,
+.gdlr-core-container,
+.gdlr-core-container-custom,
+.logisco-container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 3vw, 36px) !important;
+  padding-right: clamp(16px, 3vw, 36px) !important;
+  box-sizing: border-box;
+}
+
+body.logisco-body-front .logisco-container,
+body.logisco-body-front .gdlr-core-container,
+body.logisco-body-front .gdlr-core-container-custom,
+body.logisco-body-front .logisco-container-fluid {
+  max-width: 100% !important;
+  padding-left: clamp(16px, 3vw, 36px) !important;
+  padding-right: clamp(16px, 3vw, 36px) !important;
+}
+
+.gdlr-core-pbf-wrapper-container,
+.gdlr-core-pbf-wrapper-content .gdlr-core-pbf-wrapper-container,
+.gdlr-core-page-builder-body .gdlr-core-pbf-wrapper-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 3vw, 36px) !important;
+  padding-right: clamp(16px, 3vw, 36px) !important;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif !important;
   /* Compensation for Fixed Header */
@@ -36,11 +72,19 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #DE2818 !important; /* Footer matching red to fix white gap */
 }
-.logisco-body-outer-wrapper {
+.logisco-page-wrapper {
+    background-color: #ffffff !important;
+    position: relative;
+    z-index: 1;
+}
+.logisco-body-outer-wrapper,
+.logisco-body-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
+  background-color: #DE2818 !important; /* Ensuring gap stays red */
 }
 .logisco-body-wrapper {
   flex: 1;

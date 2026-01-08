@@ -59,10 +59,20 @@
 
 .breakbulk-hero {
     position: relative;
-    padding: 140px 0 120px;
+    padding: clamp(100px, 16vw, 160px) 0;
     background: linear-gradient(135deg, #010d2a 0%, #041a4a 55%, #08234f 100%);
     color: #fff;
     overflow: hidden;
+}
+.breakbulk-hero .gdlr-core-pbf-wrapper-container,
+.breakbulk-hero .hero-content,
+.breakbulk-fullwidth {
+    width: 100%;
+    max-width: min(1440px, 94vw);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(16px, 3vw, 40px);
+    padding-right: clamp(16px, 3vw, 40px);
 }
 .breakbulk-hero::after {
     content: "";
@@ -75,9 +85,9 @@
 .breakbulk-hero .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 1100px;
+    max-width: min(1440px, 94vw);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 3vw, 40px);
 }
 .breakbulk-hero h1 {
     font-size: clamp(2.6rem, 6vw, 4rem);
@@ -181,8 +191,8 @@
     grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
     gap: 22px;
     margin: 80px auto;
-    max-width: 1200px;
-    padding: 0 24px;
+    max-width: min(1440px, 94vw);
+    padding: 0 clamp(16px, 3vw, 40px);
 }
 .promise-card {
     background: #fff;
@@ -216,9 +226,9 @@
     font-size: 1.2rem;
 }
 .capability-grid {
-    max-width: 1200px;
+    max-width: min(1440px, 94vw);
     margin: 40px auto;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 3vw, 40px);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
     gap: 24px;
@@ -253,9 +263,9 @@
     margin: 0;
 }
 .timeline-section {
-    max-width: 1100px;
+    max-width: min(1440px, 94vw);
     margin: 80px auto;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 3vw, 40px);
 }
 .timeline-grid {
     display: grid;
@@ -276,9 +286,9 @@
     margin: 80px 0;
 }
 .metric-wrap {
-    max-width: 1100px;
+    max-width: min(1440px, 94vw);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 3vw, 40px);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
     gap: 20px;
@@ -301,9 +311,9 @@
     font-weight: 700;
 }
 .project-highlight {
-    max-width: 1200px;
+    max-width: min(1440px, 94vw);
     margin: 60px auto;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 3vw, 40px);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
     gap: 30px;
@@ -346,8 +356,8 @@
 }
 .cta-panel {
     margin: 100px auto;
-    max-width: 1100px;
-    padding: 50px 40px;
+    max-width: min(1440px, 94vw);
+    padding: 50px clamp(16px, 4vw, 60px);
     border-radius: 26px;
     background: linear-gradient(120deg, #e52021, #ff7a18);
     color: #fff;
