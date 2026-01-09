@@ -234,7 +234,7 @@
     border-top: 4px solid #0f62fe;
     box-shadow: 0 15px 35px rgba(6,12,30,0.1);
 }
-.timeline-section { margin-top: 90px; }
+.timeline-section { margin: 90px auto 0; }
 .timeline-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
@@ -251,7 +251,7 @@
     background: linear-gradient(120deg, #041647, #0b2966);
     color: #fff;
     padding: 80px 0;
-    margin: 90px 0;
+    margin: 0;
 }
 .metric-wrap {
     display: grid;
@@ -314,22 +314,17 @@
     opacity: 1;
     transform: translateY(0);
 }
-@keyframes cardIdle {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+50% { transform: translateY(-2px); }
     100% { transform: translateY(0); }
 }
 .promise-card,
 .capability-card,
 .timeline-step,
 .metric-card,
-.project-highlight > div,
 .project-highlight img,
-.cta-panel,
 .playbook-card,
 .assurance-card,
 .stat-card {
-    animation: cardIdle 9s ease-in-out infinite;
     transition: transform .35s ease, box-shadow .35s ease;
     will-change: transform;
 }
@@ -349,7 +344,6 @@
     }
 }
 .floating-badge {
-    animation: cardIdle 6s ease-in-out infinite;
     font-weight: 600;
 }
 </style>
@@ -363,7 +357,7 @@
         <div class="logisco-mobile-header-container logisco-container clearfix">
             <div class="logisco-logo  logisco-item-pdlr">
                 <div class=logisco-logo-inner>
-                    <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                    <a class href=index-2.html></a>
                 </div>
             </div>
             <div class=logisco-mobile-menu-right>
@@ -462,7 +456,7 @@
                     <div class="logisco-header-container-inner clearfix">
                         <div class="logisco-logo  logisco-item-pdlr">
                             <div class=logisco-logo-inner>
-                                <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                                <a class href=index-2.html></a>
                             </div>
                         </div>
                         <div class="logisco-navigation logisco-item-pdlr clearfix ">
@@ -488,7 +482,8 @@
                         </div>
                     </div>
                 </div>
-            </header>
+                        </header>
+</header>
         </div>
 
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
@@ -497,7 +492,7 @@
                 <section class="project-hero" data-animate>
                     <div class="hero-content">
                         <div class="hero-pill floating-badge">Primegate International Ltd · Project Cargo Command</div>
-                        <h2 class="ts-headline"><span class="ts-text">Command, engineer, and deliver every abnormal load with zero doubt.</span></h2>
+                        <h3 class="ts-headline"><span class="ts-text">Command, engineer, and deliver every abnormal load with zero doubt.</span></h3>
                         <p>Primegate International Ltd blends engineering discipline, escort diplomacy, and 24/7 mission control to move transformers, refinery skids, turbines, and plant modules into landlocked markets without disruption.</p>
                         <div class="hero-pill-group">
                             <span class="hero-pill">Route & berthing intelligence</span>

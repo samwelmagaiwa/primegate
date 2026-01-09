@@ -264,7 +264,7 @@
 }
 .timeline-section {
     max-width: min(1800px, 98vw);
-    margin: 80px auto;
+    margin: 80px auto 0;
     padding: 0 clamp(20px, 6vw, 80px);
 }
 .timeline-grid {
@@ -283,7 +283,7 @@
     background: linear-gradient(120deg, #041647, #0b2966);
     color: #fff;
     padding: 70px 0;
-    margin: 80px 0;
+    margin: 0;
 }
 .metric-wrap {
     max-width: min(1800px, 98vw);
@@ -324,9 +324,7 @@
     border-radius: 24px;
     box-shadow: 0 25px 55px rgba(6,12,30,0.2);
 }
-@keyframes cardIdle {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+50% { transform: translateY(-2px); }
     100% { transform: translateY(0); }
 }
 .promise-card,
@@ -334,11 +332,8 @@
 .stat-card,
 .timeline-step,
 .metric-card,
-.project-highlight > div,
-.project-highlight img,
-.cta-panel {
+.project-highlight img {
     transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
-    animation: cardIdle 9s ease-in-out infinite;
     will-change: transform;
 }
 @media (hover:hover) {
@@ -379,11 +374,11 @@
 }
 @keyframes floatBadge {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    50% { transform: translateY(-2px); }
     100% { transform: translateY(0); }
 }
 .floating-badge {
-    animation: floatBadge 4s ease-in-out infinite;
+    animation: floatBadge 8s ease-in-out infinite;
 }
 </style>
 </head>
@@ -396,7 +391,7 @@
         <div class="logisco-mobile-header-container logisco-container clearfix">
             <div class="logisco-logo  logisco-item-pdlr">
                 <div class=logisco-logo-inner>
-                    <a class href=index-2.html><img src=upload/logo-removebg-preview.png alt width=320 height=84 title=logo-big></a>
+                    <a class href=index-2.html></a>
                 </div>
             </div>
             <div class=logisco-mobile-menu-right>
@@ -495,7 +490,7 @@
                     <div class="logisco-header-container-inner clearfix">
                         <div class="logisco-logo  logisco-item-pdlr">
                             <div class=logisco-logo-inner>
-                                <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                                <a class href=index-2.html></a>
                             </div>
                         </div>
                         <div class="logisco-navigation logisco-item-pdlr clearfix ">
@@ -521,7 +516,8 @@
                         </div>
                     </div>
                 </div>
-            </header>
+                        </header>
+</header>
         </div>
 
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
@@ -543,25 +539,6 @@
                         </a>
                     </div>
                 </section>
-
-                <div class="promise-grid" data-animate>
-                    <article class="promise-card">
-                        <h4>Purpose-built planning</h4>
-                        <p>Route surveys, axle load simulations, and trans-shipment design delivered before any piece is mobilized.</p>
-                    </article>
-                    <article class="promise-card">
-                        <h4>One command voice</h4>
-                        <p>A dedicated Primegate mission desk synchronizes port stevedores, hauliers, police escorts, and customs controllers.</p>
-                    </article>
-                    <article class="promise-card">
-                        <h4>Risk-proofed moves</h4>
-                        <p>Live GPS geofencing, weather triggers, and redundancy legs keep critical cargo moving through unpredictable terrain.</p>
-                    </article>
-                    <article class="promise-card">
-                        <h4>Transparent governance</h4>
-                        <p>Stakeholders receive situation boards, variance audits, and photographic evidence at every milestone.</p>
-                    </article>
-                </div>
 
                 <section class="capability-grid" data-animate>
                     <div class="capability-card">

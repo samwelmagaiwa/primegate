@@ -7022,10 +7022,12 @@ html.mm-opening.logisco-mmenu-right .logisco-mobile-header {
 
 .input1 {
 	border:0;
-	background: rgba(49, 49, 49, 0.8);
-    color: #adadad;
+	background: #ffffff;
+    color: #041d7d;
     padding: 20px 30px !important;
     margin-bottom: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(4, 29, 125, 0.15);
 }
 
 .gdlr-core-blog-thumbnail img {

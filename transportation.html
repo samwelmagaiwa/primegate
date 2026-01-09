@@ -65,7 +65,7 @@
     font-size: clamp(2.6rem, 6vw, 4.2rem);
     margin-bottom: 18px;
 }
-.transport-hero h2.ts-headline {
+.ts-headline {
     display: inline-flex;
     align-items: center;
     gap: 18px;
@@ -75,6 +75,7 @@
     border: 1px solid rgba(255,255,255,0.15);
     box-shadow: 0 25px 55px rgba(0,0,0,0.35);
     backdrop-filter: blur(8px);
+    min-height: 4.2em; /* Ensure height stability during typing */
 }
 .ts-text { font-weight:600; letter-spacing:0.01em; line-height:1.3; display:inline-flex; align-items:center; }
 .typing-caret { width:2px; height:1.8rem; background:#fff; margin-left:8px; animation: caretBlink .8s steps(2,start) infinite; }
@@ -140,15 +141,54 @@
 }
 .transport-showcase { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:30px; align-items:center; margin-top:70px; }
 .transport-showcase img { width:100%; border-radius:24px; box-shadow:0 25px 55px rgba(6,12,30,0.2); }
+.transport-panel {
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100vw;
+    max-width:100vw;
+    margin:0 calc(50% - 50vw) 100px;
+    padding:clamp(40px,5vw,110px);
+    border-radius:0;
+    background-image:linear-gradient(120deg,rgba(4,16,52,0.92),rgba(4,29,125,0.62)),url('upload/700x5002.png');
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 45px 90px rgba(4,16,52,0.45);
+    color:#fff;
+    overflow:hidden;
+}
+.transport-panel:before {
+    content:"";
+    position:absolute;
+    inset:28px;
+    border-radius:28px;
+    border:1px solid rgba(255,255,255,0.18);
+}
+.transport-panel > div {
+    position:relative;
+    z-index:1;
+    max-width:780px;
+    background:rgba(3,10,30,0.55);
+    padding:clamp(24px,4vw,54px);
+    border-radius:24px;
+    border-left:6px solid #ffb347;
+    backdrop-filter:blur(6px);
+}
+.transport-panel h3 { color:#fff; margin-bottom:18px; }
+.transport-panel p, .transport-panel li { color:rgba(255,255,255,0.92); }
+.transport-panel ul { margin:22px 0 0 20px; padding:0; list-style:disc; }
+@media(max-width:1300px){.transport-panel{width:100%;max-width:100%;margin:0 auto 80px;padding:40px 32px;} .transport-panel:before{inset:20px;} .transport-panel>div{max-width:100%;}}
+@media(max-width:768px){.transport-panel{flex-direction:column;padding:32px 18px;margin:50px auto 60px;} .transport-panel:before{inset:14px;border-radius:20px;} .transport-panel>div{border-left:0;border-radius:20px;background:rgba(3,10,30,0.8);}}
 .modalities-grid { margin-top:60px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
 .modal-card { background:#fff; border-radius:16px; padding:22px 24px; border-top:4px solid #0f62fe; box-shadow:0 15px 35px rgba(6,12,30,0.1); }
-.timeline-section { margin-top:90px; }
+.timeline-section { margin: 90px auto 0; }
 .timeline-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
 .timeline-step { background:#fff; border-radius:18px; padding:24px; border-top:4px solid #e52021; box-shadow:0 15px 35px rgba(6,12,30,0.1); }
 .network-panel { margin-top:70px; }
 .network-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
 .network-card { background:#fff; border-radius:18px; padding:26px; border-left:5px solid #0f62fe; box-shadow:0 18px 45px rgba(6,20,43,0.08); }
-.metrics-panel { background:linear-gradient(120deg,#041647,#0b2966); color:#fff; padding:80px 0; margin:90px 0; }
+.metrics-panel { background:linear-gradient(120deg,#041647,#0b2966); color:#fff; padding:80px 0; margin:0; }
 .metric-wrap { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
 .metric-card { background:rgba(255,255,255,0.1); border-radius:18px; padding:26px 24px 26px 34px; border-left:5px solid #ff7a18; box-shadow:0 20px 40px rgba(1,6,23,0.35); }
 .metric-number { font-size:2.4rem; font-weight:700; }
@@ -169,18 +209,20 @@
 }
 [data-animate]{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
 [data-animate].is-visible{opacity:1;transform:translateY(0);}
-@keyframes cardIdle{0%{transform:translateY(0);}50%{transform:translateY(-4px);}100%{transform:translateY(0);}}
+50%{transform:translateY(-2px);}100%{transform:translateY(0);}}
 .promise-card,
 .capability-card,
 .timeline-step,
 .metric-card,
-.transport-showcase>div,
 .transport-showcase img,
-.cta-panel,
 .network-card,
 .modal-card,
 .assurance-card,
-.stat-card{animation:cardIdle 9s ease-in-out infinite;transition:transform .35s,box-shadow .35s;will-change:transform;}
+.stat-card {
+    transition: transform .35s ease, box-shadow .35s ease;
+    will-change: transform;
+    /* Animation removed from here; controlled via modern-primegate.css or kept disabled for stability */
+}
 @media(hover:hover){
     .promise-card:hover,
     .capability-card:hover,
@@ -194,7 +236,7 @@
     .assurance-card:hover,
     .stat-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 30px 60px rgba(4,10,30,0.18);}
 }
-.floating-badge { animation:cardIdle 6s ease-in-out infinite; font-weight:600; }
+.floating-badge { font-weight:600; }
 </style>
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
@@ -206,7 +248,7 @@
         <div class="logisco-mobile-header-container logisco-container clearfix">
             <div class="logisco-logo  logisco-item-pdlr">
                 <div class=logisco-logo-inner>
-                    <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                    <a class href=index-2.html></a>
                 </div>
             </div>
             <div class=logisco-mobile-menu-right>
@@ -305,7 +347,7 @@
                     <div class="logisco-header-container-inner clearfix">
                         <div class="logisco-logo  logisco-item-pdlr">
                             <div class=logisco-logo-inner>
-                                <a class href=index-2.html><img src=upload/logobg.png alt width=320 height=84 title=logo-big></a>
+                                <a class href=index-2.html></a>
                             </div>
                         </div>
                         <div class="logisco-navigation logisco-item-pdlr clearfix ">
@@ -331,7 +373,8 @@
                         </div>
                     </div>
                 </div>
-            </header>
+                        </header>
+</header>
         </div>
 
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
@@ -340,7 +383,7 @@
                 <section class="transport-hero" data-animate>
                     <div class="hero-content">
                         <div class="hero-pill floating-badge">Primegate International Ltd · Integrated Transportation Control</div>
-                        <h2 class="ts-headline"><span class="ts-text">Every corridor, every mode, one synchronized Primegate command.</span></h2>
+                        <h3 class="ts-headline"><span class="ts-text">Every corridor, every mode, one synchronized Primegate command.</span></h3>
                         <p>Primegate International Ltd fuses road fleets, air charters, ocean capacity, and rail partnerships into a single visibility layer—delivering raw materials, relief cargo, and finished goods faster across East & Central Africa.</p>
                         <div class="hero-pill-group">
                             <span class="hero-pill">Road · Rail · Air · Ocean</span>
@@ -357,7 +400,7 @@
                     </div>
                 </section>
 
-                <section class="transport-showcase" data-animate>
+                <section class="transport-showcase transport-panel" data-animate>
                     <div>
                         <h3>Built for high-velocity supply chains</h3>
                         <p>From port stripping to last-mile replenishment, Primegate dispatches multi-modal plans that keep mining sites, energy developers, FMCG networks, and humanitarian agencies stocked. Our teams pre-qualify routes, align carriers to HSSE standards, and monitor dwell time live.</p>
@@ -367,7 +410,6 @@
                             <li>IoT telematics for temperature, vibration, and geofence alerts.</li>
                         </ul>
                     </div>
-                    <img src="upload/700x5002.png" alt="Primegate convoy leaving the port" loading="lazy">
                 </section>
 
                 <div class="promise-grid" data-animate>
@@ -407,26 +449,6 @@
                         <p>Space protection on major alliances plus Lake Tanganyika and Lake Victoria feeder solutions.</p>
                     </div>
                 </section>
-
-                <section class="modalities-grid" data-animate>
-                    <div class="modal-card">
-                        <strong>Contract logistics</strong>
-                        <p>Dedicated fleets, drivers, and yard management for FMCG and retail distribution.</p>
-                    </div>
-                    <div class="modal-card">
-                        <strong>Project shuttle</strong>
-                        <p>Looped convoys supplying remote EPC sites with cement, fuel, and structural steel.</p>
-                    </div>
-                    <div class="modal-card">
-                        <strong>Humanitarian lift</strong>
-                        <p>Rapid response corridors for NGOs with customs fast-tracks and secure storage.</p>
-                    </div>
-                    <div class="modal-card">
-                        <strong>eCommerce linehaul</strong>
-                        <p>Nightly express routes connecting customs zones, fulfillment centers, and urban spokes.</p>
-                    </div>
-                </section>
-
                 <section class="timeline-section" data-animate>
                     <h3>Primegate transportation playbook</h3>
                     <div class="timeline-grid">
@@ -437,35 +459,12 @@
                     </div>
                 </section>
 
-                <section class="network-panel" data-animate>
-                    <h3>Corridors we light up</h3>
-                    <div class="network-list">
-                        <article class="network-card"><strong>Central corridor</strong><p>Dar es Salaam → Dodoma → Mwanza → Kigali → Bujumbura with bonded stops at Isaka ICD.</p></article>
-                        <article class="network-card"><strong>Northern corridor</strong><p>Mombasa/Dar → Nairobi → Kampala → Goma → Juba with rail-road combos.</p></article>
-                        <article class="network-card"><strong>Southern corridor</strong><p>Dar/Mtwara → Mbeya → Tunduma → Ndola → Lubumbashi fueling mining supply chains.</p></article>
-                        <article class="network-card"><strong>Coastal shuttle</strong><p>Tanga ↔ Zanzibar ↔ Pemba reefer loops for pharmaceuticals and perishables.</p></article>
-                    </div>
-                </section>
-
                 <section class="metrics-panel" data-animate>
                     <div class="metric-wrap">
                         <div class="metric-card"><div class="metric-number">45%</div><p>Average reduction in customer inventory days thanks to synchronized deliveries.</p></div>
                         <div class="metric-card"><div class="metric-number">12K</div><p>TEUs stripped and transferred to inland depots annually.</p></div>
                         <div class="metric-card"><div class="metric-number">72 Hrs</div><p>Guaranteed maximum lead time from Dar port to Kampala for priority cargo.</p></div>
                         <div class="metric-card"><div class="metric-number">100%</div><p>Driver workforce trained on Primegate HSSE & defensive driving curriculum.</p></div>
-                    </div>
-                </section>
-
-                <section class="transport-showcase" data-animate>
-                    <img src="upload/mita-64-VJX7YO8nXtg-unsplash.jpg" alt="Primegate trucks on the move" loading="lazy">
-                    <div>
-                        <h3>Assurance wall</h3>
-                        <p>Clients follow live dashboards showing truck sequence, customs statuses, POD scans, and HSSE checkpoints. Exceptions trigger escalation trees and automated customer-facing updates.</p>
-                        <div class="assurance-grid">
-                            <article class="assurance-card"><strong>Telematics & IoT</strong><p>Temperature, shock, and unauthorized stop alerts logged in the mission desk.</p></article>
-                            <article class="assurance-card"><strong>Secure comms</strong><p>Encrypted driver comms plus panic buttons linked to regional response teams.</p></article>
-                            <article class="assurance-card"><strong>Compliance vault</strong><p>Licenses, permits, insurance, and vehicle inspections stored digitally for audits.</p></article>
-                        </div>
                     </div>
                 </section>
             </div>

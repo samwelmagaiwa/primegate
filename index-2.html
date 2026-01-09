@@ -117,9 +117,16 @@
     opacity: 0;
 }
 
+:root {
+    --header-bottom-offset: 185px;
+}
+
 .hero-highlight-container {
+    position: relative;
     background: rgba(7, 47, 132, 0.92);
     padding: 24px 28px;
+    margin-left: calc(var(--logo-square-size) + max(0px, var(--logo-square-offset-x)) + var(--hero-corner-gap));
+    padding-left: 28px;
     border-radius: 18px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
     max-width: 440px;
@@ -159,6 +166,308 @@
         height: 40px;
     }
 }
+
+.mission-panel {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.mission-panel .gdlr-core-pbf-background-wrap {
+    background: linear-gradient(135deg, rgba(4, 29, 125, 0.3) 0%, rgba(11, 57, 178, 0.2) 50%, rgba(28, 91, 255, 0.1) 100%);
+    opacity: 1 !important;
+    border-radius: 28px;
+    box-shadow: 0 35px 70px rgba(4, 29, 125, 0.2);
+}
+
+.mission-panel::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+}
+
+.mission-panel__content {
+    position: relative;
+    z-index: 1;
+}
+
+.mission-panel__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    margin-bottom: 18px;
+}
+
+.mission-panel__badge i {
+    font-size: 14px;
+}
+
+.mission-panel__metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-top: 18px;
+}
+
+.mission-panel__metrics span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mission-panel__metrics i {
+    color: #ffb347;
+}
+
+.mission-panel input,
+.mission-panel textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(4, 29, 125, 0.1);
+    border-radius: 16px;
+    padding: 10px 18px;
+    color: #041d7d;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mission-panel input::placeholder,
+.mission-panel textarea::placeholder {
+    color: rgba(4, 29, 125, 0.55);
+}
+
+.mission-panel input:focus,
+.mission-panel textarea:focus {
+    outline: none;
+    border-color: #ff7a18;
+    box-shadow: 0 0 0 2px rgba(255, 122, 24, 0.25);
+}
+
+.mission-panel .quform-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mission-panel .quform-element {
+    margin-bottom: 0;
+}
+
+.mission-panel .submit-button {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #ffb347, #ff7a18);
+    color: #041d7d;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 15px 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 20px 40px rgba(255, 122, 24, 0.35);
+}
+
+.mission-panel .submit-button span {
+    color: #041d7d;
+}
+
+.mission-panel .submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 50px rgba(255, 122, 24, 0.45);
+}
+
+@media (max-width: 768px) {
+    .mission-panel {
+        margin: 0 !important;
+        padding: 30px 20px !important;
+    }
+
+    .mission-panel__metrics {
+        gap: 8px;
+    }
+}
+/* ===============================
+   HEADER ACCENT SQUARE (LOGO)
+================================ */
+
+.header-accent-square {
+    position: fixed;
+    top: 20px;
+    left: -10px;
+    width: 240px;
+    height: 240px;
+    border-radius: 36px;
+    background: #ffffff;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    pointer-events: auto;
+}
+
+/* Logo wrapper */
+.header-square-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===============================
+   LOGO IMAGE (FAST + PREMIUM)
+================================ */
+
+.header-accent-square img {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    object-fit: contain;
+
+    /* Fast, confident animation */
+    animation:
+        logoFloat 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+        logoPulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover enhancement */
+.header-accent-square:hover img {
+    transform: scale(1.12);
+    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.3));
+}
+
+/* ===============================
+   KEYFRAMES
+================================ */
+
+@keyframes logoFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.07);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===============================
+   RESPONSIVE OPTIMIZATION
+================================ */
+
+@media (max-width: 768px) {
+    .header-accent-square {
+        width: 160px;
+        height: 160px;
+        top: 12px;
+        left: -6px;
+        padding: 12px;
+    }
+
+    .header-accent-square img {
+        max-width: 120px;
+        animation: none; /* Disable animation on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .header-accent-square {
+        display: none;
+    }
+}
+
+
+.royal-marquee {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(4, 29, 125, 0.85), rgba(229, 32, 33, 0.85));
+    color: #fff;
+    padding: 12px 0;
+    padding-left: clamp(110px, 12vw, 220px);
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 20px rgba(4, 16, 52, 0.25);
+    z-index: 5;
+}
+
+.royal-marquee__inner {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: royalMarqueeSlide 18s linear infinite;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.royal-marquee__inner span {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 32px;
+    animation: royalColorPulse 3s ease-in-out infinite;
+}
+
+.royal-marquee__inner span:before {
+    content: "005";
+    font-family: 'FontAwesome';
+    font-size: 13px;
+    color: #ffd76b;
+}
+
+@keyframes royalMarqueeSlide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes royalColorPulse {
+    0% { color: #ffffff; }
+    50% { color: #ffd76b; }
+    100% { color: #ffffff; }
+}
+
 </style>
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
@@ -170,7 +479,7 @@
         <div class="logisco-mobile-header-container logisco-container clearfix">
             <div class="logisco-logo  logisco-item-pdlr">
                 <div class=logisco-logo-inner>
-                    <a class href=index-2.html><img src=upload/logo-removebg-preview.png alt width=320 height=84 title=logo-big></a>
+                    <a class href=index-2.html></a>
                 </div>
             </div>
             <div class=logisco-mobile-menu-right>
@@ -226,7 +535,6 @@
                     <div class="logisco-top-bar-container-inner clearfix">
                         <div class="logisco-top-bar-left logisco-item-pdlr">
                             <div class="top-bar-brand">
-                                <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
                                 <div class="contact-hours">
                                     <i class="icon_clock"></i> Mon - sun / 08:00 - 17:30
                                 </div>
@@ -269,11 +577,6 @@
                 <div class=logisco-header-background></div>
                 <div class="logisco-header-container  logisco-header-full">
                     <div class="logisco-header-container-inner clearfix">
-                        <div class="logisco-logo  logisco-item-pdlr">
-                            <div class=logisco-logo-inner>
-                                <a class href=index-2.html><img src="upload/logo-removebg-preview.png" alt="Primegate Logo" width="360" height="110" title="Primegate"></a>
-                            </div>
-                        </div>
                         <div class="logisco-navigation logisco-item-pdlr clearfix ">
                             <div class=logisco-main-menu id=logisco-main-menu>
                                 <div class=logisco-navigation-slide-bar id=logisco-navigation-slide-bar></div>
@@ -299,7 +602,16 @@
                 </div>
             </header>
         </div>
-
+        <div class="royal-marquee" aria-label="Primegate welcome marquee">
+            <div class="royal-marquee__inner">
+                <span>Welcome to our world in Tanzania, where every client is treated like royalty</span>
+                <span>Primegate delivers royal-grade care, precision and visibility across Africa</span>
+                <span>Every mission receives concierge-level tracking, HSSE guardians and rapid comms</span>
+                <span>Welcome to our world in Tanzania, where every client is treated like royalty</span>
+                <span>Primegate delivers royal-grade care, precision and visibility across Africa</span>
+                <span>Every mission receives concierge-level tracking, HSSE guardians and rapid comms</span>
+            </div>
+        </div>
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
             <div class=gdlr-core-page-builder-body>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 60px 0px 40px 0px;" id=gdlr-core-wrapper-1>
@@ -312,6 +624,11 @@
                                 <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 30px 0px 30px 40px;">
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class="hero-highlight-container">
+                                            <div class="header-accent-square" aria-hidden="true">
+                                                <a class="header-square-logo" href="index-2.html" aria-label="Primegate Home">
+                                                    <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" loading="eager">
+                                                </a>
+                                            </div>
                                             <div class=gdlr-core-pbf-element>
                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 35px ;">
                                                     <div class="gdlr-core-title-item-title-wrap ">
@@ -332,13 +649,19 @@
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-column gdlr-core-column-30" data-skin="Homepage Enquiry Form" id=gdlr-core-column-2>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: 0px 20px 35px 60px;padding: 45px 25px 5px 25px;">
-                                    <div class=gdlr-core-pbf-background-wrap style="background-color: #212121 ;opacity: 0.77 ;border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webkit-border-radius: 3px 3px 3px 3px;"></div>
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js mission-panel" style="margin: 0px 20px 35px 60px;padding: 22px 20px 20px 20px;">
+                                    <div class=gdlr-core-pbf-background-wrap></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js mission-panel__content">
+                                        <div class="mission-panel__badge"><i class="fa fa-satellite"></i> Mission Control</div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 12px;">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 24px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">Plan a Mission with Primegate<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;color: #cfd6f2 ;">Share your cargo specs and we'll return a tailored route, permit and HSSE plan within 24 hours.</span></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 21px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">Plan a Mission with Primegate<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;font-size: 13px ;color: #e2e7ff ;">Share your cargo specs and we'll return a tailored route, permit and HSSE plan within 24 hours.</span></div>
+                                            <div class="mission-panel__metrics">
+                                                <span><i class="fa fa-clock-o"></i> 24h brief-back</span>
+                                                <span><i class="fa fa-map-o"></i> Corridor routing</span>
+                                                <span><i class="fa fa-shield"></i> HSSE review</span>
+                                            </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-contact-form-7-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 0px ;">
@@ -350,21 +673,21 @@
                                                             <div class="quform-element">
                                                                 
                                                                 <span class="wpcf7-form-control-wrap your-name">
-                                                                    <input style="color: #fff;" id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
+                                                                    <input id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Commander name*">
                                                                 </span> 
                                                             
                                                             </div>
                                                             <div class="quform-element">
                                                            
                                                                 <span class="wpcf7-form-control-wrap your-email">
-                                                                    <input style="color: #fff;" id="email" type="text" name="email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
+                                                                    <input id="email" type="text" name="email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Mission email*">
                                                                 </span> 
                                                             
                                                             </div>
                                                             <div class="quform-element">
                                                            
                                                                 <span class="wpcf7-form-control-wrap your-message">
-                                                                    <textarea style="color: #fff;"  id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
+                                                                    <textarea id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Cargo profile, route, permits required*"></textarea>
                                                                 </span>
                                                             
                                                             </div>
@@ -1538,325 +1861,7 @@
                 </div>
 
 
-                    <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/hp-accordion-bg.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.8></div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 58px ;"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px ;font-style: normal ;letter-spacing: 1px ;text-transform: uppercase ;color: #9a9a9a ;margin-bottom: 0px ;">News & Events</span>
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Get Updates<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-widget" style="padding-bottom: 0px ;">
-                                                <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout=fitrows>
-                                                    <div class="gdlr-core-item-list-wrap gdlr-core-column-60">
-                                                        <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-large">
-                                                            <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                <a href=#><img src=upload/julie-north-720432-unsplash-150x150.jpg alt width=150 height=150 title=julie-north-720432-unsplash></a>
-                                                            </div>
-                                                            <div class=gdlr-core-blog-widget-content>
-                                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>June 6, 2016</a></span>
-                                                                </div>
-                                                                <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 17px ;font-weight: 700 ;letter-spacing: 0px ;"><a href=# >In Good Taste: Mark Finlay Architects &#038; Interiors</a></h3></div>
-                                                        </div>
-                                                        <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-large">
-                                                            <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                <a href=#><img src=upload/spacex-101795-unsplash-150x150.jpg alt width=150 height=150 title=spacex-101795-unsplash></a>
-                                                            </div>
-                                                            <div class=gdlr-core-blog-widget-content>
-                                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>June 6, 2016</a></span>
-                                                                </div>
-                                                                <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 17px ;font-weight: 700 ;letter-spacing: 0px ;"><a href=# >Possession of my entire soul</a></h3></div>
-                                                        </div>
-                                                        <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-large">
-                                                            <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                <a href=#><img src=upload/ronan-680083-unsplash-150x150.jpg alt width=150 height=150 title=ronan-680083-unsplash></a>
-                                                            </div>
-                                                            <div class=gdlr-core-blog-widget-content>
-                                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>June 6, 2016</a></span>
-                                                                </div>
-                                                                <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 17px ;font-weight: 700 ;letter-spacing: 0px ;"><a href=# >SagasCano Designs a Temporary Pavilion for a Belgian Canal</a></h3></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# id=gdlr-core-button-id-78450><span class=gdlr-core-content >View All Posts</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"  ></i></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-pbf-column gdlr-core-column-40" id=gdlr-core-column-16>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 45px ;"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px ;font-style: normal ;letter-spacing: 1px ;text-transform: uppercase ;color: #9a9a9a ;margin-bottom: 0px ;">know us more</span>
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Frequently Asked Questions<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-accordion-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-accordion-style-icon">
-                                                <div class="gdlr-core-accordion-item-tab clearfix  gdlr-core-active">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js ">Shipping Tracking</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>At Logisco, we know experience matters. That�s why customers trust us � we have more than 80 years of experience in the logistics and transportation industry. For your air charter services, this translates to competence around the globe. Please make sure that the correct Reference Type matches the number being entered. Please follow these instructions for help. That�s why customers trust us � we have more than 80 years of experience.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js ">New Customers</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>At Logisco, we know experience matters. That�s why customers trust us � we have more than 80 years of experience in the logistics and transportation industry. For your air charter services, this translates to competence around the globe. Please make sure that the correct Reference Type matches the number being entered. Please follow these instructions for help. That�s why customers trust us � we have more than 80 years of experience.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js ">Applying For a Job</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>At Logisco, we know experience matters. That�s why customers trust us � we have more than 80 years of experience in the logistics and transportation industry. For your air charter services, this translates to competence around the globe. Please make sure that the correct Reference Type matches the number being entered. Please follow these instructions for help. That�s why customers trust us � we have more than 80 years of experience.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js ">Contact Info</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>At Logisco, we know experience matters. That�s why customers trust us � we have more than 80 years of experience in the logistics and transportation industry. For your air charter services, this translates to competence around the globe. Please make sure that the correct Reference Type matches the number being entered. Please follow these instructions for help. That�s why customers trust us � we have more than 80 years of experience.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js ">General Enquiries</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>At Logisco, we know experience matters. That�s why customers trust us � we have more than 80 years of experience in the logistics and transportation industry. For your air charter services, this translates to competence around the globe. Please make sure that the correct Reference Type matches the number being entered. Please follow these instructions for help. That�s why customers trust us � we have more than 80 years of experience.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 45px ;">
-                                    <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;color: #c3d9ff ;">
-                                        <p>Decision makers across energy, infrastructure, retail and humanitarian sectors use Primegate as their East &amp; Central Africa command center.</p>
-                                    </div>
-                                </div>
-                            </div>
-                                    <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;color: #c3d9ff ;">
-                                        <p>Our commitment to sustainability helps us reduce waste and share the benefits with
-                                            <br/>our customers. It permeates the way we do business, driving us to innovate.</p>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-testimonial-item gdlr-core-item-pdb clearfix  gdlr-core-testimonial-style-left gdlr-core-item-pdlr">
-                                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2  gdlr-core-bullet-style-cylinder" data-type=carousel data-column=2 data-move=1 data-nav=bullet data-nav-parent=gdlr-core-testimonial-item data-disable-autoslide=1>
-                                        <ul class=slides>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-testimonial clearfix">
-                                                    <div class="gdlr-core-testimonial-frame clearfix gdlr-core-skin-e-background">
-                                                        <div class="gdlr-core-testimonial-quote gdlr-core-quote-font" style="color: #e52021 ;">&#8220;</div>
-                                                        <div class=gdlr-core-testimonial-content-wrap>
-                                                            <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>Primegate collapsed a 28-day customs bottleneck into 9 days and fed live intelligence to our finance, HSSE and site teams simultaneously.</p>
-                                                            </div>
-                                                            <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <!-- <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src=upload/hp-testimonial-1-150x150.jpg alt width=150 height=150 title=hp-testimonial-1></div> -->
-                                                                <div class=gdlr-core-testimonial-author-content>
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title" style="color: #143369 ;font-size: 18px ;">Owawa EPC Consortium</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="color: #143369 ;font-size: 16px ;">Project Controls Director</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-testimonial clearfix">
-                                                    <div class="gdlr-core-testimonial-frame clearfix gdlr-core-skin-e-background">
-                                                        <div class="gdlr-core-testimonial-quote gdlr-core-quote-font" style="color: #e52021 ;">&#8220;</div>
-                                                        <div class=gdlr-core-testimonial-content-wrap>
-                                                            <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>Their Nairobi control tower choreographed 46 abnormal-load convoys with zero safety incidents and a 100% permit hit rate.</p>
-                                                            </div>
-                                                            <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <!-- <div class="gdlr-core-testimonial-author-image gdlr-core-media-image">
-                                                                    <img src=upload/hp-testimonial-2-150x150.jpg alt width=150 height=150 title=hp-testimonial-2>
-                                                                </div> -->
-                                                                <div class=gdlr-core-testimonial-author-content>
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title" style="color: #143369 ;font-size: 18px ;">Amina K.</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="color: #143369 ;font-size: 16px ;">Regional Logistics Lead, Consumer Goods</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-testimonial clearfix">
-                                                    <div class="gdlr-core-testimonial-frame clearfix gdlr-core-skin-e-background">
-                                                        <div class="gdlr-core-testimonial-quote gdlr-core-quote-font" style="color: #e52021 ;">&#8220;</div>
-                                                        <div class=gdlr-core-testimonial-content-wrap>
-                                                            <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>When flooding cut the central corridor, Primegate re-routed via Mtwara within hours and protected our vaccine cold chain the entire way.</p>
-                                                            </div>
-                                                            <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <div class=gdlr-core-testimonial-author-content>
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title" style="color: #143369 ;font-size: 18px ;">Dr. Elias Mwinyi</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="color: #143369 ;font-size: 16px ;">Director, Regional Health NGO</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-                                            <!-- <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-testimonial clearfix">
-                                                    <div class="gdlr-core-testimonial-frame clearfix gdlr-core-skin-e-background">
-                                                        <div class="gdlr-core-testimonial-quote gdlr-core-quote-font" style="color: #e52021 ;">&#8220;</div>
-                                                        <div class=gdlr-core-testimonial-content-wrap>
-                                                            <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic.</p>
-                                                            </div>
-                                                            <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src=upload/hp-testimonial-3-150x150.jpg alt width=150 height=150 title=hp-testimonial-3></div>
-                                                                <div class=gdlr-core-testimonial-author-content>
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title" style="color: #143369 ;font-size: 18px ;">Joseph Martin</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="color: #143369 ;font-size: 16px ;">Head Of Logistic, Micrsoft</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li> -->
-
-                                            <!-- <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-testimonial clearfix">
-                                                    <div class="gdlr-core-testimonial-frame clearfix gdlr-core-skin-e-background">
-                                                        <div class="gdlr-core-testimonial-quote gdlr-core-quote-font" style="color: #e52021 ;">&#8220;</div>
-                                                        <div class=gdlr-core-testimonial-content-wrap>
-                                                            <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantic.</p>
-                                                            </div>
-                                                            <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src=upload/hp-testimonial-4-1-150x150.jpg alt width=150 height=150 title=hp-testimonial-4></div>
-                                                                <div class=gdlr-core-testimonial-author-content>
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title" style="color: #143369 ;font-size: 18px ;">Kerry Jensen</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="color: #143369 ;font-size: 16px ;">CFO Of Tumi</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li> -->
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 30px 0px;">
-                    <div class=gdlr-core-pbf-background-wrap></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 20px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 28px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #143369 ;">Subscribe to newsletter<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                                <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;">
-                                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gdlr-core-pbf-column gdlr-core-column-30" data-skin="Re Button 2" id=gdlr-core-column-17>
-                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 40px 0px 0px 0px;">
-                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-newsletter-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-style-rectangle">
-                                                <script>
-                                                    /*<![CDATA[*/
-                                                    if (typeof newsletter_check !== "function") {
-                                                        window.newsletter_check = function(f) {
-                                                            var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
-                                                            if (!re.test(f.elements["ne"].value)) {
-                                                                alert("Email address is not correct");
-                                                                return false;
-                                                            }
-                                                            for (var i = 1; i < 20; i++) {
-                                                                if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
-                                                                    alert("");
-                                                                    return false;
-                                                                }
-                                                            }
-                                                            if (f.elements["ny"] && !f.elements["ny"].checked) {
-                                                                alert("You must accept the privacy policy");
-                                                                return false;
-                                                            }
-                                                            return true;
-                                                        }
-                                                    } /*]]>*/
-                                                </script>
-                                                <div class="newsletter newsletter-subscription">
-                                                    <form class="gdlr-core-newsletter-form clearfix" method=post action="https://demo.goodlayers.com/logisco/?na=s" onsubmit="return newsletter_check(this)">
-                                                        <div class=gdlr-core-newsletter-email>
-                                                            <input class="newsletter-email gdlr-core-skin-e-background gdlr-core-skin-e-content" placeholder="Your Email Address" type=email name=ne size=30 required>
-                                                        </div>
-                                                        <div class=gdlr-core-newsletter-submit>
-                                                            <input class=newsletter-submit type=submit value=Subscribe>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                
-            </div>
-        </div>
-
-        
-        <!-- Footer Begins -->
+                  
                 
         <footer>
             <div class="logisco-footer-wrapper ">
