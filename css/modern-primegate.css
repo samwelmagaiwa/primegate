@@ -665,9 +665,9 @@ h6 {
 }
 
 .top-bar-btn--ghost {
-  background-color: transparent;
+  background-color: #041d7d;
   border-color: #041d7d;
-  color: #041d7d;
+  color: #ffffff;
 }
 
 .top-bar-btn:hover {
@@ -677,7 +677,8 @@ h6 {
 }
 
 .top-bar-btn--ghost:hover {
-  background-color: #041d7d;
+  background-color: #e52021;
+  border-color: #e52021;
   color: #ffffff;
 }
 
