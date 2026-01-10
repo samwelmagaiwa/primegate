@@ -475,13 +475,13 @@ ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-list li a{ border-color: #2
 ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-box li a{ color: #727272; } 
 ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-box li a:hover, ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-box li.current-menu-item a, ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-box li.current-menu-ancestor a{ background-color: #041D7D; } 
 ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-box li a:hover, ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-box li.current-menu-item a, ul.gdlr-core-custom-menu-widget.gdlr-core-menu-style-box li.current-menu-ancestor a{ color: #ffffff; } 
-.logisco-footer-wrapper{ background-color: #DE2818; } 
+.logisco-footer-wrapper{ background-color: #041D7D; }
 .logisco-footer-wrapper .logisco-widget-title{ color: #ffffff; }.logisco-footer-wrapper h1, .logisco-footer-wrapper h3, .logisco-footer-wrapper h3, .logisco-footer-wrapper h4, .logisco-footer-wrapper h5, .logisco-footer-wrapper h6{ color: #ffffff; }  
 .logisco-footer-wrapper{ color: #c2cbda; }.logisco-footer-wrapper .widget_recent_entries ul li:before, .logisco-footer-wrapper .widget_recent_comments ul li:before, .logisco-footer-wrapper .widget_pages ul li:before, .logisco-footer-wrapper .widget_rss ul li:before, .logisco-footer-wrapper .widget_archive ul li:before, .logisco-footer-wrapper .widget_categories ul li:before, .widget_nav_menu ul li:before, .logisco-footer-wrapper .widget_meta ul li:before{ color: #c2cbda; } 
 .logisco-footer-wrapper a{ color: #c2cbda; } 
 .logisco-footer-wrapper a:hover{ color: #ffffff; } 
 .logisco-footer-wrapper, .logisco-footer-wrapper *{ border-color: #3a4251; } 
-.logisco-copyright-wrapper{ background-color: #DE2818; } 
+.logisco-copyright-wrapper{ background-color: #041D7D; }
 .logisco-copyright-wrapper{ color: #ffffff; } 
 .logisco-copyright-wrapper a{ color: #ffffff; } 
 .logisco-copyright-wrapper a:hover{ color: #ffffff; } 

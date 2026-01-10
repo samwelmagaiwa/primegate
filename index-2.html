@@ -10,7 +10,7 @@
     <meta name="description" content="Leading logistics company in Tanzania offering sea freight, air freight, contract logistics, and overland transportation. Trusted global logistics partner with 90+ service locations worldwide.">
     <meta name="keywords" content="logistics Tanzania, freight forwarding, sea freight, air freight, cargo shipping, contract logistics, overland transport, Dar es Salaam logistics, international shipping, supply chain management">
     <meta name="author" content="Primegate International Trading LTD">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex,follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     
@@ -119,6 +119,14 @@
 
 :root {
     --header-bottom-offset: 185px;
+    --royal-marquee-height: 56px;
+    /* approximate total fixed header height (top bar + main nav) */
+    --fixed-header-height: 140px;
+}
+
+/* Ensure hero background has no red band */
+#gdlr-core-wrapper-1.gdlr-core-pbf-wrapper > .gdlr-core-pbf-background-wrap {
+    background: #041d7d !important;
 }
 
 .hero-highlight-container {
@@ -307,166 +315,6 @@
         gap: 8px;
     }
 }
-/* ===============================
-   HEADER ACCENT SQUARE (LOGO)
-================================ */
-
-.header-accent-square {
-    position: fixed;
-    top: 20px;
-    left: -10px;
-    width: 240px;
-    height: 240px;
-    border-radius: 36px;
-    background: #ffffff;
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.14);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    pointer-events: auto;
-}
-
-/* Logo wrapper */
-.header-square-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-/* ===============================
-   LOGO IMAGE (FAST + PREMIUM)
-================================ */
-
-.header-accent-square img {
-    width: 100%;
-    max-width: 190px;
-    height: auto;
-    object-fit: contain;
-
-    /* Fast, confident animation */
-    animation:
-        logoFloat 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite,
-        logoPulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-/* Hover enhancement */
-.header-accent-square:hover img {
-    transform: scale(1.12);
-    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.3));
-}
-
-/* ===============================
-   KEYFRAMES
-================================ */
-
-@keyframes logoFloat {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes logoPulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.07);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* ===============================
-   RESPONSIVE OPTIMIZATION
-================================ */
-
-@media (max-width: 768px) {
-    .header-accent-square {
-        width: 160px;
-        height: 160px;
-        top: 12px;
-        left: -6px;
-        padding: 12px;
-    }
-
-    .header-accent-square img {
-        max-width: 120px;
-        animation: none; /* Disable animation on mobile */
-    }
-}
-
-@media (max-width: 576px) {
-    .header-accent-square {
-        display: none;
-    }
-}
-
-
-.royal-marquee {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: block;
-    overflow: hidden;
-    background: linear-gradient(135deg, rgba(4, 29, 125, 0.85), rgba(229, 32, 33, 0.85));
-    color: #fff;
-    padding: 12px 0;
-    padding-left: clamp(110px, 12vw, 220px);
-    margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 20px rgba(4, 16, 52, 0.25);
-    z-index: 5;
-}
-
-.royal-marquee__inner {
-    display: inline-flex;
-    white-space: nowrap;
-    animation: royalMarqueeSlide 18s linear infinite;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.royal-marquee__inner span {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    padding-right: 32px;
-    animation: royalColorPulse 3s ease-in-out infinite;
-}
-
-.royal-marquee__inner span:before {
-    content: "005";
-    font-family: 'FontAwesome';
-    font-size: 13px;
-    color: #ffd76b;
-}
-
-@keyframes royalMarqueeSlide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-@keyframes royalColorPulse {
-    0% { color: #ffffff; }
-    50% { color: #ffd76b; }
-    100% { color: #ffffff; }
-}
 
 </style>
 </head>
@@ -505,8 +353,7 @@
                                 <ul class=sub-menu>
                                     <li class="menu-item"><a href="about-1.html">About us</a></li>
                                     <li class="menu-item"><a href="contact.html">Contact</a></li>
-                                    
-                                    
+
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children"><a href=#>Our Services</a>
@@ -535,10 +382,11 @@
                     <div class="logisco-top-bar-container-inner clearfix">
                         <div class="logisco-top-bar-left logisco-item-pdlr">
                             <div class="top-bar-brand">
-                                <div class="contact-hours">
-                                    <i class="icon_clock"></i> Mon - sun / 08:00 - 17:30
-                                </div>
+        <img src="upload/logo-removebg-preview.png" alt="Primegate Logo" class="top-bar-logo" loading="lazy">
+        <div class="contact-hours">
+                                <i class="icon_clock"></i> Mon - sun / 08:00 - 17:30
                             </div>
+    </div>
                         </div>
                         <div class="logisco-top-bar-right logisco-item-pdlr">
                             <div class="contact-numbers">
@@ -551,7 +399,6 @@
                                 <ul class=sub-menu>
                                     <li class="menu-item" data-size=60><a href=about-1.html>About Us</a></li>                                            
                                     <li class="menu-item" data-size=60><a href=contact.html>Contact</a></li>
-                                    <li class="menu-item"><a href="our-team.html">Our Team</a></li>
 
                                 </ul>
                             </li>
@@ -577,6 +424,11 @@
                 <div class=logisco-header-background></div>
                 <div class="logisco-header-container  logisco-header-full">
                     <div class="logisco-header-container-inner clearfix">
+                        <div class="logisco-logo  logisco-item-pdlr">
+                            <div class=logisco-logo-inner>
+                                <a class href=index-2.html></a>
+                            </div>
+                        </div>
                         <div class="logisco-navigation logisco-item-pdlr clearfix ">
                             <div class=logisco-main-menu id=logisco-main-menu>
                                 <div class=logisco-navigation-slide-bar id=logisco-navigation-slide-bar></div>
@@ -602,21 +454,11 @@
                 </div>
             </header>
         </div>
-        <div class="royal-marquee" aria-label="Primegate welcome marquee">
-            <div class="royal-marquee__inner">
-                <span>Welcome to our world in Tanzania, where every client is treated like royalty</span>
-                <span>Primegate delivers royal-grade care, precision and visibility across Africa</span>
-                <span>Every mission receives concierge-level tracking, HSSE guardians and rapid comms</span>
-                <span>Welcome to our world in Tanzania, where every client is treated like royalty</span>
-                <span>Primegate delivers royal-grade care, precision and visibility across Africa</span>
-                <span>Every mission receives concierge-level tracking, HSSE guardians and rapid comms</span>
-            </div>
-        </div>
         <div class=logisco-page-wrapper id=logisco-page-wrapper>
             <div class=gdlr-core-page-builder-body>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 60px 0px 40px 0px;" id=gdlr-core-wrapper-1>
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/shipping-container-being-loaded-onto-truck-port.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0></div>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-color: #041d7d; background-size: cover; background-position: center;" data-parallax-speed=0></div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -709,35 +551,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="gdlr-core-pbf-wrapper " style="margin: -60px 0px 0px 0px;padding: 0px 0px 0px 0px;" id=gdlr-core-wrapper-2>
-                    <div class=gdlr-core-pbf-background-wrap></div>
+                <div class="gdlr-core-pbf-wrapper global-services-section" style="margin: -60px 0px 0px 0px;padding: 0px 0px 0px 0px;" id=gdlr-core-wrapper-2>
+                    <div class="gdlr-core-pbf-background-wrap"></div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class=" gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix" style="box-shadow: 0 0 35px rgba(10, 10, 10,0.12); -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.12); -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.12); background-color: #ffffff ;border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webkit-border-radius: 3px 3px 3px 3px;z-index: 999 ;">
-                                <div class="gdlr-core-pbf-column gdlr-core-column-24 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 50px 0px 20px 0px;" data-sync-height=map-height>
+                            <div class=" gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix global-services-card">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-24 gdlr-core-column-first">
+                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 40px 30px 30px 30px;" data-sync-height=map-height>
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
                                             <div class=gdlr-core-pbf-element>
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src=upload/hp-1-map-1.jpg alt width=444 height=221 title=hp-1-map></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;border-radius: 18px;overflow: hidden;"><img src="upload/hp-1-map-1.jpg" alt="Primegate global logistics network" width="444" height="221" title="hp-1-map"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-36" id=gdlr-core-column-3>
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 90px 40px 0px 0px;" data-sync-height=map-height>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-36" id=gdlr-core-column-3>
+                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 60px 40px 30px 0px;" data-sync-height=map-height>
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
                                             <div class=gdlr-core-pbf-element>
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
+                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 18px ;">
                                                     <div class="gdlr-core-title-item-title-wrap ">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 31px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #e52021 ;">We Provide Service Across The Globe<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 700 ;letter-spacing: 0.02em ;text-transform: none ;color: #ffffff ;">We Provide Service Across The Globe<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                                 </div>
                                             </div>
                                             <div class=gdlr-core-pbf-element>
                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-p-space">
-                                                    <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;color: #4f5d77 ;">
-                                                        <p>We offer a Global Logistics Network with our worldwide offices and also high quality distribution facilities which are staffed by dedicated teams of the top of experts. We have more than 17+ years of experiences in this field.</p>
+                                                    <div class=gdlr-core-text-box-item-content style="font-size: 17px ;text-transform: none ;color: #dde5ff ;">
+                                                        <p>We offer a global logistics network with high-quality distribution hubs, staffed by dedicated experts who understand Africas trade corridors. Our teams deliver consistent, reliable execution across ports, borders and inland routes.</p>
                                                     </div>
                                                 </div>
                                             </div>

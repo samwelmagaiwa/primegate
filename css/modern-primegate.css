@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 9999;
   padding: 8px 0 !important;
-  background-color: #DE2818 !important;
+  background-color: #041D7D !important;
   border-top: 2px solid rgba(255,255,255,0.15) !important;
   box-shadow: 0 -3px 12px rgba(0,0,0,0.15);
 }
@@ -29,6 +29,18 @@ footer {
   --text-light: #777777;
   --white: #ffffff;
   --dropdown-bg: #041d7d;
+}
+
+/* Ensure no theme background image or red frame shows behind content */
+.logisco-body-background {
+  background: none !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.logisco-body-wrapper.logisco-with-frame {
+  background: none !important;
+  background-color: #ffffff !important;
 }
 
 .logisco-container,
@@ -72,7 +84,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #DE2818 !important; /* Footer matching red to fix white gap */
+  /* Use neutral white so no red band shows behind header */
+  background-color: #ffffff !important;
 }
 
 /* Split header innovation layout */
@@ -227,16 +240,17 @@ body {
     position: relative;
     z-index: 1;
 }
-.logisco-body-outer-wrapper,
-.logisco-body-wrapper {
+ .logisco-body-outer-wrapper,
+ .logisco-body-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #DE2818 !important; /* Ensuring gap stays red */
-}
-.logisco-body-wrapper {
+  /* Remove legacy red band background and keep layout flexible */
+  background-color: #ffffff !important;
+ }
+ .logisco-body-wrapper {
   flex: 1;
-}
+ }
 
 h1,
 h2,
