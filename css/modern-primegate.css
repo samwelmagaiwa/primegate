@@ -567,3 +567,149 @@ h6 {
 .logisco-top-bar-right-social {
   display: none !important;
 }
+
+
+/* -------------------------------------------------------------------------- */
+/* Header Refresh (top bar + navigation)                                      */
+/* -------------------------------------------------------------------------- */
+.logisco-top-bar,
+.logisco-top-bar-background {
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(4, 29, 125, 0.08);
+}
+
+.logisco-top-bar-container-inner {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  padding: 10px 0;
+}
+
+.top-bar-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.top-bar-row.top-bar-meta {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #041d7d;
+}
+
+.top-bar-row.top-bar-meta > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 220px;
+}
+
+.top-bar-row.top-bar-meta > div a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.top-bar-row.top-bar-meta > div a:hover,
+.top-bar-row.top-bar-meta > div a:focus {
+  color: #e52021;
+}
+
+.top-bar-row.top-bar-main {
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.top-bar-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.top-bar-logo {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+}
+
+.top-bar-nav-wrap {
+  flex: 1 1 auto;
+  min-width: 280px;
+}
+
+.top-bar-cta {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+}
+
+.top-bar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 10px 22px;
+  border: 1px solid transparent;
+  background-color: #041d7d;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.top-bar-btn--ghost {
+  background-color: transparent;
+  border-color: #041d7d;
+  color: #041d7d;
+}
+
+.top-bar-btn:hover {
+  background-color: #e52021;
+  border-color: #e52021;
+  color: #ffffff;
+}
+
+.top-bar-btn--ghost:hover {
+  background-color: #041d7d;
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .top-bar-row.top-bar-main {
+    flex-wrap: wrap;
+  }
+  .top-bar-brand {
+    flex: 1 1 160px;
+  }
+  .top-bar-cta {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar-row.top-bar-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .top-bar-brand,
+  .top-bar-nav-wrap,
+  .top-bar-cta {
+    width: 100%;
+  }
+  .top-bar-nav-wrap {
+    order: 3;
+  }
+  .top-bar-cta {
+    order: 2;
+  }
+}
+
