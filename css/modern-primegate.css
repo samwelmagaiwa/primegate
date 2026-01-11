@@ -579,15 +579,15 @@ h6 {
   display: flex !important;
   flex-direction: column;
   align-items: stretch;
-  gap: 4px;
-  padding: 2px 0;
+  gap: 2px;
+  padding: 0;
 }
 
 .top-bar-row {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
 }
 
 .top-bar-row.top-bar-meta {
@@ -643,11 +643,13 @@ h6 {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 6px 24px;
+  padding: 6px 20px;
   background: #ffffff;
   border: 1px solid rgba(4, 29, 125, 0.12);
-  border-radius: 20px 0 0 20px;
-  box-shadow: 0 8px 20px rgba(4, 29, 125, 0.08);
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0 6px 16px rgba(4, 29, 125, 0.08);
+  flex: 0 0 320px;
+  min-width: 320px;
 }
 
 .top-bar-brand::after {
@@ -874,6 +876,15 @@ h6 {
 }
 
 
+
+.top-bar-logo {
+  height: 110px !important;
+}
+@media (max-width: 768px) {
+  .top-bar-logo {
+    height: 72px !important;
+  }
+}
 @media (max-width: 1024px) {
   .top-bar-row.top-bar-main {
     flex-direction: column;
@@ -951,5 +962,20 @@ h6 {
 @media (max-width: 1024px) {
   .top-bar-nav-wrap nav ul {
     justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .top-bar-brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar-brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 8px 16px;
   }
 }
