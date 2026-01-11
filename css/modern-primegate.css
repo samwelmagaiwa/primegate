@@ -627,12 +627,12 @@ h6 {
 }
 
 .top-bar-row.top-bar-main {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  display: flex;
+  align-items: center;
   column-gap: 18px;
-  align-items: stretch;
   position: relative;
   isolation: isolate;
+  width: 100%;
 }
 
 .top-bar-brand {
@@ -673,12 +673,13 @@ h6 {
   border: 1px solid rgba(4, 29, 125, 0.12);
   border-left: none;
   border-radius: 0 28px 28px 0;
-  padding: 10px 20px 10px 10px;
+  padding: 12px 24px 12px 18px;
   box-shadow: 0 14px 40px rgba(4, 29, 125, 0.08);
   min-width: 320px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  justify-content: flex-start;
+  gap: 18px;
 }
 
 .top-bar-cta {
@@ -732,12 +733,15 @@ h6 {
     flex-wrap: wrap;
   }
   .top-bar-brand {
-    flex: 1 1 160px;
+    flex: 0 0 auto;
+  }
+  .top-bar-nav-wrap {
+    flex: 1 1 auto;
   }
   .top-bar-cta {
-    flex: 1 1 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
   }
 }
 
@@ -751,11 +755,16 @@ h6 {
   .top-bar-cta {
     width: 100%;
   }
+  .top-bar-brand {
+    order: 1;
+  }
   .top-bar-nav-wrap {
-    order: 3;
+    order: 2;
   }
   .top-bar-cta {
-    order: 2;
+    order: 3;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 
