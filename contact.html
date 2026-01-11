@@ -91,6 +91,7 @@
 .contact-card:hover strong,
 .contact-card:focus-within strong{color:#e52021;}
 .contact-card a{color:#e52021;font-weight:600;position:relative;display:inline-flex;align-items:center;gap:8px;transition:color .2s ease;}
+.contact-card__phones a i{color:inherit;font-size:0.95rem;}
 .contact-card a::after{content:"";width:0;height:2px;background:currentColor;position:absolute;left:0;bottom:-3px;transition:width .2s ease;}
 .contact-card a:hover,
 .contact-card a:focus{color:#b60c0d;}
@@ -314,7 +315,11 @@
       <article class="contact-card">
         <div class="contact-card__icon"><i class="fa fa-phone"></i></div>
         <strong>Call us</strong>
-        <p>+255 718 707 449<br/>+255 755 666 745<br/>0798 008 007</p>
+        <p class="contact-card__phones">
+          <a href="tel:+255718707449"><i class="fa fa-phone"></i> +255 718 707 449</a><br/>
+          <a href="tel:+255755666745"><i class="fa fa-phone"></i> +255 755 666 745</a><br/>
+          <a href="https://wa.me/255798008007" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i> 0798 008 007</a>
+        </p>
       </article>
       <article class="contact-card">
         <div class="contact-card__icon"><i class="fa fa-envelope"></i></div>
