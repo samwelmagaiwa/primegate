@@ -79,13 +79,20 @@ body.logisco-body-front .logisco-container-fluid {
 
 body {
   font-family: "Poppins", sans-serif !important;
-  /* Compensation for Fixed Header */
+  /* Compensation for Fixed Header on desktop (fixed top bar) */
   padding-top: 80px !important;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* Use neutral white so no red band shows behind header */
   background-color: #ffffff !important;
+}
+
+/* On tablets/phones we use the theme mobile header, so remove extra top padding */
+@media (max-width: 1200px) {
+  body {
+    padding-top: 0 !important;
+  }
 }
 
 /* Split header innovation layout */
@@ -714,3 +721,70 @@ h6 {
   }
 }
 
+
+
+/* -------------------------------------------------------------------------- */
+/* Mobile header cleanup */
+/* -------------------------------------------------------------------------- */
+.logisco-mobile-header {
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 24px rgba(4, 29, 125, 0.08);
+  border-bottom: 1px solid rgba(4, 29, 125, 0.08);
+}
+
+.logisco-mobile-menu-button {
+  border-color: #041d7d !important;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.logisco-mobile-menu-button:hover {
+  background-color: rgba(4, 29, 125, 0.08);
+}
+
+.logisco-mobile-button-hamburger,
+.logisco-mobile-button-hamburger::before,
+.logisco-mobile-button-hamburger::after,
+.logisco-mobile-button-hamburger span {
+  background-color: transparent;
+}
+
+.logisco-mobile-button-hamburger::before,
+.logisco-mobile-button-hamburger::after,
+.logisco-mobile-button-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #041d7d;
+  border-radius: 999px;
+}
+
+.logisco-mobile-button-hamburger::before {
+  transform: translateY(-7px);
+}
+
+.logisco-mobile-button-hamburger::after {
+  transform: translateY(7px);
+}
+
+.logisco-mobile-header .logisco-main-menu-search i,
+.logisco-mobile-header .logisco-top-menu-button i {
+  color: #041d7d;
+}
+
+@media (max-width: 600px) {
+  .logisco-mobile-menu-button {
+    width: 44px;
+    height: 44px;
+  }
+  .logisco-mobile-button-hamburger::before,
+  .logisco-mobile-button-hamburger::after,
+  .logisco-mobile-button-hamburger span {
+    width: 20px;
+  }
+}
