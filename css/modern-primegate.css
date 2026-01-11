@@ -1039,5 +1039,16 @@ h6 {
   .partner-showcase {
     padding: 44px 24px;
     border-radius: 32px;
+    margin-bottom: 0;
+  }
+}
+
+/* Overlap the partner showcase with the next section on larger screens */
+@media (min-width: 992px) {
+  .partner-showcase {
+    margin-bottom: -80px;
+  }
+  #gdlr-core-wrapper-client-feedback {
+    padding-top: 190px !important;
   }
 }
