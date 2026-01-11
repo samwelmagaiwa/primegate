@@ -862,11 +862,7 @@ h6 {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .top-bar-logo,
-  .section-logo img,
-  .logisco-mobile-header .logisco-logo-inner img {
-    animation: none !important;
-  }
+  /* Intentionally left blank for logos: they always animate for brand impact */
 }
 @keyframes topBarLogoFloat {
   0% { transform: translateY(0) scale(1) rotate(0deg); filter: drop-shadow(0 6px 12px rgba(4, 29, 125, 0.25)); }
@@ -999,12 +995,13 @@ h6 {
 .partner-showcase {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: clamp(56px, 7vw, 96px) clamp(28px, 6vw, 84px);
-  border-radius: 44px;
+  gap: 48px;
+  /* Increase overall size of the outer section */
+  padding: clamp(80px, 9vw, 140px) clamp(40px, 7vw, 110px);
+  border-radius: 52px;
   background: rgba(3, 8, 30, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 60px 150px rgba(0, 0, 0, 0.7), inset 0 0 60px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 70px 170px rgba(0, 0, 0, 0.8), inset 0 0 60px rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
 }
@@ -1040,6 +1037,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .partner-showcase {
-    padding: 36px 20px;
+    padding: 44px 24px;
+    border-radius: 32px;
   }
 }
