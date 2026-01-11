@@ -712,6 +712,7 @@ h6 {
   background-color: #041d7d;
   color: #ffffff;
   transition: all 0.2s ease;
+  white-space: nowrap;              /* keep text like "GET A QUOTE" on one line */
 }
 
 .top-bar-btn--ghost {
