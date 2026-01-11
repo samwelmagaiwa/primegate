@@ -100,7 +100,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 12px;
 }
 
 .split-header-left {
@@ -358,16 +358,6 @@ h6 {
   margin-right: 5px;
 }
 
-.top-bar-logo {
-  height: 64px !important;
-  width: auto !important;
-  object-fit: contain;
-}
-@media (max-width: 768px) {
-  .top-bar-logo {
-    height: 50px !important;
-  }
-}
 .logisco-header-container .logisco-logo img {
   height: 110px !important;
   width: auto !important;
@@ -589,8 +579,8 @@ h6 {
   display: flex !important;
   flex-direction: column;
   align-items: stretch;
-  gap: 14px;
-  padding: 10px 0;
+  gap: 8px;
+  padding: 6px 0;
 }
 
 .top-bar-row {
@@ -601,9 +591,10 @@ h6 {
 }
 
 .top-bar-row.top-bar-meta {
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  row-gap: 8px;
+  gap: 0;
+  row-gap: 6px;
   font-size: 14px;
   font-weight: 600;
   color: #041d7d;
@@ -612,8 +603,16 @@ h6 {
 .top-bar-row.top-bar-meta > div {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  flex: 1 1 220px;
+  gap: 2px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.top-bar-row.top-bar-meta > div:not(:first-child)::before {
+  content: "|";
+  margin: 0 6px;
+  color: currentColor;
+  opacity: 0.65;
 }
 
 .top-bar-row.top-bar-meta > div a {
@@ -628,31 +627,70 @@ h6 {
 }
 
 .top-bar-row.top-bar-main {
-  justify-content: space-between;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: stretch;
+  position: relative;
+  isolation: isolate;
 }
 
 .top-bar-brand {
   display: inline-flex;
   align-items: center;
-  flex: 0 0 auto;
+  justify-content: center;
+  position: relative;
+  padding: 12px 32px;
+  background: #ffffff;
+  border: 1px solid rgba(4, 29, 125, 0.12);
+  border-radius: 28px 0 0 28px;
+  box-shadow: 0 14px 40px rgba(4, 29, 125, 0.08);
 }
 
-.top-bar-logo {
-  height: 58px;
-  width: auto;
-  object-fit: contain;
+.top-bar-brand::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 78px;
+  transform: translateY(-50%);
+  background: linear-gradient(180deg, rgba(4, 29, 125, 0.05), rgba(4, 29, 125, 0.35), rgba(4, 29, 125, 0.05));
+}
+
+@media (max-width: 768px) {
+  .top-bar-brand {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .top-bar-brand::after {
+    display: none;
+  }
 }
 
 .top-bar-nav-wrap {
-  flex: 1 1 auto;
-  min-width: 280px;
+  background: #ffffff;
+  border: 1px solid rgba(4, 29, 125, 0.12);
+  border-left: none;
+  border-radius: 0 28px 28px 0;
+  padding: 10px 20px 10px 10px;
+  box-shadow: 0 14px 40px rgba(4, 29, 125, 0.08);
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .top-bar-cta {
   display: inline-flex;
-  flex: 0 0 auto;
   gap: 12px;
+  align-self: center;
+  margin-left: auto;
+  background: #f6f9ff;
+  padding: 6px 8px;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(4, 29, 125, 0.08);
+  z-index: 1;
 }
 
 .top-bar-btn {
@@ -786,5 +824,120 @@ h6 {
   .logisco-mobile-button-hamburger::after,
   .logisco-mobile-button-hamburger span {
     width: 20px;
+  }
+}
+
+
+/* Header logo animation (desktop top bar, hero logo, and mobile header) */
+.top-bar-logo,
+.section-logo img,
+.logisco-mobile-header .logisco-logo-inner img {
+  height: 96px !important;
+  width: auto !important;
+  object-fit: contain;
+  display: block;
+  /* High‑speed, premium float animation */
+  animation: topBarLogoFloat 0.9s cubic-bezier(0.52, 0.02, 0.34, 0.99) infinite;
+  will-change: transform, filter;
+}
+@media (max-width: 768px) {
+  .top-bar-logo,
+  .logisco-mobile-header .logisco-logo-inner img,
+  .section-logo img {
+    height: 64px !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .top-bar-logo,
+  .section-logo img,
+  .logisco-mobile-header .logisco-logo-inner img {
+    animation: none !important;
+  }
+}
+@keyframes topBarLogoFloat {
+  0% { transform: translateY(0) scale(1) rotate(0deg); filter: drop-shadow(0 6px 12px rgba(4, 29, 125, 0.25)); }
+  35% { transform: translateY(-12px) scale(1.05) rotate(-1.1deg); filter: drop-shadow(0 18px 32px rgba(4, 29, 125, 0.22)); }
+  65% { transform: translateY(5px) scale(0.985) rotate(0.7deg); filter: drop-shadow(0 10px 18px rgba(4, 29, 125, 0.2)); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); filter: drop-shadow(0 6px 12px rgba(4, 29, 125, 0.25)); }
+}
+
+
+@media (max-width: 1024px) {
+  .top-bar-row.top-bar-main {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .top-bar-brand {
+    flex: 0 0 auto;
+    width: 100%;
+    border-radius: 28px;
+    margin-right: 0;
+    padding: 16px;
+  }
+  .top-bar-brand::after {
+    display: none;
+  }
+  .top-bar-nav-wrap {
+    border-radius: 28px;
+    padding: 16px;
+    border-left: 1px solid rgba(4, 29, 125, 0.12);
+    min-width: auto;
+  }
+  .top-bar-cta {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    justify-content: flex-start;
+  }
+}
+
+
+.top-bar-brand { grid-column: 1; }
+.top-bar-nav-wrap { grid-column: 2; }
+.top-bar-cta { grid-column: 2; }
+@media (max-width: 1024px) {
+  .top-bar-row.top-bar-main {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+  .top-bar-brand, .top-bar-nav-wrap {
+    border-radius: 28px;
+    border-left: 1px solid rgba(4, 29, 125, 0.12);
+  }
+  .top-bar-nav-wrap {
+    padding: 16px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .top-bar-cta {
+    align-self: stretch;
+    margin-left: 0;
+    justify-content: center;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+
+.top-bar-nav-wrap nav {
+  flex: 1 1 auto;
+}
+.top-bar-nav-wrap nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .top-bar-nav-wrap nav ul {
+    justify-content: center;
   }
 }
