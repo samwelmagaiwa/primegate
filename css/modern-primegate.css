@@ -683,20 +683,19 @@ h6 {
   min-width: 320px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;   /* menu on left, CTAs on right */
   gap: 18px;
+  flex: 1 1 auto;                   /* stretch pill so buttons stay inside */
 }
 
 .top-bar-cta {
   display: inline-flex;
   gap: 10px;
-  align-self: center;
-  margin-left: auto;
-  background: #f6f9ff;
-  padding: 4px 6px;
-  border-radius: 999px;
-  box-shadow: 0 6px 16px rgba(4, 29, 125, 0.08);
-  z-index: 1;
+  margin-left: auto;              /* push buttons to right edge INSIDE pill */
+  background: transparent;        /* remove separate pill background */
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;               /* no extra halo outside nav block */
 }
 
 .top-bar-btn {
@@ -950,7 +949,7 @@ h6 {
 .top-bar-nav-wrap nav {
   flex: 1 1 auto;
 }
-.top-bar-nav-wrap nav ul {
+.top-bar-nav-wrap > ul {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -960,7 +959,7 @@ h6 {
   padding: 0;
 }
 @media (max-width: 1024px) {
-  .top-bar-nav-wrap nav ul {
+  .top-bar-nav-wrap > ul {
     justify-content: center;
   }
 }
@@ -977,5 +976,19 @@ h6 {
     flex: 1 1 auto;
     min-width: 0;
     padding: 8px 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-bar-nav-wrap {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .top-bar-cta {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: center;
   }
 }
