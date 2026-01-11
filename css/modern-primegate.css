@@ -291,11 +291,11 @@ h6 {
   right: 0;
   width: 100%;
   z-index: 99999;
-  box-shadow: 0 15px 35px rgba(4, 16, 52, 0.08);
+  box-shadow: 0 12px 28px rgba(4, 16, 52, 0.06);
 
-  /* Height Control */
-  padding: 10px 0 !important;
-  min-height: 80px !important;
+  /* Height Control – slimmer header */
+  padding: 4px 0 !important;
+  min-height: 64px !important;
 }
 
 .logisco-top-bar-background {
@@ -579,8 +579,8 @@ h6 {
   display: flex !important;
   flex-direction: column;
   align-items: stretch;
-  gap: 8px;
-  padding: 6px 0;
+  gap: 4px;
+  padding: 2px 0;
 }
 
 .top-bar-row {
@@ -594,10 +594,12 @@ h6 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0;
-  row-gap: 6px;
-  font-size: 14px;
+  row-gap: 1px;
+  font-size: 12px;
   font-weight: 600;
   color: #041d7d;
+  padding: 0;
+  line-height: 1.15;
 }
 
 .top-bar-row.top-bar-meta > div {
@@ -606,6 +608,7 @@ h6 {
   gap: 2px;
   flex: 0 0 auto;
   white-space: nowrap;
+  line-height: 1.12;
 }
 
 .top-bar-row.top-bar-meta > div:not(:first-child)::before {
@@ -629,7 +632,7 @@ h6 {
 .top-bar-row.top-bar-main {
   display: flex;
   align-items: center;
-  column-gap: 18px;
+  column-gap: 8px;
   position: relative;
   isolation: isolate;
   width: 100%;
@@ -640,11 +643,11 @@ h6 {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 12px 32px;
+  padding: 6px 24px;
   background: #ffffff;
   border: 1px solid rgba(4, 29, 125, 0.12);
-  border-radius: 28px 0 0 28px;
-  box-shadow: 0 14px 40px rgba(4, 29, 125, 0.08);
+  border-radius: 20px 0 0 20px;
+  box-shadow: 0 8px 20px rgba(4, 29, 125, 0.08);
 }
 
 .top-bar-brand::after {
@@ -673,7 +676,7 @@ h6 {
   border: 1px solid rgba(4, 29, 125, 0.12);
   border-left: none;
   border-radius: 0 28px 28px 0;
-  padding: 12px 24px 12px 18px;
+  padding: 8px 20px 8px 16px;
   box-shadow: 0 14px 40px rgba(4, 29, 125, 0.08);
   min-width: 320px;
   display: flex;
@@ -684,13 +687,13 @@ h6 {
 
 .top-bar-cta {
   display: inline-flex;
-  gap: 12px;
+  gap: 10px;
   align-self: center;
   margin-left: auto;
   background: #f6f9ff;
-  padding: 6px 8px;
+  padding: 4px 6px;
   border-radius: 999px;
-  box-shadow: 0 12px 30px rgba(4, 29, 125, 0.08);
+  box-shadow: 0 6px 16px rgba(4, 29, 125, 0.08);
   z-index: 1;
 }
 
@@ -698,12 +701,12 @@ h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   font-weight: 700;
   border-radius: 999px;
-  padding: 10px 22px;
+  padding: 8px 20px;
   border: 1px solid transparent;
   background-color: #041d7d;
   color: #ffffff;
@@ -841,7 +844,7 @@ h6 {
 .top-bar-logo,
 .section-logo img,
 .logisco-mobile-header .logisco-logo-inner img {
-  height: 96px !important;
+  height: 80px !important;
   width: auto !important;
   object-fit: contain;
   display: block;
