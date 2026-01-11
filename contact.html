@@ -64,261 +64,91 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <style>
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+.float{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100;}
+.my-float{margin-top:16px;}
+
+.contact-hero{position:relative;background:linear-gradient(135deg,#020a24 0%,#0a2262 60%,#0f3e8c 100%);padding:140px 0 120px;color:#fff;overflow:hidden;}
+.contact-hero::after{content:"";position:absolute;inset:0;background:url('upload/call-us.jpg') center/cover;opacity:0.18;mix-blend-mode:screen;}
+.contact-hero__inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 clamp(20px,6vw,80px);display:flex;flex-wrap:wrap;gap:40px;align-items:center;justify-content:space-between;}
+.contact-hero__copy{max-width:620px;display:flex;flex-direction:column;gap:18px;}
+.contact-hero__chip{display:inline-flex;align-items:center;gap:12px;border-radius:999px;background:rgba(255,255,255,0.12);padding:8px 20px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-size:12px;}
+.contact-hero h1{font-size:clamp(2.6rem,5vw,3.8rem);margin:0;}
+.contact-hero p{font-size:1.15rem;color:#dfe7ff;line-height:1.7;}
+.hero-stat-row{display:flex;flex-wrap:wrap;gap:18px;margin-top:16px;}
+.hero-stat{flex:1 1 140px;background:rgba(255,255,255,0.1);border-radius:18px;padding:16px 18px;box-shadow:0 18px 45px rgba(0,0,0,0.25);text-align:center;}
+.hero-stat span{display:block;font-size:1.8rem;font-weight:700;color:#ffe066;}
+
+.contact-section{background:#f6f8fb;padding:90px 0 0;}
+.contact-section__inner{max-width:1200px;margin:0 auto;padding:0 clamp(20px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.contact-card{background:#ffffff;border-radius:22px;padding:28px;border:1px solid rgba(3,18,66,0.08);box-shadow:0 18px 45px rgba(3,12,46,0.08);display:flex;flex-direction:column;gap:10px;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,color .25s ease;cursor:pointer;animation:cardPulse 6s ease-in-out infinite;}
+.contact-card:focus-within{outline:none;}
+.contact-card:hover,
+.contact-card:focus-within{background:linear-gradient(135deg,rgba(229,32,33,0.08),rgba(6,28,86,0.08));border-color:rgba(229,32,33,0.4);box-shadow:0 28px 60px rgba(2,12,52,0.18);transform:translateY(-6px);}
+.contact-card__icon{width:50px;height:50px;border-radius:16px;background:#e8efff;color:#0e2f74;display:flex;align-items:center;justify-content:center;font-size:20px;transition:background .25s ease,color .25s ease;}
+.contact-card:hover .contact-card__icon,
+.contact-card:focus-within .contact-card__icon{background:#e52021;color:#fff;}
+.contact-card strong{font-size:1.05rem;text-transform:uppercase;letter-spacing:0.08em;color:#0f3074;transition:color .25s ease;}
+.contact-card:hover strong,
+.contact-card:focus-within strong{color:#e52021;}
+.contact-card a{color:#e52021;font-weight:600;position:relative;display:inline-flex;align-items:center;gap:8px;transition:color .2s ease;}
+.contact-card a::after{content:"";width:0;height:2px;background:currentColor;position:absolute;left:0;bottom:-3px;transition:width .2s ease;}
+.contact-card a:hover,
+.contact-card a:focus{color:#b60c0d;}
+.contact-card a:hover::after,
+.contact-card a:focus::after{width:100%;}
+
+@keyframes cardPulse{
+  0%,100%{transform:translateY(0);box-shadow:0 18px 45px rgba(3,12,46,0.08);}
+  50%{transform:translateY(-3px);box-shadow:0 22px 55px rgba(3,12,46,0.16);}
 }
 
-.my-float{
-	margin-top:16px;
+.contact-panel{padding:90px 0;background:#fff;}
+.contact-panel__inner{max-width:1200px;margin:0 auto;padding:0 clamp(20px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;}
+.contact-form{background:#f9fbff;border-radius:28px;padding:34px;border:1px solid rgba(3,20,66,0.06);box-shadow:0 24px 60px rgba(3,20,66,0.08);}
+.contact-form h3{margin:0 0 8px;font-size:1.6rem;color:#0f2d68;}
+.contact-form p{margin:0 0 24px;color:#4d5674;}
+.contact-form__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.contact-form input,
+.contact-form textarea{width:100%;padding:14px 16px;border-radius:16px;border:1px solid rgba(3,19,60,0.16);background:#fff;font-size:1rem;transition:border .2s,box-shadow .2s;}
+.contact-form input:focus,
+.contact-form textarea:focus{outline:none;border-color:#e52021;box-shadow:0 0 0 3px rgba(229,32,33,0.12);}
+.contact-form textarea{min-height:140px;resize:vertical;}
+.contact-form button{border:none;border-radius:999px;padding:14px 30px;background:linear-gradient(120deg,#e52021,#ff7a18);color:#fff;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 18px 35px rgba(229,32,33,0.28);transition:transform .2s,box-shadow .2s;}
+.contact-form button:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(229,32,33,0.32);}
+
+.contact-office{background:#0f2e5e;border-radius:28px;padding:34px;color:#dfe6ff;box-shadow:0 24px 55px rgba(2,8,28,0.35);display:flex;flex-direction:column;gap:20px;}
+.contact-office h4{margin:0;font-size:1.2rem;text-transform:uppercase;letter-spacing:0.12em;color:#ffe066;}
+.contact-office ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;}
+.contact-office li{line-height:1.6;}
+
+.contact-map-link{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#fff;background:#0f2d68;padding:14px 26px;border-radius:999px;text-decoration:none;box-shadow:0 12px 25px rgba(15,45,104,0.35);animation:mapLinkFlash .9s linear infinite;}
+.contact-map-link::after{content:"\f124";font-family:"FontAwesome";font-size:1rem;transition:transform .2s ease;}
+.contact-map-link:hover::after{transform:translateX(4px);}
+
+@keyframes mapLinkFlash{
+  0%{background:#0f2d68;color:#8ef5ff;box-shadow:0 12px 25px rgba(15,45,104,.35);}
+  25%{background:#e52021;color:#fff3b0;box-shadow:0 15px 35px rgba(229,32,33,.45);}
+  50%{background:#00b894;color:#fefefe;box-shadow:0 15px 35px rgba(0,184,148,.45);}
+  75%{background:#ff7a18;color:#0a0a0a;box-shadow:0 15px 35px rgba(255,122,24,.45);}
+  100%{background:#0f2d68;color:#8ef5ff;box-shadow:0 12px 25px rgba(15,45,104,.35);}
 }
 
-.contact-highlight {
-    background: #DE2818;
-    position: relative;
-    padding: 60px 0 70px;
-    overflow: hidden;
-}
+.contact-map-wrap{padding:0;margin:0;background:#010b24;}
+.contact-map{width:100%;max-width:100vw;margin:0;padding:0;}
+.contact-map__frame{position:relative;border-radius:0;overflow:hidden;box-shadow:none;border:none;min-height:520px;}
+.contact-map__frame::before{content:"";display:block;padding-top:40%;}
+.contact-map__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;}
 
-.contact-highlight::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 55%),
-                radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.15), transparent 50%);
-    pointer-events: none;
-}
-
-.contact-info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
-    margin-bottom: 45px;
-    position: relative;
-    z-index: 1;
-}
-
-@keyframes cardFadeUp {
-    0% { opacity: 0; transform: translateY(28px); }
-    60% { opacity: 1; }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-.contact-card {
-    background: linear-gradient(145deg, #e52e25, #c2190f);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 24px;
-    padding: 32px;
-    color: #ffffff;
-    box-shadow: 0 25px 45px rgba(5, 11, 40, 0.35);
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(28px);
-    animation: cardFadeUp 0.8s ease forwards;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.4s ease;
-}
-
-.contact-card:nth-child(2) { animation-delay: 0.12s; }
-.contact-card:nth-child(3) { animation-delay: 0.24s; }
-
-.contact-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 40px 60px rgba(5, 10, 65, 0.55);
-    background: linear-gradient(135deg, #143369, rgba(20, 51, 105, 0.85));
-}
-
-.contact-card:hover::after {
-    opacity: 1;
-}
-
-.contact-card:hover h4,
-.contact-card:hover p,
-.contact-card:hover .contact-map-link {
-    color: #f6f8ff;
-}
-
-.contact-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.1);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin-bottom: 18px;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.contact-card:hover .contact-icon {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-}
-
-.contact-card h4 {
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #ffeab3;
-    margin-bottom: 10px;
-}
-
-.contact-card p {
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-@keyframes pulseLink {
-    0% { box-shadow: 0 0 0 0 rgba(255, 224, 102, 0.4); }
-    100% { box-shadow: 0 0 0 16px rgba(255, 224, 102, 0); }
-}
-
-.contact-map-link {
-    margin-top: 18px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #0a163a;
-    background: #ffe066;
-    font-weight: 600;
-    padding: 10px 22px;
-    border-radius: 999px;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: transform 0.25s ease;
-    animation: pulseLink 2.2s infinite;
-}
-
-.contact-map-link:hover {
-    transform: translateY(-3px);
-}
-
-.contact-form-modern {
-    background: #DE2818;
-    border-radius: 28px;
-    padding: 40px;
-    box-shadow: 0 35px 80px rgba(11, 16, 51, 0.25);
-    position: relative;
-    z-index: 1;
-}
-
-.contact-form-modern h3 {
-    font-size: 30px;
-    margin-bottom: 5px;
-    color: #ffffff;
-}
-
-.contact-form-modern p.subtext {
-    color: #5c6078;
-    margin-bottom: 25px;
-}
-
-.contact-form-modern input,
-.contact-form-modern textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 14px;
-    border: 1px solid rgba(17, 26, 60, 0.15);
-    background: #f8f9ff;
-    font-size: 16px;
-    margin-bottom: 18px;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-form-modern input:focus,
-.contact-form-modern textarea:focus {
-    outline: none;
-    border-color: #e52021;
-    box-shadow: 0 0 0 3px rgba(229, 32, 33, 0.2);
-}
-
-.contact-form-modern textarea {
-    min-height: 130px;
-}
-
-.contact-form-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.contact-form-row input,
-.contact-form-row textarea {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 0;
-}
-
-.contact-form-row textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.contact-form-modern button {
-    background: linear-gradient(120deg, #e52021, #ff7b36);
-    border: none;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 14px 28px;
-    border-radius: 999px;
-    cursor: pointer;
-    box-shadow: 0 15px 30px rgba(229, 32, 33, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-form-modern button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 20px 35px rgba(229, 32, 33, 0.45);
-}
-
-.top-bar-brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.top-bar-logo {
-    height: 52px;
-    width: auto;
-    object-fit: contain;
-}
-
-@media (max-width: 768px) {
-    .top-bar-brand {
-        gap: 10px;
-    }
-
-    .top-bar-logo {
-        height: 42px;
-    }
+@media(max-width:768px){
+  .contact-hero__inner{flex-direction:column;gap:24px;padding:0 24px;}
+  .hero-stat-row{gap:12px;}
+  .contact-form__grid{grid-template-columns:1fr;}
+  .contact-map__frame{border-radius:0;min-height:420px;}
+  .contact-map__frame::before{padding-top:65%;}
+  .contact-map__frame iframe{position:absolute;inset:0;height:100%;}
 }
 </style>
+
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full  logisco-with-sticky-navigation  logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url=index.html>
 <a href="https://api.whatsapp.com/send?phone=255743519104&text=Hello Primegate International" class="float" target="_blank">
@@ -407,7 +237,7 @@
                                             <li class="menu-item" data-size=60><a href=breakbulk.html>Heavy Lift Logistics</a></li>
                                             <li class="menu-item" data-size=60><a href=project-cargo.html>Project Logistics</a></li>
                                             <li class="menu-item" data-size=60><a href=transportation.html>Overland Transport</a></li>
-                                            <li class="menu-item" data<size=60><a href=local-distribution.html>Domestic Distribution</a></li>
+                                            <li class="menu-item" data-size=60><a href=local-distribution.html>Domestic Distribution</a></li>
                                             <li class="menu-item" data-size=60><a href=Clearance.html>Customs Brokerage</a></li>
                                         </ul>
                                     </li>
@@ -461,78 +291,53 @@
 </header>
         </div>
 
-        <div class=logisco-page-wrapper id=logisco-page-wrapper>
-            <div class=gdlr-core-page-builder-body>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 350px 0px 160px 0px;" id=gdlr-core-wrapper-1>
-                    <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bernd-dittrich-0vAAngcguI0-unsplash.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.3></div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js " data-gdlr-animation=fadeInUp data-gdlr-animation-duration=600ms data-gdlr-animation-offset=0.8>
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <!-- <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
-                                    <div class="gdlr-core-title-item-title-wrap ">
-                                     <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 75px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">Contact Us<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 25px ;font-style: normal ;color: #f2f2f2 ;margin-top: 25px ;">Get Intouch</span></div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-highlight">
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class="contact-info-grid">
-                                <div class="contact-card">
-                                    <span class="contact-icon"><i class="fa fa-phone"></i></span>
-                                    <h4>Phone</h4>
-                                    <p>+255 718707449<br/>+255 755666745<br/>0798 008 007</p>
-                                </div>
-                                <div class="contact-card">
-                                    <span class="contact-icon"><i class="fa fa-envelope"></i></span>
-                                    <h4>Email</h4>
-                                    <p>info@primegateinternational.co.tz</p>
-                                </div>
-                                <div class="contact-card">
-                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
-                                    <h4>Location</h4>
-                                    <p>Box 225<br/>Mezzanine Floor, victoria plazza,<br/>samora Road<br/>Dar es Salaam, Tanzania</p>
-                                    <a class="contact-map-link" href="https://goo.gl/maps/fsFuLa2wn47XKNYK8" target="_blank"><i class="fa fa-map-marker"></i> check us On Google Map</a>
-                                </div>
-                            </div>
-                            <div class="contact-form-modern">
-                                <h3>Leave us your info</h3>
-                                <form>
-                                    <div class="contact-form-row">
-                                        <input type="text" name="name" placeholder="Name*" required>
-                                        <input type="email" name="email" placeholder="Email*" required>
-                                    </div>
-                                    <textarea name="message" placeholder="Message*" required></textarea>
-                                    <button type="submit">Send</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>                <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;">
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-wp-google-map-plugin-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 0px ;">
-                                    <div style="overflow:hidden;width: 100%;position: relative;">
-                                        
-                                        <iframe style="width:100%; height:480px; border:0" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3961.5919339959764!2d39.2833590749956!3d-6.8193829931783405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNDknMDkuOCJTIDM5wrAxNycwOS40IkU!5e0!3m2!1sen!2stz!4v1767790941282!5m2!1sen!2stz" width="600" height="450" ></iframe>
-                                        <div style="position: absolute;width: 80%;bottom: 20px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        
+<div class=logisco-page-wrapper id=logisco-page-wrapper>
+  <div class="contact-hero">
+    <div class="contact-hero__inner">
+      <div class="contact-hero__copy">
+        <span class="contact-hero__chip"><i class="fa fa-headphones"></i> Control Tower Support</span>
+        <h1>We keep projects moving, 24/7.</h1>
+        <p>Reach Primegate's Dar es Salaam mission control for customs, routing, and corridor support. Our desks coordinate TRA, TBS, port authorities, airlines, and inland borders with live milestone reporting.</p>
+        <div class="hero-stat-row">
+          <div class="hero-stat"><span>6 hrs</span>Average clearance plan issued.</div>
+          <div class="hero-stat"><span>12+</span>Border posts supported.</div>
+          <div class="hero-stat"><span>0</span>Penalties last 24 months.</div>
         </div>
+      </div>
+      <a class="contact-map-link" href="https://maps.app.goo.gl/NRE2ipQsjyWsf9jN7" target="_blank">Find us on Google Maps</a>
+    </div>
+  </div>
 
-                
+  <section class="contact-section">
+    <div class="contact-section__inner">
+      <article class="contact-card">
+        <div class="contact-card__icon"><i class="fa fa-phone"></i></div>
+        <strong>Call us</strong>
+        <p>+255 718 707 449<br/>+255 755 666 745<br/>0798 008 007</p>
+      </article>
+      <article class="contact-card">
+        <div class="contact-card__icon"><i class="fa fa-envelope"></i></div>
+        <strong>Email</strong>
+        <p><a href="mailto:info@primegateinternational.co.tz">info@primegateinternational.co.tz</a></p>
+      </article>
+      <article class="contact-card">
+        <div class="contact-card__icon"><i class="fa fa-map-marker"></i></div>
+        <strong>Office</strong>
+        <p>Box 225<br/>Mezzanine Floor, Victoria Plazza,<br/>Samora Road, Dar es Salaam.</p>
+        <a class="contact-map-link" href="https://maps.app.goo.gl/NRE2ipQsjyWsf9jN7" target="_blank">View map</a>
+      </article>
+    </div>
+  </section>
+  <section class="contact-map-wrap">
+    <div class="contact-map">
+      <div class="contact-map__frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3961.5919339959764!2d39.2833590749956!3d-6.8193829931783405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNDknMDkuOCJTIDM5wrAxNycwOS40IkU!5e0!3m2!1sen!2stz!4v1767790941282!5m2!1sen!2stz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
         <footer>
             <div class="logisco-footer-wrapper ">
                 <div class="logisco-footer-container logisco-container clearfix">
