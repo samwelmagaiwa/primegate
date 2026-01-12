@@ -993,6 +993,38 @@ h6 {
   }
 }
 
+/* Inline feedback below homepage quote form */
+.hp-quote-feedback {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: pgFadeIn 0.25s ease-out;
+}
+.hp-quote-feedback .hp-quote-icon {
+  font-size: 16px;
+}
+.hp-quote-feedback--loading {
+  background: rgba(15,45,104,0.06);
+  color: #0f2d68;
+}
+.hp-quote-feedback--success {
+  background: rgba(0,150,80,0.08);
+  color: #056044;
+}
+.hp-quote-feedback--error {
+  background: rgba(176,0,32,0.07);
+  color: #b00020;
+}
+
+@keyframes pgFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* Contact page map sizing + overlap */
 .contact-map-wrap {
